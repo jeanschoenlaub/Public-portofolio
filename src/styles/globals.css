@@ -6,7 +6,11 @@ body {
     @apply bg-custom-beige;
 }
 
+/* styles/global.css */
 .underline-custom-mint-green:hover {
-    text-decoration-color: #8BC34A; /* Replace with the actual hex code for custom-mint-green */
+    text-decoration: underline;
+    text-decoration-color: #8BC34A; 
+    text-decoration-thickness: 3px; 
+    text-underline-offset: 6px;
   }
   

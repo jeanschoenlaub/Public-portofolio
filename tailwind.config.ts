@@ -10,7 +10,7 @@ export default {
       },
       colors: {
         'custom-beige': '#FAF3E0',
-        'mint-green': '#8BC34A',
+        'custom-mint-green': '#8BC34A',
       },
     },
   },

@@ -14,3 +14,36 @@ body {
     text-underline-offset: 6px;
   }
   
+
+  .container {
+    position: relative;
+  }
+  
+  .timeline-entry {
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .timeline-entry:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    width: 20px;
+    height: 2px;
+    background-color: black;
+  }
+  
+  .black-line {
+    position: absolute;
+    bottom: 100%; /* Adjust this value to connect to the bottom of the green box */
+    left: 20px; /* Match this to the margin-left of your timeline entries */
+    width: 2px;
+    height: calc(100% - 50px); /* Adjust height to reach the "2021" div */
+    background-color: black;
+  }
+
+  .border-yellow {
+    border: 2px solid yellow;
+  }

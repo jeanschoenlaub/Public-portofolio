@@ -8,6 +8,10 @@ export default {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
+      colors: {
+        'custom-beige': '#FAF3E0',
+        'mint-green': '#8BC34A',
+      },
     },
   },
   plugins: [],

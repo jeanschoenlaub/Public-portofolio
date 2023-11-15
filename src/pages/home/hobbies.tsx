@@ -1,7 +1,6 @@
 import Link from "next/link";
 
-export default function AboutMe() {
-  
+export default function Hobbies() {
 
   return (
     <>
@@ -59,7 +58,6 @@ export default function AboutMe() {
 
                     </div>
                 </div>          
-
     </>
   );
 }

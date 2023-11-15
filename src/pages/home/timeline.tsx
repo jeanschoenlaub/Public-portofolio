@@ -1,5 +1,4 @@
 import { timelineData } from "../../data/career-line";
-import { PanelSVG } from "./panel-svg";
 
 export default function Timeline() {
   

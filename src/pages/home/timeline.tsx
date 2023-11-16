@@ -5,7 +5,7 @@ export default function Timeline() {
 
   return (
     <>
-      <ol className="relative border-l ml-20 mt-4 mr-20 border-slate-500">
+      <ol className="relative border-l mt-4 ml-2 md:ml-10 mr-2 md:mr-10 border-slate-500">
         {timelineData.map((item, index) => (
           <li key={index} className="ml-4 relative">
             {/* Dot */}

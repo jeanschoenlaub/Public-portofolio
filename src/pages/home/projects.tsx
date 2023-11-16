@@ -7,6 +7,7 @@ interface Project {
     description: string;
     full_text: string;
     video: string;
+    // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
     tags: { [key: number]: string | undefined }; // Allow undefined values
     image: string;
   }
@@ -14,6 +15,7 @@ interface Project {
 export default function Projects() {
     const recentProjects = [...projectData].slice(0, 3);
   
+    // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
     const renderTags = (tags: { [key: number]: string | undefined }) => {
         return Object.values(tags)
           .filter((tag): tag is string => tag !== undefined) // Filter out undefined values
@@ -25,9 +27,9 @@ export default function Projects() {
       };
   
       return (
-        <div >
+        <>
           {recentProjects.map((project, index) => (
-            <Link href="/projects">
+            <Link href="/projects" key={index}>
             <div key={index} className="border-2 border-custom-mint-green flex bg-white rounded-lg mx-2 md:mx-5 my-4 shadow-md">
               {/* Image */}
               <div className="relative w-1/2 border border-slate-300">
@@ -70,6 +72,6 @@ export default function Projects() {
                 </Link>
             </div>
             </div>
-        </div>
+            </>
       );
   }

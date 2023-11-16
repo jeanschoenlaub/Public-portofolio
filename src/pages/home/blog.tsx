@@ -9,12 +9,12 @@ export default function Blog() {
     return (
         <div>
           {recentBlogs.map((blog, index) => (
-            <Link className="block border-2 border-custom-mint-green bg-white rounded-lg mx-2 md:mx-5 my-4 shadow-md" href={`/blog`} key={index}>
+            <Link className="block border-2 border-custom-mint-green bg-custom-beige rounded-lg mx-2 md:mx-5 my-4 shadow-md" href={`/blog`} key={index}>
 
                 {/* Content */}
                 <div className="p-4 w-full space-y-2">
                   {/* Blog Title */}
-                  <div className="text-lg tracking-tight font-bold">
+                  <div className="text tracking-tight font-bold">
                     {blog.title}
                   </div>
 

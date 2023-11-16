@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { PanelSVG, PowerFullSVG } from "../../components/panel-svg";
+import { PanelSVG, PowerFullSVG, SunSVG } from "../../components/panel-svg";
 import { PowerSVG } from "../../components/panel-svg";
 
 interface LeftDrawingsProps {
@@ -13,6 +13,8 @@ export default function LeftDrawings ( { isAnyElementVisible }: LeftDrawingsProp
     const panelWidth= 223;
     const branchLength = 200; // Length of each branch to the right
     const FullPowerWidth = 93
+
+    const sunWidth = 215
   
     const totalHeight = numPanels * panelHeight + (numPanels - 1) * spacing;
     const topOffset = `calc(50vh - ${totalHeight / 2}px)`;
@@ -25,6 +27,7 @@ export default function LeftDrawings ( { isAnyElementVisible }: LeftDrawingsProp
     const [innerHeight, setInnerHeight] = useState(0);
     const [topOffsetPanels, setTopOffsetPanels] = useState(0); // The space between the top of screen and first panel to have them centered vertically
     const [bottomOffsetPower, setBottomOffsetPower] = useState(0); // The space between bottom of screen and the power converter
+    const [rightOffsetSun, setRightOffsetSun] = useState(0); // The space between rigth of screen and the start of the sun based on 1/4 screen width minus sun width
 
     useEffect(() => {
         const calculateValues = () => {
@@ -33,6 +36,8 @@ export default function LeftDrawings ( { isAnyElementVisible }: LeftDrawingsProp
             const twentyFiveVW = 25 * vwUnitInPixels;
             const offsetPx = twentyFiveVW - panelWidth;
             setRightOffsetPanelDivs(offsetPx);
+            const offsetPxSun = (twentyFiveVW - sunWidth)/2;
+            setRightOffsetSun(offsetPxSun);
 
             const vhUnitInPixels = window.innerHeight / 100;
             const calcTopOffsetPanels = 50 * vhUnitInPixels - totalHeight/ 2
@@ -54,13 +59,6 @@ export default function LeftDrawings ( { isAnyElementVisible }: LeftDrawingsProp
            window.removeEventListener('resize', calculateValues);
        };
    }, []);
-
-   useEffect(() => {
-    console.log(bottomOffsetPower)
-            console.log(topOffsetPanels)
-            console.log(totalHeight)
-   },[bottomOffsetPower, topOffsetPanels])
-    
 
   return (
     <>
@@ -99,7 +97,7 @@ export default function LeftDrawings ( { isAnyElementVisible }: LeftDrawingsProp
         <div>
             {isAnyElementVisible ? (
                 // If any element is visible, show PowerFullSVG
-                <div className="fixed bottom-0 left-0 transform -translate-x-1/2" style={{ bottom: bottomOffsetPower+7, left: panelWidth + rightOffsetPanelDivs - 10}}>
+                <div className="fixed bottom-0 left-0 transform -translate-x-1/2" style={{ bottom: bottomOffsetPower+7, left: panelWidth + rightOffsetPanelDivs - 9}}>
                     <PowerFullSVG />
                 </div>
             ) : (
@@ -108,6 +106,15 @@ export default function LeftDrawings ( { isAnyElementVisible }: LeftDrawingsProp
                     <PowerSVG />
                 </div>
             )}
+        </div>
+
+        {/* Sun SVG */}
+       <div className="w-1/4 flex justify-center align-center">
+       <div className="fixed top-8 right-0 transform -translate-x-1/2" style={{ right: sunWidth+ rightOffsetSun+20 }}>
+                <div  style={{ position: 'absolute', width: '200px' }}> {/* width should match the SVG width */}
+                    <SunSVG height="230" width="215"/>
+                </div>
+        </div>
         </div>
     
     </>

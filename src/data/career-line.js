@@ -5,7 +5,7 @@ export const timelineData = [
       link: "https://www.riples.app/"
     },
     {
-      year: "2021-2023, ",
+      year: "2021-2023, Sydney AU",
       description: "Working as a Business Analyst and then Data Engineer at a medium sized solar manufacturer start-up.",
       link: "" // No link provided for this entry
     },

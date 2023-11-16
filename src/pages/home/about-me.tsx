@@ -17,9 +17,9 @@ export default function AboutMe() {
                 <h1 className="text-xl font-semibold mb-2"> I am currently on sabbatical until September '24  </h1>
             </div>
         </div>
-            <div className="flex justify-between text-lg mt-4 mb-2"> 
+            <div className="flex justify-between ml-2 text-lg mt-4 mb-2"> 
 
-                <div className="flex items-center ml-2 border py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg">
+                <div className="flex items-center border py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg">
                     <Link href="https://github.com/jeanschoenlaub">
                         <div className="flex items-center">
                         <svg className="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">

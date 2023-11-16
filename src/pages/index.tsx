@@ -64,8 +64,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex min-h-screen flex-col  bg-custom-beige p-4">
-        <div className="container mx-auto px-8 w-1/2">
+      <main className="flex min-h-screen flex-col bg-custom-beige p-4">
+        <div className="container mx-auto px-8 w-full md:w-1/2">
           <nav className="flex justify-end space-x-6 mb-4 mr-4 text-xl font-montserrat"> {/* Larger text and Montserrat font */}
             <Link href={"/"} className="underline-custom-mint-green font-semibold ">Home</Link>
             <Link href={"/"} className="underline-custom-mint-green">Projects</Link>
@@ -87,7 +87,7 @@ export default function Home() {
             </div>
 
             <div id="blog" className={` p-2 border-2 mt-12 ${isElementVisible['blog'] ? ' border-yellow-400' : 'border-custom-beige'}`}>
-                <h2 className="text-2xl font-semibold mt-2 mb-2"> It's about the journey </h2>
+                <h2 className="text-2xl font-semibold mt-2 mb-2"> Some thoughts </h2>
                 <Blog></Blog>
             </div>
 
@@ -96,8 +96,11 @@ export default function Home() {
                 <Hobbies></Hobbies>
             </div>
 
-            <LeftDrawings isAnyElementVisible={isAnyElementVisible}></LeftDrawings>
+            {/* Conditional rendering of LeftDrawings for medium devices and up */}
+            <div className="hidden md:block">
 
+              <LeftDrawings isAnyElementVisible={isAnyElementVisible}></LeftDrawings>
+            </div>
         </div>
       </main>
     </>

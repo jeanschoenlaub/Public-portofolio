@@ -73,7 +73,7 @@ export default function Home() {
         <div className="md:container px-2 md:px-8 w-full md:w-1/2 mx-0 md:mx-auto ">
           <nav className="flex flex-no-shrink justify-end space-x-6 mb-4 mr-4 text-xl font-montserrat"> {/* Larger text and Montserrat font */}
             <Link href={"/"} className="underline-custom-mint-green font-semibold ">Home</Link>
-            <Link href={"/"} className="underline-custom-mint-green">Projects</Link>
+            <Link href={"/projects"} className="underline-custom-mint-green">Projects</Link>
             <Link href={"/"} className="underline-custom-mint-green">Blog</Link>
           </nav>
 

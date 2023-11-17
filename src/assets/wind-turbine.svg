@@ -1,0 +1,68 @@
+<svg width="547" height="592" viewBox="0 0 547 592" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 22">
+<g id="Tower">
+<path id="Vector 193" d="M229 581L243 229" stroke="#BCB5B5" stroke-width="5"/>
+<path id="Vector 194" d="M290 581L276 228" stroke="#BCB5B5" stroke-width="5"/>
+<path id="Vector 195" d="M243 229.5C255.887 235.234 263.114 234.509 276 229.5" stroke="#BCB5B5" stroke-width="3"/>
+<path id="Vector 196" d="M240 299C254.839 304.687 263.161 303.968 278 299" stroke="#BCB5B5" stroke-width="5"/>
+<path id="Vector 197" d="M240 299C254.839 304.687 263.161 303.968 278 299" stroke="#BCB5B5" stroke-width="5"/>
+<path id="Vector 198" d="M237 368C254.963 375.108 265.037 374.21 283 368" stroke="#BCB5B5" stroke-width="5"/>
+<path id="Vector 199" d="M234 438C253.916 446.53 265.085 445.452 285 438" stroke="#BCB5B5" stroke-width="5"/>
+<path id="Vector 200" d="M232 509C253.868 518.952 266.132 517.694 288 509" stroke="#BCB5B5" stroke-width="5"/>
+<path id="Vector 201" d="M228 581C252.602 592.373 266.399 590.936 291 581" stroke="#BCB5B5" stroke-width="5"/>
+<circle id="Ellipse 5" cx="259" cy="205" r="30.5" fill="#FAF3E0" stroke="#BCB5B5" stroke-width="3"/>
+<path id="Vector 202" d="M248.5 193C248.5 193 254.5 184 265.5 187.5C276.5 191 278 203.5 278 203.5" stroke="#BCB5B5" stroke-width="3"/>
+</g>
+<g id="Blade1">
+<g id="Group 14">
+<path id="Vector 184" d="M243.355 231.204C251.466 236.031 256.902 236.43 266 235.268" stroke="#BCB5B5" stroke-width="3"/>
+<g id="Group 12">
+<path id="Vector 183" d="M204.362 458.691L221.843 461.99" stroke="#E58080" stroke-width="5"/>
+<path id="Vector 184_2" d="M208.742 432.101L226.223 435.401" stroke="#E58080" stroke-width="5"/>
+<path id="Vector 185" d="M255.489 292.294L218.796 477.073C208.599 505.619 205.524 500.613 202.347 473.33" stroke="#BCB5B5" stroke-width="3"/>
+<path id="Vector 186" d="M225.5 290.058C231.394 285.7 234.098 280.671 237.836 267.001" stroke="#BCB5B5" stroke-width="3"/>
+<path id="Vector 187" d="M243.839 230.563L237.836 267.001" stroke="#BCB5B5" stroke-width="3"/>
+<path id="Vector 188" d="M265 234.557L254.78 296.6" stroke="#BCB5B5" stroke-width="3"/>
+<path id="Vector 189" d="M226.595 288.156L202.646 475.528" stroke="#BCB5B5" stroke-width="3"/>
+</g>
+</g>
+<path id="Rectangle 12" d="M234.316 292.863L244.177 233C251.259 238.28 255.385 239.244 263.085 236.569L253.224 296.432L234.316 292.863Z" fill="#FAF3E0"/>
+<path id="Rectangle 13" d="M209.75 430L227.501 290.5L253.312 295.896L226.1 432.5L209.75 430Z" fill="#FAF3E0"/>
+<path id="Polygon 2" d="M227.501 290.5C232.645 285.898 234.655 282.089 237.311 274L234.508 292L227.501 290.5Z" fill="#FAF3E0"/>
+</g>
+<g id="Blade2">
+<g id="Group 14_2">
+<path id="Vector 184_3" d="M289.232 205.498C289.356 196.06 286.983 191.153 281.428 183.855" stroke="#BCB5B5" stroke-width="3"/>
+<g id="Group 12_2">
+<path id="Vector 183_2" d="M505.737 125.524L499.854 108.735" stroke="#E58080" stroke-width="5"/>
+<path id="Vector 184_4" d="M480.52 135.025L474.637 118.237" stroke="#E58080" stroke-width="5"/>
+<path id="Vector 185_2" d="M336.07 164.445L514.439 103.832C544.259 98.3905 541.461 103.556 519.423 119.949" stroke="#BCB5B5" stroke-width="3"/>
+<path id="Vector 186_2" d="M349.128 191.533C342.406 188.608 336.699 188.781 322.991 192.379" stroke="#BCB5B5" stroke-width="3"/>
+<path id="Vector 187_2" d="M288.434 205.399L322.991 192.379" stroke="#BCB5B5" stroke-width="3"/>
+<path id="Vector 188_2" d="M281.312 185.076L340.153 162.906" stroke="#BCB5B5" stroke-width="3"/>
+<path id="Vector 189_2" d="M346.933 191.536L521.177 118.591" stroke="#BCB5B5" stroke-width="3"/>
+</g>
+</g>
+<path id="Rectangle 12_2" d="M347.149 182.496L290.376 203.888C291.407 195.115 290.179 191.06 284.012 185.729L340.786 164.337L347.149 182.496Z" fill="#FAF3E0"/>
+<path id="Rectangle 13_2" d="M478.196 135.202L348.51 189.58L340.277 164.529L472.186 119.793L478.196 135.202Z" fill="#FAF3E0"/>
+<path id="Polygon 2_2" d="M348.51 189.58C341.953 187.426 337.649 187.59 329.316 189.335L346.306 182.762L348.51 189.58Z" fill="#FAF3E0"/>
+</g>
+<g id="Blade3">
+<g id="Group 14_3">
+<path id="Vector 184_5" d="M243.221 178.361C234.986 182.972 231.922 187.481 228.38 195.941" stroke="#BCB5B5" stroke-width="3"/>
+<g id="Group 12_3">
+<path id="Vector 183_3" d="M65.7085 30.8491L54.1108 44.3383" stroke="#E58080" stroke-width="5"/>
+<path id="Vector 184_6" d="M86.5459 47.9373L74.9481 61.4265" stroke="#E58080" stroke-width="5"/>
+<path id="Vector 185_3" d="M184.249 158.325L42.5724 34.1584C22.9495 11.0545 28.8222 10.8948 54.0378 21.7845" stroke="#BCB5B5" stroke-width="3"/>
+<path id="Vector 186_3" d="M201.18 133.472C202.007 140.755 205.01 145.612 214.98 155.684" stroke="#BCB5B5" stroke-width="3"/>
+<path id="Vector 187_3" d="M243.535 179.101L214.98 155.684" stroke="#BCB5B5" stroke-width="3"/>
+<path id="Vector 188_3" d="M229.495 195.43L180.875 155.558" stroke="#BCB5B5" stroke-width="3"/>
+<path id="Vector 189_3" d="M202.28 135.372L51.9847 20.9446" stroke="#BCB5B5" stroke-width="3"/>
+</g>
+</g>
+<path id="Rectangle 12_3" d="M194.342 139.704L241.255 178.176C233.141 181.669 230.244 184.76 228.71 192.766L181.798 154.294L194.342 139.704Z" fill="#FAF3E0"/>
+<path id="Rectangle 13_3" d="M87.8612 49.861L199.796 134.984L182.218 154.639L77.5215 62.77L87.8612 49.861Z" fill="#FAF3E0"/>
+<path id="Polygon 2_3" d="M199.796 134.984C201.21 141.739 203.503 145.385 209.181 151.729L194.994 140.302L199.796 134.984Z" fill="#FAF3E0"/>
+</g>
+</g>
+</svg>

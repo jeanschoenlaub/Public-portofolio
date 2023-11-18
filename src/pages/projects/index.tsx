@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { motion } from 'framer-motion';
 import { WindSVG } from "~/components/wind-svg";
+import Projects from "../home/projects";
 
 // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
 interface VisibilityState {
@@ -11,6 +12,13 @@ interface VisibilityState {
 
 
 export default function Home() {
+
+  const numTurbines = 3; // Number of turbines
+  const spacing = 30; // Spacing in pixels between each turbine
+  const turbineHeight = 198; // Height of each turbine
+
+  // Create an array for the turbines
+  const turbinesArray = Array.from({ length: numTurbines });
 
   return (
     <>
@@ -28,12 +36,25 @@ export default function Home() {
             <Link href={"/"} className="underline-custom-mint-green">Blog</Link>
           </nav>
 
-            {/* Conditional rendering of LeftDrawings for medium devices and up */}
-            <div className="hidden md:block">
-              <WindSVG></WindSVG>
-              
+      
+
+            <div id="projects" className={` p-2 border-0 md:border-2 mt-12 `}>
+                <h2 className="text-2xl font-semibold mt-2 mb-2"> What I&apos;ve been up to </h2>
+                <Projects></Projects>
+                <Projects></Projects>
             </div>
-        </div>
+
+
+            <div className="hidden md:block">
+      <div className="fixed top-0 right-48 transform -translate-x-1/2">
+        {turbinesArray.map((_, index) => (
+          <div key={index} style={{ position: 'absolute', top: `${index * (turbineHeight + spacing)}px`, width: '180px', height: '198px' }}>
+            <WindSVG width="180" height="198" />
+          </div>
+        ))}
+      </div>
+    </div>
+    </div>
       </main>
     </>
   );

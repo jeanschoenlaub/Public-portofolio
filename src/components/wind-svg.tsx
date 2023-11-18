@@ -1,18 +1,39 @@
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
-export const WindSVG = () => {
-    // Define the animation
+interface SunSVGProps {
+    width: string;
+    height: string;
+  }
+  
+export const WindSVG = ({ width, height }: SunSVGProps) => {
+
+    const [scrollY, setScrollY] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    // Calculate rotation based on scroll position
+    const rotateValue = Math.abs(scrollY * 1); // Adjust the multiplier as needed
+
+
     const bladeAnimation = {
-        rotate: 720, // Full circle rotation
-        transition: {
-        duration: 20, // Duration of one rotation cycle in seconds
-        repeat: Infinity, // Repeat the animation indefinitely
-        ease: "linear" // Linear animation for constant speed
-        }
+        rotate: rotateValue,
+        transition: { duration: 0.1, ease: "linear" }
     };
 
+
     return (
-     <svg width="547" height="593" viewBox="0 0 547 593" fill="none" xmlns="http://www.w3.org/2000/svg">
+     <svg width={width} height={height} viewBox="0 -200 650 800" fill="none" xmlns="http://www.w3.org/2000/svg">
      <g id="Group 22">
      <g id="Tower">
      <path id="Vector 193" d="M259 582L273 230" stroke="#BCB5B5" stroke-width="5"/>

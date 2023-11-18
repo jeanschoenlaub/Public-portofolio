@@ -2,33 +2,56 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 interface SunSVGProps {
-    width: string;
-    height: string;
+    width: number;
+    height: number;
   }
   
 export const WindSVG = ({ width, height }: SunSVGProps) => {
 
-    const [scrollY, setScrollY] = useState(0);
+    const [rotation, setRotation] = useState(0);
+    const [isAnimating, setIsAnimating] = useState(true);
+
+    useEffect (() => {
+        console.log(rotation)
+    },[rotation])
+
 
     useEffect(() => {
+        let lastScrollY = window.scrollY;
+        let animationTimeout: NodeJS.Timeout;
+    
         const handleScroll = () => {
-            setScrollY(window.scrollY);
+            setIsAnimating(true); // Start or continue the animation on scroll
+            const scrollDiff = window.scrollY - lastScrollY;
+            lastScrollY = window.scrollY;
+            setRotation(prevRotation => prevRotation + Math.abs(scrollDiff * 0.3));
+    
+            // Reset the timeout on each scroll
+            clearTimeout(animationTimeout);
+            animationTimeout = setTimeout(() => {
+                setIsAnimating(false); // Stop the animation after a period of inactivity
+            }, 2000); // 5 seconds after the last scroll
         };
-
+    
         window.addEventListener('scroll', handleScroll);
 
+        
+        const interval = setInterval(() => {
+            if (!isAnimating) return;
+                setRotation(prevRotation => prevRotation * 0.99 );
+        }, 250);
+    
+        // Clean up function
         return () => {
             window.removeEventListener('scroll', handleScroll);
+            clearInterval(interval);
+            clearTimeout(animationTimeout);
         };
-    }, []);
-
-    // Calculate rotation based on scroll position
-    const rotateValue = Math.abs(scrollY * 1); // Adjust the multiplier as needed
-
+    }, [isAnimating]);
 
     const bladeAnimation = {
-        rotate: rotateValue,
-        transition: { duration: 0.1, ease: "linear" }
+        rotate: rotation + 50 ,
+        transition: { duration: 5, ease: "linear" }
     };
 
 
@@ -48,7 +71,8 @@ export const WindSVG = ({ width, height }: SunSVGProps) => {
      <circle id="Ellipse 5" cx="289" cy="206" r="30.5" fill="#FAF3E0" stroke="#BCB5B5" stroke-width="3"/>
      <path id="Vector 202" d="M278.5 194C278.5 194 284.5 185 295.5 188.5C306.5 192 308 204.5 308 204.5" stroke="#BCB5B5" stroke-width="3"/>
      </g>
-     <motion.g id="Blade1" animate={bladeAnimation} style={{originX: 0.105, originY: -0.097}} >
+     <motion.g animate={bladeAnimation} style={{originX: 0.552, originY: 0.397}}>
+     <g id="Blade1"  >
      <g id="Group 14">
      <path id="Vector 184" d="M306.645 232.204C298.534 237.031 293.097 237.43 284 236.268" stroke="#BCB5B5" stroke-width="3"/>
      <g id="Group 12">
@@ -64,8 +88,8 @@ export const WindSVG = ({ width, height }: SunSVGProps) => {
      <path id="Rectangle 12" d="M315.684 293.863L305.823 234C298.741 239.28 294.615 240.244 286.915 237.569L296.776 297.432L315.684 293.863Z" fill="#FAF3E0"/>
      <path id="Rectangle 13" d="M340.25 431L322.499 291.5L296.688 296.896L323.901 433.5L340.25 431Z" fill="#FAF3E0"/>
      <path id="Polygon 2" d="M322.499 291.5C317.355 286.898 315.345 283.089 312.69 275L315.492 293L322.499 291.5Z" fill="#FAF3E0"/>
-     </motion.g>
-     <motion.g id="Blade2" animate={bladeAnimation}  style={{originX: -0.07, originY: 1.05}}>
+     </g>
+     <g id="Blade2">
      <g id="Group 14_2">
      <path id="Vector 184_3" d="M303.173 178.684C311.409 183.295 314.472 187.804 318.015 196.263" stroke="#BCB5B5" stroke-width="3"/>
      <g id="Group 12_2">
@@ -81,8 +105,8 @@ export const WindSVG = ({ width, height }: SunSVGProps) => {
      <path id="Rectangle 12_2" d="M352.052 140.026L305.14 178.498C313.253 181.991 316.151 185.082 317.684 193.088L364.597 154.616L352.052 140.026Z" fill="#FAF3E0"/>
      <path id="Rectangle 13_2" d="M458.533 50.1832L346.598 135.306L364.176 154.962L468.873 63.0922L458.533 50.1832Z" fill="#FAF3E0"/>
      <path id="Polygon 2_2" d="M346.598 135.306C345.184 142.062 342.891 145.707 337.213 152.051L351.4 140.624L346.598 135.306Z" fill="#FAF3E0"/>
-     </motion.g>
-     <motion.g id="Blade3" animate={bladeAnimation} style={{originX: 1.09, originY: 1}}>
+     </g>
+     <g id="Blade3">
      <g id="Group 14_3">
      <path id="Vector 184_5" d="M257.576 206.498C257.452 197.06 259.825 192.153 265.38 184.855" stroke="#BCB5B5" stroke-width="3"/>
      <g id="Group 12_3">
@@ -98,7 +122,10 @@ export const WindSVG = ({ width, height }: SunSVGProps) => {
      <path id="Rectangle 12_3" d="M199.658 183.497L256.432 204.888C255.401 196.115 256.629 192.06 262.796 186.729L206.022 165.337L199.658 183.497Z" fill="#FAF3E0"/>
      <path id="Rectangle 13_3" d="M68.6115 136.202L198.297 190.58L206.531 165.529L74.6212 120.794L68.6115 136.202Z" fill="#FAF3E0"/>
      <path id="Polygon 2_3" d="M198.298 190.58C204.855 188.426 209.159 188.59 217.492 190.335L200.502 183.762L198.298 190.58Z" fill="#FAF3E0"/>
+     
+     </g>
      </motion.g>
+     
      </g>
      </svg>
      

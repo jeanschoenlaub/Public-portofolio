@@ -7,13 +7,13 @@ export default function AboutMe() {
     <>
       <div className="flex flex-col"> 
         <div className="flex">
-            <div className="w-1/4 hidden md:block">
-                <img src="/profile_image.jpeg" alt="Jean's Profile" className="rounded-full w-32 h-32 mr-12" />
+            <div className="w-1/4 hidden md:block ">
+                <img src="/profile_image.jpeg" alt="Jean's Profile" className="rounded-full flex-grow items-center w-32 h-32 mr-12" />
             </div>
             <div className="flex w-full md:w-3/4 flex-col text-left">
                 
                 <h1 className="text-2xl font-semibold mb-2">Hey, I&apos;m Jean.</h1>
-                <p className="mb-4">An engineer from Switzerland passionate about making the world a better place. I love making cool and valuable products that . I am   </p>
+                <p className="mb-4">An engineer from Switzerland passionate about making the world a better place. I thrive on building innovative solutions to real problems, be it energy transition, sustainability or digital transformation. </p>
                 <h1 className="text-xl font-semibold mb-2"> I am currently on sabbatical until September &apos;24  </h1>
             </div>
         </div>

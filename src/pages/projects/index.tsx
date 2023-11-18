@@ -1,8 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
-import { motion } from 'framer-motion';
-import { WindSVG } from "~/components/wind-svg";
 import Projects from "../home/projects";
+import DrawingsProjects from "./drawings";
 
 // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
 interface VisibilityState {
@@ -12,13 +11,6 @@ interface VisibilityState {
 
 
 export default function Home() {
-
-  const numTurbines = 3; // Number of turbines
-  const spacing = 30; // Spacing in pixels between each turbine
-  const turbineHeight = 198; // Height of each turbine
-
-  // Create an array for the turbines
-  const turbinesArray = Array.from({ length: numTurbines });
 
   return (
     <>
@@ -46,13 +38,8 @@ export default function Home() {
 
 
             <div className="hidden md:block">
-      <div className="fixed top-0 right-48 transform -translate-x-1/2">
-        {turbinesArray.map((_, index) => (
-          <div key={index} style={{ position: 'absolute', top: `${index * (turbineHeight + spacing)}px`, width: '180px', height: '198px' }}>
-            <WindSVG width="180" height="198" />
-          </div>
-        ))}
-      </div>
+              <DrawingsProjects></DrawingsProjects>
+      
     </div>
     </div>
       </main>

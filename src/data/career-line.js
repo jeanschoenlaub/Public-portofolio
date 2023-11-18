@@ -26,7 +26,7 @@ export const timelineData = [
     },
     {
       year: "2014-2018, Lausanne CH",
-      description: "Studied mechatronics and lot's of skiing.",
+      description: "Studied mechatronics at EPFL, and lot's of skiing.",
       link: "" // No link provided for this entry
     }
   ];

@@ -67,7 +67,7 @@ export default function Projects() {
             <div className="flex w-52 justify-center items-center border py-1 px-2 rounded-lg border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white ">
                 <Link href="/projects" download="Jean_Resume.pdf">
                     <div className=" font-semibold text flex items-center">
-                        Check out more cool stuff
+                        Check out more projects.
                     </div>
                 </Link>
             </div>

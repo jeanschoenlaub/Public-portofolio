@@ -74,7 +74,7 @@ export default function Home() {
           <nav className="flex flex-no-shrink justify-end space-x-6 mb-4 mr-4 text-xl font-montserrat"> {/* Larger text and Montserrat font */}
             <Link href={"/"} className="underline-custom-mint-green font-semibold ">Home</Link>
             <Link href={"/projects"} className="underline-custom-mint-green">Projects</Link>
-            <Link href={"/"} className="underline-custom-mint-green">Blog</Link>
+            <Link href={"/blog"} className="underline-custom-mint-green">Blog</Link>
           </nav>
 
           <div id="aboutme" className={`border-0 md:border-2 p-2 mt-12 ${isElementVisible.aboutme ? ' border-yellow-400' : 'border-custom-beige'}`}>

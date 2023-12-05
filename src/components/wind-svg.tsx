@@ -11,14 +11,16 @@ export const WindSVG = ({ width, height }: SunSVGProps) => {
     const [rotation, setRotation] = useState(0);
     const [isAnimating, setIsAnimating] = useState(true);
 
-    useEffect (() => {
-        console.log(rotation)
-    },[rotation])
-
 
     useEffect(() => {
+
+        if (typeof window === 'undefined') {
+            return;
+          }
+
         let lastScrollY = window.scrollY;
         let animationTimeout: NodeJS.Timeout;
+        
     
         const handleScroll = () => {
             setIsAnimating(true); // Start or continue the animation on scroll

@@ -13,40 +13,40 @@ export default function DrawingsProjects () {
   const [topOffsetWindTurbine, setTopOffsetWindTurbine] = useState(0); // The space between the top of screen and first panel to have them centered vertically
 
   // Create an array for the turbines
-  let turbinesArray = Array.from({ length: numTurbines });
+  const turbinesArray = Array.from({ length: numTurbines });
 
   const calculateValues = () => {
-        
+    // Window-dependent code
     const vwUnitInPixels = window.innerWidth / 100;
     const twentyFiveVW = 25 * vwUnitInPixels;
-    const offsetPxWindTurbin = (twentyFiveVW - turbineWidth)/2+ + turbineWidth ; 
+    const offsetPxWindTurbin = (twentyFiveVW - turbineWidth) / 2 + turbineWidth; 
     setRightOffsetWindTurbin(offsetPxWindTurbin);
-  
+
     const vhUnitInPixels = window.innerHeight / 100;
-    const calcTopOffsetWindTurbinw = 50 * vhUnitInPixels - totalHeight/ 2
-    setTopOffsetWindTurbine(calcTopOffsetWindTurbinw)
-};
+    const calcTopOffsetWindTurbinw = 50 * vhUnitInPixels - totalHeight / 2;
+    setTopOffsetWindTurbine(calcTopOffsetWindTurbinw);
+  };
 
+  // Adjust number of turbines based on window size
+  const adjustTurbines = () => {
+    const newNumTurbines = window.innerHeight < 600 ? 1 : 2;
+    setNumTurbines(newNumTurbines);
+    calculateValues();
+  };
+
+  // Setup and cleanup of window resize listener
   useEffect(() => {
-   // Initial svg placements calcs
-   calculateValues();
-   // Set up the resize event listener
-   window.addEventListener('resize', calculateValues);
-   return () => {
-       window.removeEventListener('resize', calculateValues);// Clean up
-   };
-}, []);
-
-  useEffect(() => { // changes the number of turbines and replaces svg on screen size change
-    if ((window.innerHeight)< 600){
-        setNumTurbines(1)
-        calculateValues();
+    if (typeof window !== 'undefined') {
+      calculateValues();
+      adjustTurbines();
+      window.addEventListener('resize', adjustTurbines);
     }
-    else {
-        setNumTurbines(2); // Update number of turbines for larger height
-        calculateValues();
-    }
-  }, [window.innerHeight])
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', adjustTurbines);
+      }
+    };
+  }, []);
 
   return (
     <>

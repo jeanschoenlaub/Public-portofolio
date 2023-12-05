@@ -11,7 +11,7 @@ export const projectData = [
         `,
       video: "https://www.riples.app/",
       date: "2023",
-      tags: {1:"react",2:"typescript",3:"tailwind",4:"next",5:"vercel"},
+      tags: {1:"react",2:"typescript",3:"tailwind",4:"next",5:"vercel",6:"prisma",7:"AWS",8:"OpenAI APIs"},
       image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/Riples.png"
     },
    {
@@ -20,7 +20,7 @@ export const projectData = [
         full_text: "My first interaction with develloping a CI/Cd pipeline.",
         video: "",
         date: "2023",
-        tags: {1:"AWS",2:"Google Data Studio"},
+        tags: {1:"AWS",2:"Google Data Studio",3:"Postgre",4:"SQL",5:""},
         image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/5B_DW.png"
    },
     {

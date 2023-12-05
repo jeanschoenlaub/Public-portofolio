@@ -9,7 +9,7 @@ export const projectData = [
         Embedding AI including agents with authororisations to conduct actions on users behalfs.
         Developing Riples was a journey in innovation, challenging my technical and creative skills to produce a platform that empowers collaboration and idea realization.
         `,
-      video: "https://www.riples.app/",
+      video: "https://www.riples.app/about",
       date: "2023",
       tags: {1:"react",2:"typescript",3:"tailwind",4:"next",5:"vercel",6:"prisma",7:"AWS",8:"OpenAI APIs"},
       image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/Riples.png"
@@ -17,10 +17,10 @@ export const projectData = [
    {
         title: "AWS Data warehouse ",
         description: "Ingesting data from 5 sources, accessible through reports and dashboards.",
-        full_text: "My first interaction with develloping a CI/Cd pipeline.",
+        full_text: "My first interaction with develloping a CI/CD pipeline.",
         video: "",
         date: "2023",
-        tags: {1:"AWS",2:"Google Data Studio",3:"Postgre",4:"SQL",5:""},
+        tags: {1:"AWS",2:"Google Data Studio",3:"PostgreSQL",4:"SQL",5:"ETL"},
         image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/5B_DW.png"
    },
     {
@@ -34,7 +34,7 @@ export const projectData = [
     },
     {
         title: "Greenhouse crop model",
-        description: "Using Rhino CAD to model light and crop growth under semi-transparent solar panels",
+        description: "Using Rhino CAD to model light and crop growth under a semi-transparent solar panels greenhouse",
         full_text: "",
         video: "",
         date: "2021",
@@ -43,11 +43,11 @@ export const projectData = [
     },
     {
         title: "Smart Solar Designs",
-        description: "Electric Single Line Diagram (SLD) Automation for residential solar",
+        description: "Electric Single Line Diagram (SLD) Automation (desktop app) for residential solar",
         full_text: "The first real coding project I have done, where I merged some existing python skills (I had coded a Snake game previously for a high-school project) with new skills I had to learn for this project, such as versioning with Github, or Excel VBA",
         video: "",
         date: "2021",
         tags: {1:"Python",2:"VBAs"},
-        image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/SmartSolarDesign.pngg"
+        image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/SmartSolarDesign.png"
     },
   ];

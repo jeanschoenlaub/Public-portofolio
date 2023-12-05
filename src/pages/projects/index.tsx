@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Projects from "../home/projects";
 import DrawingsProjects from "./drawings";
+import ProjectList from "./project-list";
 
 // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
 interface VisibilityState {
@@ -30,10 +31,9 @@ export default function Home() {
 
       
 
-            <div id="projects" className={` p-2 border-0 md:border-2 mt-12 `}>
-                <h2 className="text-2xl font-semibold mt-2 mb-2"> What I&apos;ve been up to </h2>
-                <Projects></Projects>
-                <Projects></Projects>
+            <div id="projects" className={` p-2 mt-12 `}>
+                <h2 className="text-2xl font-semibold mt-2"> What I&apos;ve been up to </h2>
+                <ProjectList></ProjectList>
             </div>
 
 

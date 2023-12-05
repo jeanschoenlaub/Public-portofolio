@@ -65,7 +65,7 @@ export default function Home() {
     <>
       <Head>
         <title>Jean Schoenlaub</title>
-        <meta name="description" content="My awesome portfolio" />
+        <meta name="My Portofolio" content="A bit about me, what I've done and what I think" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

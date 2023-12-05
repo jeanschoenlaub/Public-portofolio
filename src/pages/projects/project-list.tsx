@@ -2,7 +2,7 @@ import Link from "next/link";
 import { projectData } from "../../data/projects";
 import Image from 'next/image';
 
-interface Project {
+interface ProjectList {
     title: string;
     description: string;
     full_text: string;
@@ -12,8 +12,13 @@ interface Project {
     image: string;
   }
 
-export default function Projects() {
-    const recentProjects = [...projectData].slice(0, 3);
+  // Function to convert a title into a slug
+const slugify = (title: string) => {
+    return title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+};
+
+export default function ProjectList() {
+    const recentProjects = [...projectData];
   
     // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
     const renderTags = (tags: { [key: number]: string | undefined }) => {
@@ -28,9 +33,9 @@ export default function Projects() {
   
       return (
         <>
-          {recentProjects.map((project, index) => (
-            <Link href="/projects" key={index}>
-            <div key={index} className="border-2 border-custom-mint-green flex bg-white rounded-lg mx-2 md:mx-5 my-4 shadow-md">
+        {recentProjects.map((project, index) => (
+            <Link key={index} href={`/projects/${slugify(project.title)}`}>
+            <div className="border-2 border-custom-mint-green flex bg-white rounded-lg my-10 shadow-md">
               {/* Image */}
               <div className="relative w-1/2 border border-slate-300">
                 <Image
@@ -44,8 +49,11 @@ export default function Projects() {
               {/* Content */}
               <div className="p-4 w-1/2 space-y-2">
                 {/* Project Title */}
-                <div className="text-lg tracking-tight font-bold">
-                  {project.title}
+                <div className=" ">
+                 <span className="text-xl tracking-tight font-bold ">
+                            {project.title}
+                    </span>
+                    <span className="ml-2 font-medium md:font-medium text-xs md:text-base text-gray-500">{`(`+project.date+`)`}</span>
                 </div>
     
                 {/* Description */}
@@ -53,25 +61,32 @@ export default function Projects() {
                   {project.description}
                 </div>
     
-                {/* Project Tags 
+                {/* Project Tags */}
                 <div className="text-sm text-gray-800">
                   <span className="text-gray-500">
                   </span>
                   {renderTags(project.tags)}
-                </div>*/}
+                </div>
+
+                <div className="flex justify-end">
+                    <div className="flex w-40 justify-center items-center border py-1 px-2 rounded-lg border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white ">
+                        <Link href={`/projects/${slugify(project.title)}`}>
+                            <div className=" font-semibold text flex items-center">
+                               Read More 
+                               <svg className="w-4 h-4 ml-2 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                </svg>
+                            </div>
+                        </Link>
+                    </div>
+                    </div>
+
               </div>
+
+
             </div>
             </Link>
           ))}
-          <div className="flex justify-center">
-            <div className="flex w-52 justify-center items-center border py-1 px-2 rounded-lg border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white ">
-                <Link href="/projects">
-                    <div className=" font-semibold text flex items-center">
-                        Check out more projects.
-                    </div>
-                </Link>
-            </div>
-            </div>
             </>
       );
   }

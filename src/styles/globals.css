@@ -13,10 +13,7 @@ body {
     text-decoration-thickness: 3px; 
     text-underline-offset: 6px;
   }
-  
-
- 
-  
+    
   .timeline-entry {
     position: relative;
     margin-left: 20px;
@@ -45,3 +42,5 @@ body {
   .border-yellow {
     border: 2px solid yellow;
   }
+
+  

@@ -96,7 +96,7 @@ export default function LeftDrawings ( { isAnyElementVisible, onTopOffsetPowerCh
                 H ${panelWidth +rightOffsetPanelDivs - FullPowerWidth +  30}
                 `}
                 stroke="#B87333"
-                stroke-width="3"
+                strokeWidth="3"
                 fill="none"
             />
         </svg>

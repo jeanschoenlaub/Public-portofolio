@@ -32,7 +32,6 @@ export default function Home() {
       
 
             <div id="projects" className={` p-2 mt-12 `}>
-                <h2 className="text-2xl font-semibold mt-2"> What I&apos;ve been up to </h2>
                 <ProjectList></ProjectList>
             </div>
 

@@ -1,9 +1,10 @@
 export const projectData = [
     {
       title: "Riples",
+      type: {1:"Software"},
       description: "Building a project hosting, sharing, and collaboration platform.",
       full_text: `
-        Riples is web application that fuses social networking with project management. This journey involved:
+        Riples is full stack application web application that merges social networking and project management concept for personal usage. Develloping this app involved:
         Transforming the initial concept into a functional web app through coding and UI/UX design and testing.
         Learning and deploying a full-stack application for web development including CI/CD, authentification...
         Embedding AI including agents with authororisations to conduct actions on users behalfs.
@@ -11,11 +12,12 @@ export const projectData = [
         `,
       video: "https://www.riples.app/about",
       date: "2023",
-      tags: {1:"react",2:"typescript",3:"tailwind",4:"next",5:"vercel",6:"prisma",7:"AWS",8:"OpenAI APIs"},
+      tags: {1:"React",2:"Typescript",3:"Tailwind",4:"Next.js",5:"Vercel",6:"Prisma",7:"AWS",8:"OpenAI APIs"},
       image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/Riples.png"
     },
    {
-        title: "AWS Data warehouse ",
+        title: "AWS Data warehouse",
+        type: {1:"Software",2:"Data",3:"Manufacturing"},
         description: "Ingesting data from 5 sources, accessible through reports and dashboards.",
         full_text: "My first interaction with develloping a CI/CD pipeline.",
         video: "",
@@ -25,6 +27,7 @@ export const projectData = [
    },
     {
         title: "3Doo",
+        type: {1:"Software",2:"Data",3:"Manufacturing"},
         description: "A custom made data connector between Odoo (ERP) and 3Dexperience (PLM).",
         full_text: ".",
         video: "",
@@ -34,20 +37,32 @@ export const projectData = [
     },
     {
         title: "Greenhouse crop model",
+        type: {1:"CAD",2:"Data"},
         description: "Using Rhino CAD to model light and crop growth under a semi-transparent solar panels greenhouse",
         full_text: "",
         video: "",
         date: "2021",
-        tags: {1:"Rhino CAD",2:"Python"},
+        tags: {1:"Rhino CAD",2:"Rhino Grasshoper", 3:"Python"},
         image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/thesis_rhino.png"
     },
     {
         title: "Smart Solar Designs",
+        type: {1:"CAD",2:"Software",3:"Solar"},
         description: "Electric Single Line Diagram (SLD) Automation (desktop app) for residential solar",
         full_text: "The first real coding project I have done, where I merged some existing python skills (I had coded a Snake game previously for a high-school project) with new skills I had to learn for this project, such as versioning with Github, or Excel VBA",
-        video: "",
+        video: "https://youtu.be/gEQEteRoiHQ",
         date: "2021",
-        tags: {1:"Python",2:"VBAs"},
+        tags: {1:"Python",2:"Excel VBA"},
         image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/SmartSolarDesign.png"
     },
+    {
+      title: "Commercial Solar Project Designs",
+      type: {1:"Solar"},
+      description: "Solar project engineering from 30-100 kW for commercial clients",
+      full_text: "While working at HCB solar, after having designed more than a hundred residential project (and having automated that process), I was able to help the lead engineer on some commercial solar projects ranging from 30 to a 100 kW each",
+      video: "",
+      date: "2021",
+      tags: {1:"AutoCAD"},
+      image: ""
+  },
   ];

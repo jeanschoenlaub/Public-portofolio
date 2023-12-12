@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { timelineData } from "../../data/career-line";
 
 export default function Timeline() {
@@ -19,9 +20,9 @@ export default function Timeline() {
               <p className="text-sm">{item.description}</p>
               {/* Conditional Link */}
               {item.link && (
-                <a href={item.link} className="text-blue-500 hover:underline text-sm">
+                <Link href={item.link} className="text-blue-500 hover:underline text-sm">
                   Check it out here.
-                </a>
+                </Link>
               )}
             </div>
           </li>

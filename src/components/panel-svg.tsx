@@ -1,14 +1,14 @@
 export const PanelSVG = () => {
     return (
         <svg width="223" height="121" viewBox="0 0 223 121" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M197.5 1.5L27 44.5L53.5 119.5L221 67.5L197.5 1.5Z" fill="#476AE8" stroke="#A9A3A3" stroke-width="2"/>
+            <path d="M197.5 1.5L27 44.5L53.5 119.5L221 67.5L197.5 1.5Z" fill="#476AE8" stroke="#A9A3A3" strokeWidth="2"/>
             <path d="M114 23L138 94" stroke="#A9A3A3"/>
-            <path d="M72 33L95 106" stroke="#A9A3A3" stroke-width="0.5"/>
-            <path d="M158 11L181 81" stroke="#A9A3A3" stroke-width="0.5"/>
-            <path d="M45 94L213 44" stroke="#A9A3A3" stroke-width="0.5"/>
-            <path d="M37 71L204 23" stroke="#A9A3A3" stroke-width="0.5"/>
-            <path d="M33 61L27 100.5" stroke="#A9A3A3" stroke-width="2"/>
-            <path d="M30.5 52L25 89C21.3681 99.9583 15.1846 101.43 1 100.5" stroke="#B87333" stroke-width="3"/>
+            <path d="M72 33L95 106" stroke="#A9A3A3" strokeWidth="0.5"/>
+            <path d="M158 11L181 81" stroke="#A9A3A3" strokeWidth="0.5"/>
+            <path d="M45 94L213 44" stroke="#A9A3A3" strokeWidth="0.5"/>
+            <path d="M37 71L204 23" stroke="#A9A3A3" strokeWidth="0.5"/>
+            <path d="M33 61L27 100.5" stroke="#A9A3A3" strokeWidth="2"/>
+            <path d="M30.5 52L25 89C21.3681 99.9583 15.1846 101.43 1 100.5" stroke="#B87333" strokeWidth="3"/>
         </svg> 
     );
 };
@@ -21,9 +21,9 @@ interface SunSVGProps {
     return (
         <svg width={width} height={height} viewBox="0 0 329 350" fill="none" xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="164.5" cy="174.5" rx="76.5" ry="71.5" fill="#EAB308"/>
-        <path d="M123.178 157.245C123.178 156.196 124.84 154.591 125.625 153.904C127.737 152.056 131.07 151.171 133.809 151.171C139.307 151.171 143.836 152.693 147.781 156.638" stroke="black" stroke-width="3" strokeLinecap="round"/>
-        <path d="M181 157.075C181 156.026 182.662 154.42 183.447 153.734C185.559 151.885 188.892 151 191.631 151C197.128 151 201.658 152.522 205.603 156.467" stroke="black" stroke-width="3" strokeLinecap="round"/>
-        <path d="M126 189C131.5 223.53 179.968 231.593 203 189" stroke="black" stroke-width="3"/>
+        <path d="M123.178 157.245C123.178 156.196 124.84 154.591 125.625 153.904C127.737 152.056 131.07 151.171 133.809 151.171C139.307 151.171 143.836 152.693 147.781 156.638" stroke="black" strokeWidth="3" strokeLinecap="round"/>
+        <path d="M181 157.075C181 156.026 182.662 154.42 183.447 153.734C185.559 151.885 188.892 151 191.631 151C197.128 151 201.658 152.522 205.603 156.467" stroke="black" strokeWidth="3" strokeLinecap="round"/>
+        <path d="M126 189C131.5 223.53 179.968 231.593 203 189" stroke="black" strokeWidth="3"/>
         <rect x="159" width="11" height="90" rx="5" fill="#EAB308"/>
         <rect x="318.076" y="82" width="11" height="90" rx="5" transform="rotate(60 318.076 82)" fill="#EAB308"/>
         <rect x="238.643" y="35.5584" width="11" height="70" rx="5" transform="rotate(30 238.643 35.5584)" fill="#EAB308"/>
@@ -46,9 +46,9 @@ interface SunSVGProps {
 export const PowerSVG = () => {
     return (
     <svg width="55" height="33" viewBox="0 0 55 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 12L30 12" stroke="#B87333" stroke-width="3"/>
-        <path d="M30 12L42.3077 24H46.4103H50" stroke="#B87333" stroke-width="3"/>
-        <path d="M30 12L42.3077 1H46.4103H50" stroke="#B87333" stroke-width="3"/>
+        <path d="M4 12L30 12" stroke="#B87333" strokeWidth="3"/>
+        <path d="M30 12L42.3077 24H46.4103H50" stroke="#B87333" strokeWidth="3"/>
+        <path d="M30 12L42.3077 1H46.4103H50" stroke="#B87333" strokeWidth="3"/>
         <path d="M43 2L50 5" stroke="#B87333"/>
         <path d="M43 5L50 5" stroke="#B87333"/>
         <path d="M43 5L50 8" stroke="#B87333"/>
@@ -68,10 +68,10 @@ export const PowerSVG = () => {
 export const PowerFullSVG = () => {
     return (
         <svg width="93" height="25" viewBox="0 0 93 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 12L26 12" stroke="#B87333" stroke-width="3"/>
-        <path d="M71 12L93 12" stroke="#B87333" stroke-width="3"/>
-        <path d="M26 12L38.3077 24H42.4103H46" stroke="#B87333" stroke-width="3"/>
-        <path d="M26 12L38.3077 1H42.4103H46" stroke="#B87333" stroke-width="3"/>
+        <path d="M0 12L26 12" stroke="#B87333" strokeWidth="3"/>
+        <path d="M71 12L93 12" stroke="#B87333" strokeWidth="3"/>
+        <path d="M26 12L38.3077 24H42.4103H46" stroke="#B87333" strokeWidth="3"/>
+        <path d="M26 12L38.3077 1H42.4103H46" stroke="#B87333" strokeWidth="3"/>
         <path d="M39 2L46 5" stroke="#B87333"/>
         <path d="M39 5L46 5" stroke="#B87333"/>
         <path d="M39 5L46 8" stroke="#B87333"/>
@@ -85,8 +85,8 @@ export const PowerFullSVG = () => {
         <path d="M39 17L46 20" stroke="#B87333"/>
         <path d="M39 20H46" stroke="#B87333"/>
         <path d="M39 20L46 23" stroke="#B87333"/>
-        <path d="M71 12L59.3077 24H55.4103H52" stroke="#B87333" stroke-width="3"/>
-        <path d="M71 12L59.3077 1H55.4103H52" stroke="#B87333" stroke-width="3"/>
+        <path d="M71 12L59.3077 24H55.4103H52" stroke="#B87333" strokeWidth="3"/>
+        <path d="M71 12L59.3077 1H55.4103H52" stroke="#B87333" strokeWidth="3"/>
         <path d="M59 2L52 5" stroke="#B87333"/>
         <path d="M59 5L52 5" stroke="#B87333"/>
         <path d="M59 5L52 8" stroke="#B87333"/>

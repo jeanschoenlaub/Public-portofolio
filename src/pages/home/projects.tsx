@@ -37,7 +37,7 @@ export default function Projects() {
                   className="rounded-l-lg object-cover"
                   src={project.image || '/default-project-image.jpg'} // Fallback to default image
                   alt={`${project.title} image`}
-                  layout="fill"
+                  fill={true} 
                 />
               </div>
     
@@ -53,12 +53,12 @@ export default function Projects() {
                   {project.description}
                 </div>
     
-                {/* Project Tags 
+                {/* Project Tags */}
                 <div className="text-sm text-gray-800">
                   <span className="text-gray-500">
                   </span>
                   {renderTags(project.tags)}
-                </div>*/}
+                </div>
               </div>
             </div>
             </Link>

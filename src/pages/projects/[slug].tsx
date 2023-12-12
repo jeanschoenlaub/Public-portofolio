@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { projectData } from "../../data/projects";
 import React from 'react';
+import Link from 'next/link';
 
 interface ProjectProps {
   project: {
@@ -23,12 +24,26 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
   }
 
   return (
-    <div>
+    <main className=" bg-custom-beige p-4">
+    <div className="md:container px-2 md:px-8 w-full md:w-1/2 mx-0 md:mx-auto ">
+      <nav className="flex flex-no-shrink justify-end space-x-6 mb-4 mr-4 text-xl font-montserrat"> {/* Larger text and Montserrat font */}
+        <Link href={"/"} className="underline-custom-mint-green ">Home</Link>
+        <Link href={"/projects"} className="underline-custom-mint-green font-semibold ">Projects</Link>
+        <Link href={"/blog"} className="underline-custom-mint-green ">Blog</Link>
+      </nav>
+
+      
+
+      <div  className={` p-2 mt-12 `}>
       <h1>{project.title}</h1>
       <Image src={project.image} alt={project.title} width={500} height={300} />
       <p>{project.description}</p>
       {/* Render other project details */}
     </div>
+
+     </div>
+  </main>
+    
   );
 };
 

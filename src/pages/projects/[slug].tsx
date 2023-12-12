@@ -32,24 +32,24 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
   );
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = projectData.map((project) => ({
+export const getStaticPaths: GetStaticPaths = () => {
+const paths = projectData.map((project) => ({
     params: { slug: slugify(project.title) },
-  }));
+}));
 
-  return { paths, fallback: true };
+return { paths, fallback: true };
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  const slug = context.params?.slug;
-  const project = projectData.find((project) => slugify(project.title) === slug);
+export const getStaticProps: GetStaticProps = (context) => {
+const slug = context.params?.slug;
+const project = projectData.find((project) => slugify(project.title) === slug);
 
-  if (!project) {
+if (!project) {
     return { notFound: true };
-  }
+}
 
-  return { props: { project } };
-};
+return { props: { project } };
+};  
 
 export default ProjectPage;
 

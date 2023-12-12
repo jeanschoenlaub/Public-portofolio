@@ -1,6 +1,6 @@
 export const timelineData = [
     {
-      year: "Now, On the road",
+      year: "2023-2024, On the road",
       description: "Building a social project hosting, sharing, and collaboration platform, called Riples.",
       link: "https://www.riples.app/"
     },

@@ -10,7 +10,8 @@ export const projectData = [
         Embedding AI including agents with authororisations to conduct actions on users behalfs.
         Developing Riples was a journey in innovation, challenging my technical and creative skills to produce a platform that empowers collaboration and idea realization.
         `,
-      video: "https://www.riples.app/about",
+      link: "https://www.riples.app/about",
+      video: "https://www.youtube.com/watch?v=lbyVFgKV3Oc&t=2s&ab_channel=JeanSchoenlaub",
       date: "2023",
       tags: {1:"React",2:"Typescript",3:"Tailwind",4:"Next.js",5:"Vercel",6:"Prisma",7:"AWS",8:"OpenAI APIs"},
       image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/Riples.png"
@@ -63,6 +64,16 @@ export const projectData = [
       video: "",
       date: "2021",
       tags: {1:"AutoCAD"},
-      image: ""
+      image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/HCB_commercial.png"
   },
+  {
+    title: "Residential Solar Project Designs",
+    type: {1:"Solar"},
+    description: "Solar project engineering from 5-30 kW for residential clients",
+    full_text: `While working at HCB solar, I designed more than a hundred residential solar projects. These are the range of projects I designed:\n\n- Off-grid and on-grid\n- With and without batteries (AC and DC coupled), using brands such as Enphase, Tesla, and Sonnen.\n- A range of different types of inverter, such as micro-inverters (Enphase), inverters with optimisers (SolarEdge), and string-inverters (SMA, Fronius).\n\nThe work typically involved:\n\n- Designing the system based on site photos and satellite imagery (eg. selecting inverter based on the house's breaker box, voltage rise calculations based on satellite imagery), and verifying standard compliance for battery placement..\n- Producing a Single Line Diagram (SLD) for the system.\n- Applying for grid connection with distributors (Ausgrid and Essential Energy)\n- Coordinating with on-site teams during installation.`,
+    video: "",
+    date: "2021",
+    tags: {1:"AutoCAD"},
+    image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/HCB_resi.png"
+},
   ];

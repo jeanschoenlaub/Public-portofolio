@@ -71,7 +71,7 @@ export default function ProjectList() {
 
                 {/* Render filteredProjects instead of recentProjects */}
                 {filteredProjects.map((project, index) => (
-                        <div className="border-2 border-custom-mint-green flex bg-white rounded-lg my-10 shadow-md">
+                        <div key={index} className="border-2 border-custom-mint-green flex bg-white rounded-lg my-10 shadow-md">
                         {/* Image */}
                         <div className="relative w-1/2 border border-slate-300">
                             <Image
@@ -84,12 +84,14 @@ export default function ProjectList() {
                 
                         {/* Content */}
                         <div className="p-4 w-1/2 space-y-2">
-                            {/* Project Title */}
-                            <div className=" ">
-                            <span className="text-xl tracking-tight font-bold ">
-                                        {project.title}
+                            {/* Project Title and Date*/}
+                            <div>
+                                <span className="text-xl tracking-tight font-bold ">
+                                    {project.title}
                                 </span>
-                                <span className="ml-2 font-medium md:font-medium text-xs md:text-base text-gray-500">{`(`+project.date+`)`}</span>
+                                <span className="ml-2 font-medium md:font-medium text-xs md:text-base text-gray-500">
+                                    {`(`+project.date+`)`}
+                                </span>
                             </div>
                 
                             {/* Description */}

@@ -4,6 +4,8 @@ import { useRouter } from 'next/router';
 import { projectData } from "../../data/projects";
 import React from 'react';
 import Link from 'next/link';
+import ReactPlayer from 'react-player';
+import ReactMarkdown from 'react-markdown';
 
 interface ProjectProps {
   project: {
@@ -13,6 +15,7 @@ interface ProjectProps {
     date: string;
     tags: Record<number, string>;
     image: string;
+    video: string;
   };
 }
 
@@ -22,6 +25,17 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
+
+  // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
+  const renderTags = (tags: { [key: number]: string | undefined }) => {
+    return Object.values(tags)
+      .filter((tag): tag is string => tag !== undefined) // Filter out undefined values
+      .map((tag, index) => (
+        <span key={index} className="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold text-gray-700 mr-2 mb-2">
+          #{tag}
+        </span>
+      ));
+  };
 
   return (
     <main className=" bg-custom-beige p-4">
@@ -35,13 +49,56 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
       
 
       <div  className={` p-2 mt-12 `}>
-      <h1>{project.title}</h1>
-      <Image src={project.image} alt={project.title} width={500} height={300} />
-      <p>{project.description}</p>
-      {/* Render other project details */}
-    </div>
+              {/* Go Back to Project List Button */}
+              <Link href="/projects"> 
+                <div className="text-custom-mint-green text-lg hover:underline mb-4 inline-block">&larr; Go Back to Project List</div>
+              </Link>
 
-     </div>
+              {/* Project Details */}
+              <div>
+                  <div className="mb-2">
+                      <span className="text-3xl tracking-tight font-bold ">
+                          {project.title}
+                      </span>
+                      <span className="ml-2 font-medium md:font-medium text-xl md:text-base text-gray-500">
+                          {`(`+project.date+`)`}
+                      </span>
+                  </div>
+
+                  {/* Tags */}
+                  <div className="">
+                    <span className=" text-gray-600 ">
+                        {renderTags(project.tags)}
+                      </span>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-gray-700 mb-4">{project.description}</p>
+                  
+                  {/* Image */}
+                  <div className="flex justify-center">
+                    <Image src={project.image} alt={project.title} width={500} height={300} className="rounded-md border-2 border-custom-mint-green" />
+                  </div>
+
+                  {/* Full Text */}
+                  <div className="mt-4 text-gray-800">
+                    <div className='prose'>
+                    <ReactMarkdown>{project.full_text}</ReactMarkdown>
+                    </div>
+                  </div>
+
+                  {/* Video (if available) */}
+                  {project.video && (
+                    <div className="mt-4">
+                       <ReactPlayer
+                          url={project.video}
+                          controls = {true}
+                        />
+                    </div>
+                  )} 
+              </div>
+            </div>
+        </div>
   </main>
     
   );

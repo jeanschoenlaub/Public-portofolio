@@ -10,7 +10,7 @@ interface ProjectTypeNavProps {
   const ProjectTypeNav: React.FC<ProjectTypeNavProps> = ({
     selectedType,
     setSelectedType,
-    options
+    options = [] //Fallback to empty array if undefined
   }) => {
     const scrollContainer = useRef<HTMLDivElement>(null);
     const [scrollPosition, setScrollPosition] = useState(0);

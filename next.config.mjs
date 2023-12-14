@@ -14,7 +14,7 @@ const config = {
         hostname: 't3-portofolio.s3.us-east-2.amazonaws.com',
       },
     ],
-  },
+  },    
 
   /**
    * If you are using `appDir` then you must comment the below `i18n` config out.

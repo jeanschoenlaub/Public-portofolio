@@ -1,10 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { projectData } from "../../data/projects";
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import ReactPlayer from 'react-player';
+import { TableOfContents } from './project-page/toc';
 
 interface ProjectProps {
   project: {
@@ -25,8 +25,6 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
-  
-  
 
   if (router.isFallback) {
     return <div>Loading...</div>;
@@ -52,7 +50,11 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
         <Link href={"/blog"} className="underline-custom-mint-green ">Blog</Link>
       </nav>
 
-      
+      <div className="w-1/4 flex justify-center align-center">
+          <div className="fixed top-1/4 left-4">
+            <TableOfContents htmlContent={project.full_text} />
+          </div>
+      </div>
 
       <div  className={` p-2 mt-12 `}>
               {/* Go Back to Project List Button */}
@@ -100,10 +102,6 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
                     onClickOutside={toggleModal}
                   />
 
-                  
-<TableOfContents htmlContent={project.full_text} />
-
-
                   {/* Full Text */}
                   <div className="mt-4 text-gray-800">
                     <div className='prose' dangerouslySetInnerHTML={{ __html: project.full_text }}>
@@ -127,6 +125,8 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
     
   );
 };
+
+
 const ImageModal: React.FC<{
   src: string;
   alt: string;
@@ -150,51 +150,6 @@ const ImageModal: React.FC<{
         </svg>
       </button>
       <img src={src} alt={alt} className="max-w-full max-h-full" />
-    </div>
-  );
-};
-
-interface TableOfContentsProps {
-  htmlContent: string;
-}
-
-interface TocItem {
-  id: string;
-  text: string | null;
-}
-
-
-const TableOfContents: React.FC<TableOfContentsProps> = ({ htmlContent }) => {
-
-  const [tocItems, setTocItems] = useState<TocItem[]>([]);
-
-
-  useEffect(() => {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(htmlContent, 'text/html');
-    const headings = doc.querySelectorAll('p[id]');
-    const newTocItems = Array.from(headings).map(heading => ({
-      id: heading.id,
-      text: heading.textContent,
-    }));
-
-    setTocItems(newTocItems);
-  }, [htmlContent]);
-
-  return (
-    <div>
-      ssss
-      {tocItems.length > 0 && (
-        <div className="table-of-contents">
-          <ul>
-            {tocItems.map((item, index) => (
-              <li key={index}>
-                <a href={`#${item.id}`}>{item.text}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
     </div>
   );
 };

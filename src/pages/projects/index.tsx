@@ -37,7 +37,7 @@ export default function Home() {
 
 
             <div className="hidden md:block">
-            <DrawingsProjects></DrawingsProjects>
+              <DrawingsProjects></DrawingsProjects>
       
     </div>
     </div>

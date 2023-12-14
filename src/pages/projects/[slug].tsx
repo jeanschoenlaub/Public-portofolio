@@ -2,10 +2,9 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { projectData } from "../../data/projects";
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import ReactPlayer from 'react-player';
-import ReactMarkdown from 'react-markdown';
 
 interface ProjectProps {
   project: {
@@ -21,6 +20,13 @@ interface ProjectProps {
 
 const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
   const router = useRouter();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+  
+  
 
   if (router.isFallback) {
     return <div>Loading...</div>;
@@ -77,13 +83,31 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
                   
                   {/* Image */}
                   <div className="flex justify-center">
-                    <Image src={project.image} alt={project.title} width={800} height={600} className="rounded-md border-2 border-custom-mint-green" />
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      width={800}
+                      height={600}
+                      className="rounded-md border-2 border-custom-mint-green cursor-pointer"
+                      onClick={toggleModal}
+                    />
                   </div>
+
+                  <ImageModal
+                    src={project.image}
+                    alt={project.title}
+                    isOpen={isModalOpen}
+                    onClickOutside={toggleModal}
+                  />
+
+                  
+<TableOfContents htmlContent={project.full_text} />
+
 
                   {/* Full Text */}
                   <div className="mt-4 text-gray-800">
-                    <div className='prose'>
-                    <ReactMarkdown>{project.full_text}</ReactMarkdown>
+                    <div className='prose' dangerouslySetInnerHTML={{ __html: project.full_text }}>
+                      {/* HTML content will be rendered here */}
                     </div>
                   </div>
 
@@ -101,6 +125,77 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
         </div>
   </main>
     
+  );
+};
+const ImageModal: React.FC<{
+  src: string;
+  alt: string;
+  isOpen: boolean;
+  onClickOutside: () => void;
+}> = ({ src, alt, isOpen, onClickOutside }) => {
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center" onClick={onClickOutside}>
+      {/* Close Button */}
+      <button
+        onClick={onClickOutside}
+        style={{ position: 'absolute', top: '20px', right: '20px', zIndex: 1000 }}
+        className="text-red-600 bg-white rounded-full p-1 focus:outline-none"
+        aria-label="Close"
+      >
+        {/* You can use an SVG or a Unicode character for the cross */}
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <img src={src} alt={alt} className="max-w-full max-h-full" />
+    </div>
+  );
+};
+
+interface TableOfContentsProps {
+  htmlContent: string;
+}
+
+interface TocItem {
+  id: string;
+  text: string | null;
+}
+
+
+const TableOfContents: React.FC<TableOfContentsProps> = ({ htmlContent }) => {
+
+  const [tocItems, setTocItems] = useState<TocItem[]>([]);
+
+
+  useEffect(() => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(htmlContent, 'text/html');
+    const headings = doc.querySelectorAll('p[id]');
+    const newTocItems = Array.from(headings).map(heading => ({
+      id: heading.id,
+      text: heading.textContent,
+    }));
+
+    setTocItems(newTocItems);
+  }, [htmlContent]);
+
+  return (
+    <div>
+      ssss
+      {tocItems.length > 0 && (
+        <div className="table-of-contents">
+          <ul>
+            {tocItems.map((item, index) => (
+              <li key={index}>
+                <a href={`#${item.id}`}>{item.text}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
   );
 };
 

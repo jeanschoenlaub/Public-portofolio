@@ -23,7 +23,7 @@ export const projectData = [
       full_text: ``,
       video: "",
       date: "2023-24",
-      tags: {},
+      tags: {1:"Australia",2:"Indonesia",3:"Vietnam",4:"Laos",5:"Thailand"},
       image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/gap-year-2.png"
     },
    {

@@ -43,33 +43,4 @@ body {
     border: 2px solid yellow;
   }
 
-  .hide-scrollbar::-webkit-scrollbar {
-    display: none; /* for Chrome, Safari, and Opera */
-  }
   
-  .hide-scrollbar {
-    -ms-overflow-style: none;  /* for Internet Explorer, Edge */
-    scrollbar-width: none;  /* for Firefox */
-  }
-
-  .button-left-overlay::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 100%; /* Start the gradient right after the button */
-    width: 50px; /* Width of the transparent effect */
-    background: linear-gradient(to left, transparent, #FAF3E0);
-    pointer-events: none;
-  }
-
-  .button-right-overlay::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 100%; /* Start the gradient right before the button */
-    width: 50px; /* Width of the transparent effect */
-    background: linear-gradient(to left, #FAF3E0, transparent);
-    pointer-events: none;
-  }

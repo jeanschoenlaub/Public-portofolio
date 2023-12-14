@@ -77,7 +77,7 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
                   
                   {/* Image */}
                   <div className="flex justify-center">
-                    <Image src={project.image} alt={project.title} width={500} height={300} className="rounded-md border-2 border-custom-mint-green" />
+                    <Image src={project.image} alt={project.title} width={800} height={600} className="rounded-md border-2 border-custom-mint-green" />
                   </div>
 
                   {/* Full Text */}

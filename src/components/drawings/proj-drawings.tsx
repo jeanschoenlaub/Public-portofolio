@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { WindSVG } from "~/components/wind-svg";
+import { WindSVG } from "~/components/drawings/home-drawings/wind-svg";
 
 
 export default function DrawingsProjects () {

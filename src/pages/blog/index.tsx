@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import Projects from "../home/projects";
+import Projects from "../../components/home/projects";
 
 // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
 interface VisibilityState {

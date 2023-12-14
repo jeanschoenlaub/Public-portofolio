@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
-import Projects from "../home/projects";
-import DrawingsProjects from "./drawings";
-import ProjectList from "./project-list/project-list";
+import Projects from "../../components/home/projects";
+import DrawingsProjects from "../../components/drawings/proj-drawings";
+import ProjectList from "../../components/projects/project-list/project-list";
 
 // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
 interface VisibilityState {
@@ -37,7 +37,7 @@ export default function Home() {
 
 
             <div className="hidden md:block">
-              <DrawingsProjects></DrawingsProjects>
+                <DrawingsProjects></DrawingsProjects>
       
     </div>
     </div>

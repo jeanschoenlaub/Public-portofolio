@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { PanelSVG, PowerFullSVG, SunSVG } from "../../components/panel-svg";
-import { PowerSVG } from "../../components/panel-svg";
+import { PanelSVG, PowerFullSVG, SunSVG } from "./panel-svg";
+import { PowerSVG } from "./panel-svg";
 
 interface LeftDrawingsProps {
     isAnyElementVisible: boolean;

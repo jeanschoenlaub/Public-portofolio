@@ -4,7 +4,7 @@ import { projectData } from "../../data/projects";
 import React, { useState } from 'react';
 import Link from 'next/link';
 import ReactPlayer from 'react-player';
-import { TableOfContents } from './project-page/toc';
+import { TableOfContents } from '../../components/projects/toc';
 
 interface ProjectProps {
   project: {

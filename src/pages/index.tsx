@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
-import AboutMe from "./home/about-me";
-import Timeline from "./home/timeline";
+import AboutMe from "../components/home/about-me";
+import Timeline from "../components/home/timeline";
 import { useEffect, useState } from "react";
-import Projects from "./home/projects";
-import Blog from "./home/blog";
-import LeftDrawings from "./home/left-drawings";
+import Projects from "../components/home/projects";
+import Blog from "../components/home/blog";
+import LeftDrawings from "../components/drawings/home-drawings/home-drawings";
 
 // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
 interface VisibilityState {
@@ -98,7 +98,6 @@ export default function Home() {
 
             {/* Conditional rendering of LeftDrawings for medium devices and up */}
             <div className="hidden md:block">
-
               <LeftDrawings isAnyElementVisible={isAnyElementVisible} onTopOffsetPowerChange={handleTopOffsetPowerChange} ></LeftDrawings>
             </div>
         </div>

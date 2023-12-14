@@ -16,10 +16,20 @@ export const projectData = [
       tags: {1:"React",2:"Typescript",3:"Tailwind",4:"Next.js",5:"Vercel",6:"Prisma",7:"AWS",8:"OpenAI APIs"},
       image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/Riples.png"
     },
+    {
+      title: "The Hippy Trail, revisited",
+      type: {1:"Travel"},
+      description: "After having lived 4 years in Australia, I undertake a year long journey, accross 20 countries, to come home",
+      full_text: ``,
+      video: "",
+      date: "2023-24",
+      tags: {},
+      image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/gap-year-2.png"
+    },
    {
         title: "AWS Data warehouse",
         type: {1:"Software",2:"Data",3:"Manufacturing"},
-        description: "Ingesting data from 5 sources, accessible through reports and dashboards.",
+        description: "Ingesting data from 5 sources, giving product insights and traceability from factory to field, accessible through reports and dashboards.",
         full_text: "My first interaction with develloping a CI/CD pipeline.",
         video: "",
         date: "2023",
@@ -39,7 +49,7 @@ export const projectData = [
     {
         title: "Greenhouse crop model",
         type: {1:"CAD",2:"Data"},
-        description: "Using Rhino CAD to model light and crop growth under a semi-transparent solar panels greenhouse",
+        description: "Using Rhino CAD to model light and tomato crop growth under a semi-transparent solar panels greenhouse",
         full_text: "",
         video: "",
         date: "2021",
@@ -75,5 +85,5 @@ export const projectData = [
     date: "2021",
     tags: {1:"AutoCAD"},
     image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/HCB_resi.png"
-},
-  ];
+  },
+];

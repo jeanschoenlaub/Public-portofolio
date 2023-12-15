@@ -51,7 +51,7 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
       </nav>
 
       <div className="w-1/4 flex justify-center align-center">
-          <div className="fixed top-1/4 left-4">
+          <div className="fixed top-1/4 left-8">
             <TableOfContents htmlContent={project.full_text} />
           </div>
       </div>
@@ -64,17 +64,17 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
 
               {/* Project Details */}
               <div>
-                  <div className="mb-2">
-                      <span className="text-3xl tracking-tight font-bold ">
+                  <div className="flex justify-center items-end mb-6">
+                      <span className="text-5xl font-semibold tracking-tighter mr-2">
                           {project.title}
                       </span>
-                      <span className="ml-2 font-medium md:font-medium text-xl md:text-base text-gray-500">
+                      <span className="font-medium md:font-medium text-xl md:text-base text-gray-500">
                           {`(`+project.date+`)`}
                       </span>
                   </div>
 
                   {/* Tags */}
-                  <div className="">
+                  <div className="flex justify-center align-center mb-4">
                     <span className=" text-gray-600 ">
                         {renderTags(project.tags)}
                       </span>

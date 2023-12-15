@@ -28,9 +28,10 @@ interface TableOfContentsProps {
     }, [htmlContent]);
   
     return (
-      <div>
+      <div className="">
         {tocItems.length > 0 && (
-          <div >
+          <div className="">
+            <div>
             <div className="text-xl font-semibold mb-4"> Table of Content </div>
             <ol>
               {tocItems.map((item, index) => (
@@ -46,6 +47,7 @@ interface TableOfContentsProps {
                 </li>
               ))}
             </ol>
+          </div>
           </div>
         )}
       </div>

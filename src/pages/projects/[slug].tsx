@@ -65,11 +65,8 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
               {/* Project Details */}
               <div>
                   <div className="flex justify-center items-end mb-6">
-                      <span className="text-5xl font-semibold tracking-tighter mr-2">
+                      <span className="text-5xl font-semibold tracking-tighter">
                           {project.title}
-                      </span>
-                      <span className="font-medium md:font-medium text-xl md:text-base text-gray-500">
-                          {`(`+project.date+`)`}
                       </span>
                   </div>
 

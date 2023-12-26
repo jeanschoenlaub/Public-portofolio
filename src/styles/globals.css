@@ -43,4 +43,6 @@ body {
     border: 2px solid yellow;
   }
 
-  
+  .prose {
+    max-width: 1080px; /* Or any other value */
+  }

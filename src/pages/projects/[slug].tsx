@@ -43,7 +43,7 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
 
   return (
     <main className=" bg-custom-beige p-4">
-    <div className="md:container px-2 md:px-8 w-full md:w-1/2 mx-0 md:mx-auto ">
+    <div className="md:container px-2 md:px-8 w-full md:w-3/5 mx-0 md:mx-auto ">
       <nav className="flex flex-no-shrink justify-end space-x-6 mb-4 mr-4 text-xl font-montserrat"> {/* Larger text and Montserrat font */}
         <Link href={"/"} className="underline-custom-mint-green ">Home</Link>
         <Link href={"/projects"} className="underline-custom-mint-green font-semibold ">Projects</Link>
@@ -51,7 +51,7 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
       </nav>
 
       <div className="w-1/4 flex justify-center align-center">
-          <div className="fixed top-1/4 left-8">
+          <div className="fixed text-gray-800 top-1/4 left-8">
             <TableOfContents htmlContent={project.full_text} />
           </div>
       </div>
@@ -78,7 +78,7 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray-700 mb-4">{project.description}</p>
+                  <p className="text-gray-700 text-lg mb-4">{project.description}</p>
                   
                   {/* Image */}
                   <div className="flex justify-center">
@@ -100,8 +100,8 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
                   />
 
                   {/* Full Text */}
-                  <div className="mt-4 text-gray-800">
-                    <div className='prose' dangerouslySetInnerHTML={{ __html: project.full_text }}>
+                  <div className="mt-4  text-gray-800">
+                    <div className='prose text-lg w-full' dangerouslySetInnerHTML={{ __html: project.full_text }}>
                       {/* HTML content will be rendered here */}
                     </div>
                   </div>

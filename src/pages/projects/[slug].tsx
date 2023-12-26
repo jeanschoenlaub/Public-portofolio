@@ -106,15 +106,6 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
                     </div>
                   </div>
 
-                  {/* Video (if available) */}
-                  {project.video && (
-                    <div className="mt-4">
-                       <ReactPlayer
-                          url={project.video}
-                          controls = {true}
-                        />
-                    </div>
-                  )} 
               </div>
             </div>
         </div>

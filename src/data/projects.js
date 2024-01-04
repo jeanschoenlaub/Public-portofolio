@@ -40,7 +40,9 @@ export const projectData = [
         title: "3Doo",
         type: {1:"Software",2:"Data",3:"Manufacturing"},
         description: "A custom made data connector between Odoo (ERP) and 3Dexperience (PLM).",
-        full_text: ".",
+        full_text: `
+        <p> After changing roles from a Business Analyst to a Data Engineer at 5B, a solar array manufacturing start-up, I was given the freedom to pitch and build multiple projects. The one I started with, was integrating our engineering and supply chain databases (Entreprise Resource Planning (ERP) <> Computer Aided Design (CAD) Software integration). The aim of the project was to reduce manufacturing downtime and extra sourcing costs due to human error in cross-referencing 50+ products for each new product configuration. </p>  <p> To solve this problem I build a custom software with Google Apps Script, allowing users to import data from both databases into google drive, compare product meta data and build an importable ERP Bill of Material (BoM) from the CAD BoM. You can find below the product demo I showed the engineering and SC teams to build awareness: </p> <div style="display: flex; justify-content: center;"> <iframe width="560" height="315" src="https://www.youtube.com/embed/DsvPQG2PCvY?si=DTTTrK-yF9C_enLd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </div> <p> In the end, I ended up being the sole user of this tool, continuously updated it, and handed it off to my replacement. I also used the logic I used in the tool for master data cleaning in the ERP. Finally, In the research phase before deciding to build our own, I found this SolidWorks <> Odoo ERP Integration tool that was pretty similar to what I ended up building:  </p> <div style="display: flex; justify-content: center;"> <iframe width="560" height="315" src="https://www.youtube.com/embed/v4Y5CS_EJ_0?si=w99PtVT5YpfY2Kdr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </div>
+        `,
         date: "2022",
         tags: {1:"Odoo",2:"3Dexperience",3:"Google Apps Script"},
         image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/3Doo.png"
@@ -49,7 +51,9 @@ export const projectData = [
         title: "Greenhouse crop model",
         type: {1:"CAD",2:"Data"},
         description: "Using Rhino CAD to model light and tomato crop growth under a semi-transparent solar panels greenhouse. Paper published in Applied Energy",
-        full_text: "",
+        full_text: `
+        <p> As I was doing my master's in Solar Energy at the University of New South Wales (UNSW) in Sydney, I became increasingly interested in Agriphotovoltaic (APV). APV is combination of using solar panels to transform the sun's energy into electricity, as well as plants for chemical energy. Multiple synergies had already been proven in this field, but I was interested in the synergies that semi-transparent solar cells could bring to APV. </p> <div style="text-align: center;"> <iframe src="https://drive.google.com/file/d/1BlY7BPrw3y0KqKGF8WYg3WazDnGyPFAa/preview" width="640" height="480"></iframe> </div> <p> Challenge was finding the right software to model everyhting. Paper is not that interesting but the methodology was novel so we decided to publish (the idea had already been explored in 2-3 papers - but never with a modelling methodology) 
+        `,
         date: "2021",
         tags: {1:"Rhino CAD",2:"Rhino Grasshoper", 3:"Python"},
         image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/thesis_rhino.png"

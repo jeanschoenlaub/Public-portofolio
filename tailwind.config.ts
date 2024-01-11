@@ -6,7 +6,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+        'lora': ['Montserrat', 'serif'],
+        'sans': ['Montserrat', 'serif', 'sans-serif'],
       },
       colors: {
         'custom-beige': '#FAF3E0',

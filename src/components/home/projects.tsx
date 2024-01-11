@@ -42,19 +42,19 @@ export default function Projects() {
               </div>
     
               {/* Content */}
-              <div className="p-4 w-1/2 space-y-2">
+              <div className="p-4 w-1/2">
                 {/* Project Title */}
                 <div className="text-lg tracking-tight font-bold">
                   {project.title}
                 </div>
     
                 {/* Description */}
-                <div className="font-light text-gray-500 md:text-lg">
+                <div className="font-light mt-2 text-gray-500 md:text-lg">
                   {project.description}
                 </div>
     
                 {/* Project Tags */}
-                <div className="text-sm text-gray-800">
+                <div className="text-sm mt-6 text-gray-800">
                   <span className="text-gray-500">
                   </span>
                   {renderTags(project.tags)}
@@ -64,9 +64,9 @@ export default function Projects() {
             </Link>
           ))}
           <div className="flex justify-center">
-            <div className="flex w-52 justify-center items-center border py-1 px-2 rounded-lg border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white ">
+            <div className="flex w-60 justify-center items-center border-2 py-1 px-2 rounded-lg border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white ">
                 <Link href="/projects">
-                    <div className=" font-semibold text flex items-center">
+                    <div className=" font-medium text flex items-center">
                         Check out more projects.
                     </div>
                 </Link>

@@ -6,20 +6,19 @@ export default function AboutMe() {
   return (
     <>
       <div className="flex flex-col"> 
-        <div className="flex">
-            <div className="w-1/4 hidden md:block ">
-                <img src="/profile_image.jpeg" alt="Jean's Profile" className="rounded-full flex-grow items-center w-32 h-32 mr-12" />
+            <div className="flex items-center">
+                <div className="w-1/4 hidden md:block ">
+                    <img src="/profile_image.jpeg" alt="Jean's Profile" className="rounded-full flex-grow items-center justify-center w-32 h-32 mr-12" />
+                </div>
+                <div className="flex w-full md:w-3/4 flex-col text-left">
+                    
+                    <h1 className="text-3xl font-semibold mb-2 font-lora">Hey, I&apos;m Jean.</h1>
+                    <p className="mb-4">An engineer from Switzerland passionate about making the world a better place. I thrive on building innovative solutions to real problems, be it energy transition, sustainability or digital transformation. </p>
+                </div>
             </div>
-            <div className="flex w-full md:w-3/4 flex-col text-left">
-                
-                <h1 className="text-2xl font-semibold mb-2">Hey, I&apos;m Jean.</h1>
-                <p className="mb-4">An engineer from Switzerland passionate about making the world a better place. I thrive on building innovative solutions to real problems, be it energy transition, sustainability or digital transformation. </p>
-                <h1 className="text-xl font-semibold mb-2"> I am currently on sabbatical until September &apos;24  </h1>
-            </div>
-        </div>
-            <div className="flex justify-between ml-2 text-lg mt-4 mb-2 flex-wrap"> 
+            <div className="flex justify-between ml-2 text-lg mt-4 mb-4 flex-wrap"> 
 
-                <div className="flex items-center border py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg">
+                <div className="flex font-medium items-center border-2 py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg">
                     <Link href="https://github.com/jeanschoenlaub" target="_blank" >
                         <div className="flex items-center">
                         <svg className="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -30,7 +29,7 @@ export default function AboutMe() {
                     </Link>
                 </div>
 
-                <div className="flex items-center border py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg">
+                <div className="flex font-medium items-center border-2 py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg">
                     <Link href="https://www.linkedin.com/in/jean2020/" target="_blank" >
                         <div className=" flex items-center">
                         <svg className="w-4 h-4 mb-1 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 15 15">
@@ -42,7 +41,7 @@ export default function AboutMe() {
                     </Link>
                 </div>
 
-                <div className="flex items-center border py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg">
+                <div className="flex font-medium items-center border-2 py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg">
                     <Link href="/CV.pdf" download="Jean_Resume.pdf">
                         <div className=" flex items-center">
                         <svg className="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 19">
@@ -53,7 +52,7 @@ export default function AboutMe() {
                     </Link>
                 </div>
 
-                <div className="flex items-center mr-2 border py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg">
+                <div className="flex font-medium items-center mr-2 border-2 py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg">
                     <Link href="mailto:jeanschoen@hotmail.com">
                         <div className=" flex items-center">
                         <svg className="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -64,17 +63,18 @@ export default function AboutMe() {
                     </Link>
                 </div>
 
-                <div className="flex items-center border py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg">
+                <div className="flex font-medium items-center border-2 py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg">
                         <Link href="https://calendly.com/jean-schoenlaub/" target="_blank">
                             <div className=" flex items-center">
                             <svg className="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 1H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Zm7 11-6-2V4l6-2v10Z"/>
+                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 1H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Zm7 11-6-2V4l6-2v10Z"/>
                             </svg>
-                            Call
+                                Call
                             </div>
                         </Link>
                     </div>
             </div>
+            <h1 className="flex font-medium mt-2 text-xl justify-center mb-2"> I am currently on sabbatical until September &apos;24  </h1>
         </div>        
     </>
   );

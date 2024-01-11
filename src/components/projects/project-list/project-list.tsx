@@ -59,7 +59,7 @@ export default function ProjectList() {
         />
 
         {filteredProjects.map((project, index) => (
-            <div key={index} className="border-2 border-custom-mint-green flex bg-white rounded-lg my-10 shadow-md">
+            <div key={index} className="border-2 border-custom-mint-green flex bg-white rounded-lg my-8 shadow-md">
                 {/* Image */}
                 <div className="relative w-1/2 border border-slate-300">
                     <Image
@@ -71,11 +71,11 @@ export default function ProjectList() {
                 </div>
         
                 {/* Card Content */}
-                <div className="p-4 w-1/2 space-y-2">
+                <div className="p-4 w-1/2">
 
                     {/* Project Title and Date*/}
                     <div>
-                        <span className="text-xl tracking-tight font-bold ">
+                        <span className="text-lg tracking-tight font-bold ">
                             {project.title}
                         </span>
                         <span className="ml-2 font-medium md:font-medium text-xs md:text-base text-gray-500">
@@ -84,20 +84,20 @@ export default function ProjectList() {
                     </div>
         
                     {/* Description */}
-                    <div className="font-light text-gray-500 md:text-lg">
+                    <div className="font-light mt-2 text-gray-500">
                         {project.description}  
                     </div>
         
                     {/* Project Tags */}
-                    <div className="text-sm text-gray-800">
+                    <div className="text-sm mt-4 text-gray-800">
                         {renderTags(project.tags)}
                     </div>
 
                     {/* Read More */}
-                    <div className="flex justify-end">
-                        <div className="flex w-40 justify-center items-center border py-1 px-2 rounded-lg border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white ">
+                    <div className="flex mt-4 justify-end">
+                        <div className="flex w-40 justify-center items-center border-2 py-1 px-2 rounded-lg border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white ">
                             <Link href={`/projects/${slugify(project.title)}`}>
-                                <div className=" font-semibold text flex items-center">
+                                <div className=" font-medium text flex items-center">
                                 Read More 
                                 <svg className="w-4 h-4 ml-2 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>

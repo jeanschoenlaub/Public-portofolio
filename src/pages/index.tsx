@@ -74,14 +74,14 @@ export default function Home() {
           <nav className="flex flex-no-shrink justify-end space-x-6 mb-4 mr-4 text-xl font-montserrat"> {/* Larger text and Montserrat font */}
             <Link href={"/"} className="underline-custom-mint-green font-semibold ">Home</Link>
             <Link href={"/projects"} className="underline-custom-mint-green">Projects</Link>
-            <Link href={"/blog"} className="underline-custom-mint-green">Blog</Link>
+            {/* <Link href={"/blog"} className="underline-custom-mint-green">Blog</Link> */}
           </nav>
 
           <div id="aboutme" className={`border-0 md:border-2 p-2 mt-12 ${isElementVisible.aboutme ? ' border-yellow-400' : 'border-custom-beige'}`}>
                 <AboutMe></AboutMe>
             </div> 
 
-            <div id="projects" className={` p-2 border-0 md:border-2 mt-12 ${isElementVisible.projects ? 'border-2 border-yellow-400' : 'border-custom-beige'}`}>
+            <div id="projects" className={` p-2 border-0  md:border-2 mt-12 ${isElementVisible.projects ? 'border-yellow-400' : 'border-custom-beige'}`}>
                 <h2 className="text-2xl font-semibold mt-2 mb-2"> What I&apos;ve been up to </h2>
                 <Projects></Projects>
             </div>
@@ -91,10 +91,10 @@ export default function Home() {
                 <Timeline></Timeline>
             </div>
 
-            <div id="blog" className={` p-2 border-0 md:border-2 mt-12 ${isElementVisible.blog ? ' border-yellow-400' : 'border-custom-beige'}`}>
+            {/* <div id="blog" className={` p-2 border-0 md:border-2 mt-12 ${isElementVisible.blog ? ' border-yellow-400' : 'border-custom-beige'}`}>
                 <h2 className="text-2xl font-semibold mt-2 mb-2"> Some thoughts </h2>
                 <Blog></Blog>
-            </div>
+            </div> */}
 
             {/* Conditional rendering of LeftDrawings for medium devices and up */}
             <div className="hidden md:block">

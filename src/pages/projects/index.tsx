@@ -26,7 +26,7 @@ export default function Home() {
           <nav className="flex flex-no-shrink justify-end space-x-6 mb-4 mr-4 text-xl font-montserrat"> {/* Larger text and Montserrat font */}
             <Link href={"/"} className="underline-custom-mint-green ">Home</Link>
             <Link href={"/projects"} className="underline-custom-mint-green font-semibold">Projects</Link>
-            <Link href={"/blog"} className="underline-custom-mint-green">Blog</Link>
+            {/* <Link href={"/blog"} className="underline-custom-mint-green">Blog</Link> */}
           </nav>
 
       

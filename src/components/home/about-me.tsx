@@ -17,7 +17,7 @@ export default function AboutMe() {
                 <h1 className="text-xl font-semibold mb-2"> I am currently on sabbatical until September &apos;24  </h1>
             </div>
         </div>
-            <div className="flex justify-between ml-2 text-lg mt-4 mb-2"> 
+            <div className="flex justify-between ml-2 text-lg mt-4 mb-2 flex-wrap"> 
 
                 <div className="flex items-center border py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg">
                     <Link href="https://github.com/jeanschoenlaub" target="_blank" >
@@ -64,10 +64,18 @@ export default function AboutMe() {
                     </Link>
                 </div>
 
+                <div className="flex items-center border py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg">
+                        <Link href="https://calendly.com/jean-schoenlaub/" target="_blank">
+                            <div className=" flex items-center">
+                            <svg className="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 1H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Zm7 11-6-2V4l6-2v10Z"/>
+                            </svg>
+                            Call
+                            </div>
+                        </Link>
+                    </div>
             </div>
         </div>        
-   
-
     </>
   );
 }

@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
 
       <main className=" bg-custom-beige p-4">
-        <div className="md:container px-2 md:px-8 w-full md:w-1/2 mx-0 md:mx-auto ">
+        <div className="lg:container px-2 lg:px-8 w-full lg:w-1/2 mx-0 lg:mx-auto ">
           <nav className="flex flex-no-shrink justify-end space-x-6 mb-4 mr-4 text-xl font-montserrat"> {/* Larger text and Montserrat font */}
             <Link href={"/"} className="underline-custom-mint-green ">Home</Link>
             <Link href={"/projects"} className="underline-custom-mint-green ">Projects</Link>

@@ -9,7 +9,7 @@ interface LeftDrawingsProps {
 
 export default function LeftDrawings ( { isAnyElementVisible, onTopOffsetPowerChange }: LeftDrawingsProps) {
     const numPanels = 3; // Number of PanelSVGs you want
-    const spacing = 30; // Spacing in pixels between each PanelSVG
+    const spacing = 10; // Spacing in pixels between each PanelSVG
     const panelHeight= 121;
     const panelWidth= 223;
     const branchLength = 200; // Length of each branch to the right
@@ -71,7 +71,7 @@ export default function LeftDrawings ( { isAnyElementVisible, onTopOffsetPowerCh
   return (
     <>
        {/* Render multiple PanelSVGs at a certain vertical spacing, centered horizontally */}
-       <div className="fixed top-0 left-2 transform -translate-x-1/2" style={{ top: topOffsetPanels }}>
+       <div className="fixed top-0 left-2  transform -translate-x-1/2" style={{ top: topOffsetPanels }}>
             {panelsArray.map((_, index) => (    
                 <div key={index} style={{ position: 'absolute', top: `${index * (panelHeight + spacing)}px`, width: '200px' }}> {/* width should match the SVG width */}
                     <PanelSVG />
@@ -118,11 +118,11 @@ export default function LeftDrawings ( { isAnyElementVisible, onTopOffsetPowerCh
 
         {/* Sun SVG */}
        <div className="w-1/4 flex justify-center align-center">
-       <div className="fixed top-8 right-0 transform -translate-x-1/2" style={{ right: sunWidth+ rightOffsetSun+20 }}>
-                <div  style={{ position: 'absolute', width: '200px' }}> {/* width should match the SVG width */}
+            <div className="fixed top-16 transform -translate-x-1/2" style={{ right: sunWidth+ rightOffsetSun -10 }}>
+                <div  style={{ position: 'absolute', width: '215px' }}> {/* width should match the SVG width */}
                     <SunSVG height="230" width="215"/>
                 </div>
-        </div>
+            </div>
         </div>
     
     </>

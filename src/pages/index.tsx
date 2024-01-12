@@ -4,7 +4,6 @@ import AboutMe from "../components/home/about-me";
 import Timeline from "../components/home/timeline";
 import { useEffect, useState } from "react";
 import Projects from "../components/home/projects";
-import Blog from "../components/home/blog";
 import LeftDrawings from "../components/drawings/home-drawings/home-drawings";
 
 // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
@@ -70,34 +69,34 @@ export default function Home() {
       </Head>
 
       <main className=" bg-custom-beige p-4">
-        <div className="md:container px-2 md:px-8 w-full md:w-1/2 mx-0 md:mx-auto ">
-          <nav className="flex flex-no-shrink justify-end space-x-6 mb-4 mr-4 text-xl font-montserrat"> {/* Larger text and Montserrat font */}
+        <div className="lg:container px-2 lg:px-8 w-full lg:w-1/2 mx-0 lg:mx-auto">
+          <nav className="flex flex-no-shrink min-w-[600px] justify-end space-x-6 mb-4 text-xl font-montserrat"> {/* Larger text and Montserrat font */}
             <Link href={"/"} className="underline-custom-mint-green font-semibold ">Home</Link>
             <Link href={"/projects"} className="underline-custom-mint-green">Projects</Link>
             {/* <Link href={"/blog"} className="underline-custom-mint-green">Blog</Link> */}
           </nav>
 
-          <div id="aboutme" className={`border-0 md:border-2 p-2 mt-12 ${isElementVisible.aboutme ? ' border-yellow-400' : 'border-custom-beige'}`}>
+          <div id="aboutme" className={`border-0 lg:border-l-4 relative z-50 p-2 mt-10 ${isElementVisible.aboutme ? ' border-yellow-400':'border-custom-beige'}`}>
                 <AboutMe></AboutMe>
             </div> 
 
-            <div id="projects" className={` p-2 border-0  md:border-2 mt-12 ${isElementVisible.projects ? 'border-yellow-400' : 'border-custom-beige'}`}>
-                <h2 className="text-2xl font-semibold mt-2 "> What I&apos;ve been up to </h2>
+            <div id="projects" className={` p-2 border-0 min-w-[600px] relative z-50 lg:border-l-4 mt-10 ${isElementVisible.projects ? 'border-yellow-400' : 'border-custom-beige'}`}>
+                <h2 className="text-3xl tracking-tight font-medium mt-2"> What I&apos;ve been up to </h2>
                 <Projects></Projects>
             </div>
 
-            <div id="timeline" className={` p-2 border-0 md:border-2 mt-12 ${isElementVisible.timeline ? ' border-yellow-400' : 'border-custom-beige'}`}>
-                <h2 className="text-2xl font-semibold mt-2 mb-6"> It&apos;s about the journey </h2>
+            <div id="timeline" className={` p-2 border-0 lg:border-l-4 mt-10 ${isElementVisible.timeline ? ' border-yellow-400' : 'border-custom-beige'}`}>
+                <h2 className="text-3xl tracking-tight font-medium mt-2 mb-8"> It&apos;s about the journey </h2>
                 <Timeline></Timeline>
             </div>
 
-            {/* <div id="blog" className={` p-2 border-0 md:border-2 mt-12 ${isElementVisible.blog ? ' border-yellow-400' : 'border-custom-beige'}`}>
+            {/* <div id="blog" className={` p-2 border-0 lg:border-2 mt-12 ${isElementVisible.blog ? ' border-yellow-400' : 'border-custom-beige'}`}>
                 <h2 className="text-2xl font-semibold mt-2 mb-2"> Some thoughts </h2>
                 <Blog></Blog>
             </div> */}
 
             {/* Conditional rendering of LeftDrawings for medium devices and up */}
-            <div className="hidden md:block">
+            <div className="hidden lg:block -z-50">
               <LeftDrawings isAnyElementVisible={isAnyElementVisible} onTopOffsetPowerChange={handleTopOffsetPowerChange} ></LeftDrawings>
             </div>
         </div>

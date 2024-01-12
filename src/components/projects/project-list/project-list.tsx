@@ -59,7 +59,7 @@ export default function ProjectList() {
         />
 
         {filteredProjects.map((project, index) => (
-            <div key={index} className="border-2 border-custom-mint-green flex bg-white rounded-lg my-8 shadow-md">
+            <div key={index} className="border-2 border-custom-mint-green flex bg-white rounded-lg my-8 shadow-lg">
                 {/* Image */}
                 <div className="relative w-1/2 border border-slate-300">
                     <Image
@@ -78,7 +78,7 @@ export default function ProjectList() {
                         <span className="text-lg tracking-tight font-bold ">
                             {project.title}
                         </span>
-                        <span className="ml-2 font-medium md:font-medium text-xs md:text-base text-gray-500">
+                        <span className="ml-2 font-medium lg:font-medium text-xs lg:text-base text-gray-500">
                             {`(`+project.date+`)`}
                         </span>
                     </div>

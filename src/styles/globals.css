@@ -8,6 +8,12 @@ body {
     @apply bg-custom-beige;
 }
 
+@media (min-width: 1024px) { /* This is Tailwind's 'lg' breakpoint */
+  .custom-mx {
+    margin-left: calc(100% - 1024px); /* Assuming 'screen size - 720px' means 'half of screen size - 360px' */
+  }
+}
+
 /* styles/global.css */
 .underline-custom-mint-green:hover {
     text-decoration: underline;

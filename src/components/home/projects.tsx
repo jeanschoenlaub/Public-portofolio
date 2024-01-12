@@ -35,7 +35,7 @@ export default function Projects() {
         <>
           {recentProjects.map((project, index) => (
             <Link href={`/projects/${slugify(project.title)}`} key={index}>
-            <div key={index} className="border-2 border-custom-mint-green flex bg-white rounded-lg mx-2 md:mx-5 my-10 shadow-lg">
+            <div key={index} className="border-2 border-custom-mint-green flex bg-white rounded-lg mx-2 lg:mx-5 my-8 hover:shadow-xl hover:shadow-lime-50">
               {/* Image */}
               <div className="relative w-1/2 border border-slate-300">
                 <Image
@@ -54,7 +54,7 @@ export default function Projects() {
                 </div>
     
                 {/* Description */}
-                <div className="font-light mt-2 text-gray-500 md:text-lg">
+                <div className="font-light mt-2 text-gray-500 lg:text-lg">
                   {project.description}
                 </div>
     
@@ -69,10 +69,10 @@ export default function Projects() {
             </Link>
           ))}
           <div className="flex justify-center">
-            <div className="flex w-60 justify-center items-center border-2 py-1 px-2 rounded-lg border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white ">
+            <div className="flex w-72 justify-center items-center border-2 py-1 px-2 rounded-lg border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white hover:shadow-xl hover:shadow-lime-100">
                 <Link href="/projects">
-                    <div className=" font-medium text flex items-center">
-                        Check out more projects.
+                    <div className="text-lg font-medium text flex items-center">
+                        Check out more projects
                     </div>
                 </Link>
             </div>

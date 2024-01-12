@@ -43,7 +43,7 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
 
   return (
     <main className=" bg-custom-beige p-4">
-    <div className="md:container px-2 md:px-8 w-full md:w-3/5 mx-0 md:mx-auto ">
+    <div className="lg:container px-2 lg:px-8 w-full lg:w-3/5 mx-0 lg:mx-auto ">
       <nav className="flex flex-no-shrink justify-end space-x-6 mb-4 mr-4 text-xl font-montserrat"> {/* Larger text and Montserrat font */}
         <Link href={"/"} className="underline-custom-mint-green ">Home</Link>
         <Link href={"/projects"} className="underline-custom-mint-green font-semibold ">Projects</Link>
@@ -87,7 +87,7 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
                       alt={project.title}
                       width={800}
                       height={600}
-                      className="rounded-md border-2 border-custom-mint-green cursor-pointer"
+                      className="rounded-lg border-2 border-custom-mint-green cursor-pointer"
                       onClick={toggleModal}
                     />
                   </div>

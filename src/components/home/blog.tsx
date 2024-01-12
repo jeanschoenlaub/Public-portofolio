@@ -9,7 +9,7 @@ export default function Blog() {
     return (
         <div>
           {recentBlogs.map((blog, index) => (
-            <Link className="block border-2 border-custom-mint-green bg-custom-beige rounded-lg mx-2 md:mx-5 my-4 shadow-md" href={`/blog`} key={index}>
+            <Link className="block border-2 border-custom-mint-green bg-custom-beige rounded-lg mx-2 lg:mx-5 my-4 shadow-lg" href={`/blog`} key={index}>
 
                 {/* Content */}
                 <div className="p-4 w-full space-y-2">
@@ -19,7 +19,7 @@ export default function Blog() {
                   </div>
 
                   {/* Blog Date */}
-                  <div className="font-light text-gray-500 md:text-lg">
+                  <div className="font-light text-gray-500 lg:text-lg">
                     {blog.date}
                   </div>
                 </div>

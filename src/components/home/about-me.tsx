@@ -7,18 +7,18 @@ export default function AboutMe() {
     <>
       <div className="flex flex-col"> 
             <div className="flex items-center">
-                <div className="w-1/4 hidden md:block ">
+                <div className="w-36 hidden lg:block ">
                     <img src="/profile_image.jpeg" alt="Jean's Profile" className="rounded-full flex-grow items-center justify-center w-32 h-32 mr-12" />
                 </div>
-                <div className="flex w-full md:w-3/4 flex-col text-left">
+                <div className="flex ml-2 w-full lg:w-3/4 flex-col text-left">
                     
-                    <h1 className="text-3xl font-semibold mb-2">Hey, I&apos;m Jean.</h1>
+                    <h1 className="text-3xl tracking-tight font-semibold mb-4">Hey, I&apos;m Jean.</h1>
                     <p className="mb-4">An engineer from Switzerland passionate about making the world a better place. I thrive on building innovative solutions to real problems, be it energy transition, sustainability or digital transformation. </p>
                 </div>
             </div>
-            <div className="flex justify-between ml-2 text-lg mt-4 mb-4 flex-wrap"> 
+            <div className="flex justify-between text-lg flex-wrap sm:flex-nowrap  mt-4 mb-4 "> 
 
-                <div className="flex font-medium items-center border-2 py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg">
+                <div className="flex font-medium items-center border-2 mt-2 py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg  hover:shadow-xl hover:shadow-lime-100">
                     <Link href="https://github.com/jeanschoenlaub" target="_blank" >
                         <div className="flex items-center">
                         <svg className="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -29,7 +29,7 @@ export default function AboutMe() {
                     </Link>
                 </div>
 
-                <div className="flex font-medium items-center border-2 py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg">
+                <div className="flex font-medium items-center border-2 ml-2 mt-2 py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg hover:shadow-xl hover:shadow-lime-100">
                     <Link href="https://www.linkedin.com/in/jean2020/" target="_blank" >
                         <div className=" flex items-center">
                         <svg className="w-4 h-4 mb-1 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 15 15">
@@ -41,7 +41,7 @@ export default function AboutMe() {
                     </Link>
                 </div>
 
-                <div className="flex font-medium items-center border-2 py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg">
+                <div className="flex font-medium items-center ml-2 mt-2 border-2 py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg hover:shadow-xl hover:shadow-lime-100">
                     <Link href="/CV.pdf" download="Jean_Resume.pdf">
                         <div className=" flex items-center">
                         <svg className="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 19">
@@ -52,7 +52,7 @@ export default function AboutMe() {
                     </Link>
                 </div>
 
-                <div className="flex font-medium items-center mr-2 border-2 py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg">
+                <div className="flex font-medium items-center ml-2 mt-2 border-2 py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg hover:shadow-xl hover:shadow-lime-100">
                     <Link href="mailto:jeanschoen@hotmail.com">
                         <div className=" flex items-center">
                         <svg className="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -63,7 +63,7 @@ export default function AboutMe() {
                     </Link>
                 </div>
 
-                <div className="flex font-medium items-center border-2 py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg">
+                <div className="flex font-medium items-center ml-2 mt-2 border-2 py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg hover:shadow-xl hover:shadow-lime-100">
                         <Link href="https://calendly.com/jean-schoenlaub/" target="_blank">
                             <div className=" flex items-center">
                             <svg className="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
@@ -74,7 +74,7 @@ export default function AboutMe() {
                         </Link>
                     </div>
             </div>
-            <h1 className="flex font-medium mt-2 text-xl justify-center mb-2"> I am currently on sabbatical until September &apos;24  </h1>
+            <h1 className="flex font-base mt-2 text-lg italic justify-center mb-2"> I am currently on sabbatical until September &apos;24  </h1>
         </div>        
     </>
   );

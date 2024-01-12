@@ -10,8 +10,7 @@ export default function DrawingsProjects () {
   const totalHeight = numTurbines * turbineHeight + (numTurbines - 1) * spacing;
 
   const [rightOffsetWindTurbin, setRightOffsetWindTurbin] = useState(0); //The space between the edge of the panel SVG anf the first div
-  const [topOffsetWindTurbine, setTopOffsetWindTurbine] = useState(0); // The space between the top of screen and first panel to have them centered vertically
-
+ 
   // Create an array for the turbines
   const turbinesArray = Array.from({ length: numTurbines });
 
@@ -22,9 +21,6 @@ export default function DrawingsProjects () {
     const offsetPxWindTurbin = (twentyFiveVW - turbineWidth) / 2 + turbineWidth; 
     setRightOffsetWindTurbin(offsetPxWindTurbin);
 
-    const vhUnitInPixels = window.innerHeight / 100;
-    const calcTopOffsetWindTurbinw = 50 * vhUnitInPixels - totalHeight / 2;
-    setTopOffsetWindTurbine(calcTopOffsetWindTurbinw);
   };
 
   // Adjust number of turbines based on window size
@@ -52,9 +48,9 @@ export default function DrawingsProjects () {
     <>
         {/* Wind turbine SVG */}
        <div className="w-1/4 flex justify-center align-center">
-          <div className="fixed top-0 right-0 transform -translate-x-1/2" style={{ top: topOffsetWindTurbine, right:rightOffsetWindTurbin}}>
+          <div className="fixed top-0 right-0 transform -translate-x-1/2" style={{ right:rightOffsetWindTurbin}}>
             {turbinesArray.map((_, index) => (
-              <div key={index} style={{ position: 'absolute', top: `${index * (turbineHeight + spacing)}px`, width: `${turbineWidth}px`, height: `${turbineHeight}px` }}>
+              <div key={index} style={{ position: 'fixed', top: `${index * (turbineHeight + spacing)}px`, width: `${turbineWidth}px`, height: `${turbineHeight}px` }}>
                 <WindSVG width={turbineWidth} height={turbineHeight} />
               </div>
             ))}

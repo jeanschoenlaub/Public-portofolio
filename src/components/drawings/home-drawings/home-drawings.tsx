@@ -9,7 +9,7 @@ interface LeftDrawingsProps {
 
 export default function LeftDrawings ( { isAnyElementVisible, onTopOffsetPowerChange }: LeftDrawingsProps) {
     const numPanels = 3; // Number of PanelSVGs you want
-    const spacing = 10; // Spacing in pixels between each PanelSVG
+    const spacing = 20; // Spacing in pixels between each PanelSVG
     const panelHeight= 121;
     const panelWidth= 223;
     const branchLength = 200; // Length of each branch to the right

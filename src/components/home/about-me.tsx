@@ -12,7 +12,7 @@ export default function AboutMe() {
                 </div>
                 <div className="flex w-full md:w-3/4 flex-col text-left">
                     
-                    <h1 className="text-3xl font-semibold mb-2 font-lora">Hey, I&apos;m Jean.</h1>
+                    <h1 className="text-3xl font-semibold mb-2">Hey, I&apos;m Jean.</h1>
                     <p className="mb-4">An engineer from Switzerland passionate about making the world a better place. I thrive on building innovative solutions to real problems, be it energy transition, sustainability or digital transformation. </p>
                 </div>
             </div>

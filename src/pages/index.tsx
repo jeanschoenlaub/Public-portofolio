@@ -82,12 +82,12 @@ export default function Home() {
             </div> 
 
             <div id="projects" className={` p-2 border-0  md:border-2 mt-12 ${isElementVisible.projects ? 'border-yellow-400' : 'border-custom-beige'}`}>
-                <h2 className="text-2xl font-semibold mt-2 mb-2"> What I&apos;ve been up to </h2>
+                <h2 className="text-2xl font-semibold mt-2 "> What I&apos;ve been up to </h2>
                 <Projects></Projects>
             </div>
 
             <div id="timeline" className={` p-2 border-0 md:border-2 mt-12 ${isElementVisible.timeline ? ' border-yellow-400' : 'border-custom-beige'}`}>
-                <h2 className="text-2xl font-semibold mt-2 mb-2"> It&apos;s about the journey </h2>
+                <h2 className="text-2xl font-semibold mt-2 mb-6"> It&apos;s about the journey </h2>
                 <Timeline></Timeline>
             </div>
 

@@ -65,7 +65,7 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
               {/* Project Details */}
               <div>
                   <div className="flex justify-center items-end mb-6">
-                      <span className="text-5xl font-semibold tracking-tighter">
+                      <span className="text-5xl font-extrabold tracking-tight">
                           {project.title}
                       </span>
                   </div>

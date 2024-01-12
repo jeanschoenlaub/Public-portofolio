@@ -2,6 +2,11 @@ import Link from "next/link";
 import { projectData } from "../../data/projects";
 import Image from 'next/image';
 
+// Function to convert a title into a slug
+const slugify = (title: string) => {
+  return title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+};
+
 interface Project {
     title: string;
     description: string;
@@ -29,8 +34,8 @@ export default function Projects() {
       return (
         <>
           {recentProjects.map((project, index) => (
-            <Link href="/projects" key={index}>
-            <div key={index} className="border-2 border-custom-mint-green flex bg-white rounded-lg mx-2 md:mx-5 my-4 shadow-md">
+            <Link href={`/projects/${slugify(project.title)}`} key={index}>
+            <div key={index} className="border-2 border-custom-mint-green flex bg-white rounded-lg mx-2 md:mx-5 my-10 shadow-lg">
               {/* Image */}
               <div className="relative w-1/2 border border-slate-300">
                 <Image

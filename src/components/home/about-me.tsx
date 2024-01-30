@@ -7,7 +7,7 @@ export default function AboutMe() {
     <>
       <div className="flex flex-col"> 
             <div className="flex items-center">
-                <div className="w-36 hidden lg:block ">
+                <div className="lg:w-36 hidden lg:block ">
                     <img src="/profile_image.jpeg" alt="Jean's Profile" className="rounded-full flex-grow items-center justify-center w-32 h-32 mr-12" />
                 </div>
                 <div className="flex ml-2 w-full lg:w-3/4 flex-col text-left">

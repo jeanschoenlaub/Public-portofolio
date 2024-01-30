@@ -50,7 +50,7 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
         {/* <Link href={"/blog"} className="underline-custom-mint-green ">Blog</Link> */}
       </nav>
 
-      <div className="w-1/4 flex justify-center align-center">
+      <div className="w-1/4 hidden lg:flex justify-center align-center">
           <div className="fixed text-gray-800 top-1/4 left-8">
             <TableOfContents htmlContent={project.full_text} />
           </div>

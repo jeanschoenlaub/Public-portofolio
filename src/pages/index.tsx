@@ -69,14 +69,14 @@ export default function Home() {
       </Head>
 
       <main className=" bg-custom-beige p-4">
-        <div className="lg:container px-2 lg:px-8 w-full lg:w-1/2 mx-0 lg:mx-auto">
+        <div className="container px-2 lg:px-8 w-full lg:w-1/2 mx-0 lg:mx-auto">
           <nav className="flex flex-no-shrink min-w-[600px] justify-end space-x-6 mb-4 text-xl font-montserrat"> {/* Larger text and Montserrat font */}
             <Link href={"/"} className="underline-custom-mint-green font-semibold ">Home</Link>
             <Link href={"/projects"} className="underline-custom-mint-green">Projects</Link>
             {/* <Link href={"/blog"} className="underline-custom-mint-green">Blog</Link> */}
           </nav>
 
-          <div id="aboutme" className={`border-0 lg:border-l-4 relative z-50 p-2 mt-10 ${isElementVisible.aboutme ? ' border-yellow-400':'border-custom-beige'}`}>
+          <div id="aboutme" className={`border-0 lg:border-l-4 min-w-[500px] relative z-50 p-2 mt-10 ${isElementVisible.aboutme ? ' border-yellow-400':'border-custom-beige'}`}>
                 <AboutMe></AboutMe>
             </div> 
 
@@ -85,7 +85,7 @@ export default function Home() {
                 <Projects></Projects>
             </div>
 
-            <div id="timeline" className={` p-2 border-0 lg:border-l-4 mt-10 ${isElementVisible.timeline ? ' border-yellow-400' : 'border-custom-beige'}`}>
+            <div id="timeline" className={` p-2 border-0 min-w-[500px] lg:border-l-4 mt-10 ${isElementVisible.timeline ? ' border-yellow-400' : 'border-custom-beige'}`}>
                 <h2 className="text-3xl tracking-tight font-medium mt-2 mb-8"> It&apos;s about the journey </h2>
                 <Timeline></Timeline>
             </div>

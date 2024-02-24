@@ -74,7 +74,7 @@ export default function AboutMe() {
                         </Link>
                     </div>
             </div>
-            <h1 className="flex font-base mt-2 text-lg italic justify-center mb-2"> I am currently on sabbatical until September &apos;24  </h1>
+            <h1 className="flex font-base mt-2 text-lg italic justify-center mb-2"> Actively looking for work in Solar, Software or Digital Transformation ! </h1>
         </div>        
     </>
   );

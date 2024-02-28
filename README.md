@@ -12,3 +12,4 @@ If you fork this repository you can host on Vercel very easily.
 
 Feel free to reach out for any questions :)
 
+And, you can check it out here : https://jeanschoenlaub.vercel.app/projects (if you do, please share any feedback you may have)

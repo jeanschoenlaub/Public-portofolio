@@ -33,7 +33,7 @@ export default function ProjectList() {
         );
         setFilteredProjects(filtered);
       }
-    }, [selectedType, projectData]);
+    }, [selectedType]);
   
     const handleTypeChange = (type: string) => {
       setSelectedType(type);

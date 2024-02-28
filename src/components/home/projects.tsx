@@ -7,16 +7,6 @@ const slugify = (title: string) => {
   return title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
 };
 
-interface Project {
-    title: string;
-    description: string;
-    full_text: string;
-    video: string;
-    // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
-    tags: { [key: number]: string | undefined }; // Allow undefined values
-    image: string;
-  }
-
 export default function Projects() {
     const recentProjects = [...projectData].slice(0, 3);
   

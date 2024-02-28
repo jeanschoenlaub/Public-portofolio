@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { timelineData } from "../../data/career-line";
+import { timelineData } from "~/data/personal-info";
 
 export default function Timeline() {
   return (

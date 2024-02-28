@@ -1,10 +1,12 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+
 import AboutMe from "../components/home/about-me";
 import Timeline from "../components/home/timeline";
-import { useEffect, useState } from "react";
 import Projects from "../components/home/projects";
-import LeftDrawings from "../components/drawings/home-drawings/home-drawings";
+import HomePageDrawings from "../components/drawings/home-drawings";
+
 import { personalInfo } from "~/data/personal-info";
 
 // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
@@ -37,12 +39,9 @@ export default function Home() {
         if (element) {
           const rect = element.getBoundingClientRect();
           newVisibility[id] = rect.top < topOffsetPower-20 && ( rect.bottom > (topOffsetPower-20));
-          if (id=="projects"){
-            console.log(rect.bottom)
-            console.log(topOffsetPower)
-          }
         }
       });
+      //show the solar panel connecting to the sections
       setIsElementVisible(newVisibility);
     };
 
@@ -52,6 +51,7 @@ export default function Home() {
     // Remove event listener on cleanup
     return () => window.removeEventListener('scroll', handleScroll);
   }, [topOffsetPower]); //If window resized (wathced in children it resets here )
+
 
   useEffect(() => {
     // Update isAnyElementVisible based on the latest isElementVisible
@@ -90,9 +90,15 @@ export default function Home() {
                 <Timeline></Timeline>
             </div>
 
+            <div id="link-to-gh-repo" className="mt-4 text-gray-500 text-sm"> Like this portofolio ? Check out the github repo
+                <Link href="https://github.com/jeanschoenlaub/public-portofolio/tree/main" className="text-blue-500 hover:underline text-sm ml-1">
+                    here
+                </Link>
+            </div>
+
             {/* Conditional rendering of LeftDrawings for medium devices and up */}
             <div className="hidden lg:block -z-50">
-              <LeftDrawings isAnyElementVisible={isAnyElementVisible} onTopOffsetPowerChange={handleTopOffsetPowerChange} ></LeftDrawings>
+              <HomePageDrawings isAnyElementVisible={isAnyElementVisible} onTopOffsetPowerChange={handleTopOffsetPowerChange} ></HomePageDrawings>
             </div>
         </div>
       </main>

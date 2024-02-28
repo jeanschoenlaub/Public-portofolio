@@ -4,12 +4,6 @@ import DrawingsProjects from "../../components/drawings/proj-drawings";
 import ProjectList from "../../components/projects/project-list/project-list";
 import { personalInfo } from "~/data/personal-info";
 
-// eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
-interface VisibilityState {
-  // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
-  [key: string]: boolean;
-}
-
 
 export default function Home() {
 

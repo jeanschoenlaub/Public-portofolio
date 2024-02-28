@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { WindSVG } from "~/components/drawings/home-drawings/wind-svg";
+import { WindSVG } from "~/components/drawings/wind-svg";
 
 
 export default function DrawingsProjects () {
@@ -7,7 +7,7 @@ export default function DrawingsProjects () {
   const spacing = 30; // Spacing in pixels between each turbine
   const turbineHeight = 300; // Height of each turbine
   const turbineWidth = 270; // Height of each turbine
-  const totalHeight = numTurbines * turbineHeight + (numTurbines - 1) * spacing;
+  // const totalHeight = numTurbines * turbineHeight + (numTurbines - 1) * spacing;
 
   const [rightOffsetWindTurbin, setRightOffsetWindTurbin] = useState(0); //The space between the edge of the panel SVG anf the first div
  

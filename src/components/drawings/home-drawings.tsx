@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { PanelSVG, PowerFullSVG, SunSVG } from "./panel-svg";
 import { PowerSVG } from "./panel-svg";
 
-interface LeftDrawingsProps {
+interface HomePageDrawingsProps {
     isAnyElementVisible: boolean;
     onTopOffsetPowerChange: (value: number) => void;
-  }
+}
 
-export default function LeftDrawings ( { isAnyElementVisible, onTopOffsetPowerChange }: LeftDrawingsProps) {
+export default function HomePageDrawings ( { isAnyElementVisible, onTopOffsetPowerChange }: HomePageDrawingsProps) {
     const numPanels = 3; // Number of PanelSVGs you want
     const spacing = 20; // Spacing in pixels between each PanelSVG
     const panelHeight= 121;
@@ -116,7 +116,7 @@ export default function LeftDrawings ( { isAnyElementVisible, onTopOffsetPowerCh
             )}
         </div>
 
-        {/* Sun SVG */}
+        {/* Sun SVG on the RIGHT side*/}
        <div className="w-1/4 flex justify-center align-center">
             <div className="fixed top-16 transform -translate-x-1/2" style={{ right: sunWidth+ rightOffsetSun -10 }}>
                 <div  style={{ position: 'absolute', width: '215px' }}> {/* width should match the SVG width */}

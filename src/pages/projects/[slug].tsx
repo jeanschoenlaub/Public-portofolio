@@ -1,9 +1,8 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+import type { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { projectData } from "../../data/projects";
 import React, { useState } from 'react';
 import Link from 'next/link';
-import ReactPlayer from 'react-player';
 import { TableOfContents } from '../../components/projects/toc';
 
 interface ProjectProps {

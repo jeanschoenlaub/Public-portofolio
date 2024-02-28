@@ -2,8 +2,6 @@ import Link from "next/link";
 import { timelineData } from "../../data/career-line";
 
 export default function Timeline() {
-  
-
   return (
     <>
       <ol className="relative border-l mt-4 ml-2 lg:ml-10 mr-2 lg:mr-10 border-slate-500">

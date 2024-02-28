@@ -5,6 +5,7 @@ import Timeline from "../components/home/timeline";
 import { useEffect, useState } from "react";
 import Projects from "../components/home/projects";
 import LeftDrawings from "../components/drawings/home-drawings/home-drawings";
+import { personalInfo } from "~/data/personal-info";
 
 // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
 interface VisibilityState {
@@ -63,7 +64,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Jean Schoenlaub</title>
+        <title>{personalInfo.firstName} {personalInfo.lastName}</title>
         <meta name="My Portofolio" content="A bit about me, what I've done and what I think" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -73,7 +74,6 @@ export default function Home() {
           <nav className="flex flex-no-shrink min-w-[600px] justify-end space-x-6 mb-4 text-xl font-montserrat"> {/* Larger text and Montserrat font */}
             <Link href={"/"} className="underline-custom-mint-green font-semibold ">Home</Link>
             <Link href={"/projects"} className="underline-custom-mint-green">Projects</Link>
-            {/* <Link href={"/blog"} className="underline-custom-mint-green">Blog</Link> */}
           </nav>
 
           <div id="aboutme" className={`border-0 lg:border-l-4 min-w-[500px] relative z-50 p-2 mt-10 ${isElementVisible.aboutme ? ' border-yellow-400':'border-custom-beige'}`}>
@@ -89,11 +89,6 @@ export default function Home() {
                 <h2 className="text-3xl tracking-tight font-medium mt-2 mb-8"> It&apos;s about the journey </h2>
                 <Timeline></Timeline>
             </div>
-
-            {/* <div id="blog" className={` p-2 border-0 lg:border-2 mt-12 ${isElementVisible.blog ? ' border-yellow-400' : 'border-custom-beige'}`}>
-                <h2 className="text-2xl font-semibold mt-2 mb-2"> Some thoughts </h2>
-                <Blog></Blog>
-            </div> */}
 
             {/* Conditional rendering of LeftDrawings for medium devices and up */}
             <div className="hidden lg:block -z-50">

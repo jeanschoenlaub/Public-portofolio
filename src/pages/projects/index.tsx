@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
-import Projects from "../../components/home/projects";
 import DrawingsProjects from "../../components/drawings/proj-drawings";
 import ProjectList from "../../components/projects/project-list/project-list";
+import { personalInfo } from "~/data/personal-info";
 
 // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
 interface VisibilityState {
@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Jean Schoenlaub</title>
+        <title>{personalInfo.firstName} {personalInfo.lastName}</title>
         <meta name="description" content="My awesome portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

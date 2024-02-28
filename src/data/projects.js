@@ -1,5 +1,16 @@
 export const projectData = [
     {
+      title: "CoolDown.io: Educational sustainability games",
+      type: {1:"Software"},
+      description: "Developing games that educate on the energy transition and sustainability.",
+      full_text: `
+      <p> Check out the demo/waitlist: <a href="https://cool-down-map.vercel.app/" style="color: blue; text-decoration: underline;">www.cooldown.io</a>. Thanks !</p><p id="context" style="font-size: 1.2em; font-weight: bold;">Context</p><p> Work in progress, but you can joing waitlist on link above if you want to receive updates"
+      `,
+      date: "2024",
+      tags: {1:"React",2:"Three.js",3:"Unity"},
+      image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/cooldown.png"
+    },
+    {
       title: "Riples: Collaborative Social Media",
       type: {1:"Software"},
       description: "Building a project hosting, sharing, and collaboration platform.",

@@ -1,6 +1,8 @@
-# A simple portofolio with React elements, some svg animations using FramerMotion, json data and S3 for images, deployed on Vercel
+# A simple portofolio with React elements, some svg animations using FramerMotion, deployed on Vercel
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+
+I have made it so it can be easily re-usable and modifiable by having all the data coming from 2 json files (one for personal info and one for projects).
 
 If you want to reuse this portofolio template, you can:
  - Change the json data under src/data. (I'm unsing inline HTML for some parts).

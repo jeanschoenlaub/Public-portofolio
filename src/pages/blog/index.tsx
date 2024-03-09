@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
 import DrawingsProjects from "../../components/drawings/proj-drawings";
-import ProjectList from "../../components/projects/project-list/project-list";
 import { personalInfo } from "~/data/personal-info";
 import Navigation from "~/components/NavBar";
+import BlogPostsList from "~/components/blog/blog-posts-list";
 
 
 export default function Home() {
@@ -19,10 +19,10 @@ export default function Home() {
       <main className=" bg-custom-beige p-4">
         <div className="lg:container px-2 lg:px-8 w-full lg:w-1/2 custom-mx">
         
-        <Navigation activeSection='projects'/>
+          <Navigation activeSection='blog'/>
 
-            <div id="projects" className={` p-2 mt-12 min-w-[600px]  `}>
-                <ProjectList></ProjectList>
+            <div id="blog-posts" className={` p-2 mt-12 min-w-[600px]  `}>
+                <BlogPostsList></BlogPostsList>
             </div>
 
             <div id="link-to-gh-repo" className="mt-4 text-gray-500 text-sm"> Like this portofolio ? Check out the github repo
@@ -35,7 +35,7 @@ export default function Home() {
             <div className="hidden lg:block">
                 <DrawingsProjects></DrawingsProjects>
             </div>
-    </div>
+          </div>
       </main>
     </>
   );

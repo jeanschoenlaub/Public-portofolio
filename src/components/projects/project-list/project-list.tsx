@@ -4,16 +4,6 @@ import Image from 'next/image';
 import { useEffect , useState } from "react";
 import ProjectTypeNav from "./project-type-nav";
 
-interface ProjectList {
-    title: string;
-    description: string;
-    full_text: string;
-    video: string;
-    // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
-    tags: { [key: number]: string | undefined }; // Allow undefined values
-    image: string;
-}
-
 // Function to convert a title into a slug
 const slugify = (title: string) => {
     return title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');

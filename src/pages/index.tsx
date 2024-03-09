@@ -8,6 +8,7 @@ import Projects from "../components/home/projects";
 import HomePageDrawings from "../components/drawings/home-drawings";
 
 import { personalInfo } from "~/data/personal-info";
+import Navigation from "~/components/NavBar";
 
 // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
 interface VisibilityState {
@@ -71,10 +72,7 @@ export default function Home() {
 
       <main className=" bg-custom-beige p-4">
         <div className="container px-2 lg:px-8 w-full lg:w-1/2 mx-0 lg:mx-auto">
-          <nav className="flex flex-no-shrink min-w-[600px] justify-end space-x-6 mb-4 text-xl font-montserrat"> {/* Larger text and Montserrat font */}
-            <Link href={"/"} className="underline-custom-mint-green font-semibold ">Home</Link>
-            <Link href={"/projects"} className="underline-custom-mint-green">Projects</Link>
-          </nav>
+          <Navigation activeSection='home'/>
 
           <div id="aboutme" className={`border-0 lg:border-l-4 min-w-[500px] relative z-50 p-2 mt-10 ${isElementVisible.aboutme ? ' border-yellow-400':'border-custom-beige'}`}>
                 <AboutMe></AboutMe>

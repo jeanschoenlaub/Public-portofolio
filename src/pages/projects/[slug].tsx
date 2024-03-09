@@ -4,6 +4,7 @@ import { projectData } from "../../data/projects";
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { TableOfContents } from '../../components/projects/toc';
+import Navigation from '~/components/NavBar';
 
 interface ProjectProps {
   project: {
@@ -13,7 +14,6 @@ interface ProjectProps {
     date: string;
     tags: Record<number, string>;
     image: string;
-    video: string;
   };
 }
 
@@ -41,13 +41,10 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
   };
 
   return (
-    <main className=" bg-custom-beige p-4">
+    <main className="bg-custom-beige p-4">
     <div className="lg:container px-2 lg:px-8 w-full lg:w-3/5 mx-0 lg:mx-auto ">
-      <nav className="flex flex-no-shrink justify-end space-x-6 mb-4 mr-4 text-xl font-montserrat"> {/* Larger text and Montserrat font */}
-        <Link href={"/"} className="underline-custom-mint-green ">Home</Link>
-        <Link href={"/projects"} className="underline-custom-mint-green font-semibold ">Projects</Link>
-        {/* <Link href={"/blog"} className="underline-custom-mint-green ">Blog</Link> */}
-      </nav>
+    
+      <Navigation activeSection='projects'/>
 
       <div className="w-1/4 hidden lg:flex justify-center align-center">
           <div className="fixed text-gray-800 top-1/4 left-8">
@@ -64,7 +61,7 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
               {/* Project Details */}
               <div>
                   <div className="flex justify-center items-end mb-6">
-                      <span className="text-5xl font-extrabold tracking-tight">
+                      <span className="text-4xl font-extrabold tracking-tight">
                           {project.title}
                       </span>
                   </div>

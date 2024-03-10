@@ -10,14 +10,8 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>{personalInfo.firstName} {personalInfo.lastName}</title>
-        <meta name="description" content="My awesome portfolio" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main className=" bg-custom-beige p-4">
-        <div className="lg:container px-2 lg:px-8 w-full lg:w-1/2 custom-mx">
+        <div className="container px-2 lg:px-8 w-full lg:w-1/2 mx-0 lg:mx-auto">
         
           <Navigation activeSection='blog'/>
 

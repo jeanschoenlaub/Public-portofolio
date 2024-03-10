@@ -1,8 +1,6 @@
-import Head from "next/head";
 import Link from "next/link";
 import { DrawingsWindTurbines } from "../../components/drawings/wind-turbines";
 import ProjectList from "../../components/projects/project-list/project-list";
-import { personalInfo } from "~/data/personal-info";
 import Navigation from "~/components/NavBar";
 
 
@@ -10,12 +8,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title> Jean Schoenlaub </title>
-        <meta name="description" content="My awesome portfolio" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main className=" bg-custom-beige p-4">
         <div className="lg:container px-2 lg:px-8 w-full lg:w-1/2 custom-mx">
         

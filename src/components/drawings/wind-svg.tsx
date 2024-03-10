@@ -39,7 +39,7 @@ export const WindSVG = ({ width, height, animationDuration }: WindSVGProps) => {
 
     // This the animation t
     const bladeAnimation = {
-        rotate: rotation * animationDuration ,
+        rotate: rotation,
         transition: { duration: animationDuration, ease: [ 0.25 ,  0.5 , 0.75 ,  1 ] }
         // cubic bezier slowing down of blade rotation
     };

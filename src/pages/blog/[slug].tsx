@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Navigation from '~/components/NavBar';
 import { blogPostsData } from '~/data/blog-posts';
+import { DrawingsWindTurbines } from '~/components/drawings/wind-turbines';
 
 interface BlogPostProps {
   blog: {
@@ -35,7 +36,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
               {/* Project Details */}
               <div>
                   <div className="flex justify-center items-end mb-6">
-                      <span className="text-xl font-extrabold tracking-tight">
+                      <span className="text-2xl font-bold tracking-tight">
                           {blog.title}
                       </span>
                   </div>
@@ -46,6 +47,10 @@ const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
                         {/* HTML content will be rendered here */}
                       </div>
                   </div>
+
+                  <div className="hidden lg:block">
+                    <DrawingsWindTurbines animationDuration={0.5}></DrawingsWindTurbines>
+                </div>
               </div>
           </div>
       </div>

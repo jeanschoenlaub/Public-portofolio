@@ -18,12 +18,12 @@ export const timelineData = [
     },
     {
         year: "2021-2023, Sydney AU",
-        description: "Working as a Business Analyst and then Data Engineer at a medium sized solar manufacturer start-up.",
+        description: "Working as a Business Analyst and then Data Engineer at a medium sized solar manufacturing scale-up.",
         link: "" // No link provided for this entry
     },
     {
         year: "2020-2021, Newcastle AU",
-        description: "Working as a Solar engineer at a solar residential and commercial installer.",
+        description: "Part time graduate engineer at a solar residential and commercial installer.",
         link: "" // No link provided for this entry
     },
     {
@@ -33,7 +33,7 @@ export const timelineData = [
     },
     {
         year: "2018-19, On the road",
-        description: "Travelling ",
+        description: "Surfing in Australia, Hawai, and Central America.",
         link: "" // No link provided for this entry
     },
     {

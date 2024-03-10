@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import DrawingsProjects from "../../components/drawings/proj-drawings";
+import { DrawingsWindTurbines } from "../../components/drawings/wind-turbines";
 import { personalInfo } from "~/data/personal-info";
 import Navigation from "~/components/NavBar";
 import BlogPostsList from "~/components/blog/blog-posts-list";
@@ -21,7 +21,11 @@ export default function Home() {
         
           <Navigation activeSection='blog'/>
 
-            <div id="blog-posts" className={` p-2 mt-12 min-w-[600px]  `}>
+            <div id="about-blog" className={` p-2 mt-12 min-w-[600px]  `}>
+                Weekly updates on the projects I am currently working on :) 
+            </div>
+
+            <div id="blog-posts" className={` p-2 mt-2 min-w-[600px]  `}>
                 <BlogPostsList></BlogPostsList>
             </div>
 
@@ -33,7 +37,7 @@ export default function Home() {
 
 
             <div className="hidden lg:block">
-                <DrawingsProjects></DrawingsProjects>
+              <DrawingsWindTurbines animationDuration={5}></DrawingsWindTurbines>
             </div>
           </div>
       </main>

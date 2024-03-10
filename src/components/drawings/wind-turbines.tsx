@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { WindSVG } from "~/components/drawings/wind-svg";
 
+interface DrawingsWindTurbines {
+  animationDuration:number;
+}
 
-export default function DrawingsProjects () {
+export const DrawingsWindTurbines = ({ animationDuration }: DrawingsWindTurbines) => {
   const [numTurbines, setNumTurbines] = useState(2); // Initial number of turbines
   const spacing = 30; // Spacing in pixels between each turbine
   const turbineHeight = 300; // Height of each turbine
@@ -51,7 +54,7 @@ export default function DrawingsProjects () {
           <div className="fixed top-0 right-0 transform -translate-x-1/2" style={{ right:rightOffsetWindTurbin}}>
             {turbinesArray.map((_, index) => (
               <div key={index} style={{ position: 'fixed', top: `${index * (turbineHeight + spacing)}px`, width: `${turbineWidth}px`, height: `${turbineHeight}px` }}>
-                <WindSVG width={turbineWidth} height={turbineHeight} />
+                <WindSVG width={turbineWidth} height={turbineHeight} animationDuration={animationDuration} />
               </div>
             ))}
           </div>

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import DrawingsProjects from "../../components/drawings/proj-drawings";
+import { DrawingsWindTurbines } from "../../components/drawings/wind-turbines";
 import ProjectList from "../../components/projects/project-list/project-list";
 import { personalInfo } from "~/data/personal-info";
 import Navigation from "~/components/NavBar";
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>{personalInfo.firstName} {personalInfo.lastName}</title>
+        <title> Jean Schoenlaub </title>
         <meta name="description" content="My awesome portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -33,7 +33,7 @@ export default function Home() {
 
 
             <div className="hidden lg:block">
-                <DrawingsProjects></DrawingsProjects>
+                <DrawingsWindTurbines animationDuration={5}></DrawingsWindTurbines>
             </div>
     </div>
       </main>

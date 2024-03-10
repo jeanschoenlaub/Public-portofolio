@@ -1,17 +1,17 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-interface SunSVGProps {
+interface WindSVGProps {
     width: number;
     height: number;
+    animationDuration:number;
   }
   
-export const WindSVG = ({ width, height }: SunSVGProps) => {
+export const WindSVG = ({ width, height, animationDuration }: WindSVGProps) => {
 
     const [rotation, setRotation] = useState(0);
-    const [isAnimating, setIsAnimating] = useState(true);
 
-
+    // We use 
     useEffect(() => {
 
         if (typeof window === 'undefined') {
@@ -19,43 +19,30 @@ export const WindSVG = ({ width, height }: SunSVGProps) => {
           }
 
         let lastScrollY = window.scrollY;
-        let animationTimeout: NodeJS.Timeout;
         
-    
         const handleScroll = () => {
-            setIsAnimating(true); // Start or continue the animation on scroll
+            // Then we wan't to accumulate rotation if the user keeps scrolling within animation duration 
+            // so wind turbine can go really fast
             const scrollDiff = window.scrollY - lastScrollY;
             lastScrollY = window.scrollY;
-            setRotation(prevRotation => prevRotation + Math.abs(scrollDiff * 0.3));
-    
-            // Reset the timeout on each scroll
-            clearTimeout(animationTimeout);
-            animationTimeout = setTimeout(() => {
-                setIsAnimating(false); // Stop the animation after a period of inactivity
-            }, 2000); // 5 seconds after the last scroll
+            // And we use absolute values so no matter scroll direction turbine only spins one way
+            setRotation(prevRotation =>  prevRotation + Math.abs(scrollDiff * 0.3));
         };
     
         window.addEventListener('scroll', handleScroll);
 
-        
-        const interval = setInterval(() => {
-            if (!isAnimating) return;
-                setRotation(prevRotation => prevRotation * 0.99 );
-        }, 250);
-    
         // Clean up function
         return () => {
             window.removeEventListener('scroll', handleScroll);
-            clearInterval(interval);
-            clearTimeout(animationTimeout);
         };
-    }, [isAnimating]);
+    }, []);
 
+    // This the animation t
     const bladeAnimation = {
-        rotate: rotation + 50 ,
-        transition: { duration: 5, ease: "linear" }
+        rotate: rotation * animationDuration ,
+        transition: { duration: animationDuration, ease: [ 0.25 ,  0.5 , 0.75 ,  1 ] }
+        // cubic bezier slowing down of blade rotation
     };
-
 
     return (
      <svg width={width} height={height} viewBox="0 -200 650 800" fill="none" xmlns="http://www.w3.org/2000/svg">

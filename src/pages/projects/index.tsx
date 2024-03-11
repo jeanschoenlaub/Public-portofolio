@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <main className=" bg-custom-beige p-4">
-        <div className="container px-2 lg:px-8 w-full lg:w-1/2 mx-0 lg:mx-auto">
+        <div className="container px-2 lg:px-8 w-full lg:w-1/2 mx-auto">
         
         <Navigation activeSection='projects'/>
 

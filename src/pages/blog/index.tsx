@@ -16,11 +16,19 @@ export default function Home() {
           <Navigation activeSection='blog'/>
 
             <div id="about-blog" className={` p-2 mt-12 min-w-[600px]  `}>
-                Weekly updates on the projects I am currently working on :) 
+                Most recent writings:
             </div>
 
             <div id="blog-posts" className={` p-2 mt-2 min-w-[600px]  `}>
                 <BlogPostsList></BlogPostsList>
+            </div>
+
+            <div id="link-to-gh-repo" className="mt-4 mb-4 text-gray-500 text-sm">
+              Like this content ? You can subscribe to my weekly newsletter Seagnal, where I explore technology and sustainability trends
+            </div>
+
+            <div id='subscribe-to-my-newsletter' className="flex items-center justify-center">
+              <iframe className="rounded-xl bg-custom-beige" src="https://seagnal.substack.com/embed" width="480" height="320" style={{ border: '1px solid #EEE', background: '#FAF3E0' }} ></iframe>
             </div>
 
             <div id="link-to-gh-repo" className="mt-4 text-gray-500 text-sm"> Like this portofolio ? Check out the github repo

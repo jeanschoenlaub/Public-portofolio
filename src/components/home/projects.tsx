@@ -7,7 +7,11 @@ const slugify = (title: string) => {
   return title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
 };
 
-export default function Projects() {
+interface ProjectProps {
+  theme:string;
+}
+
+export const Projects: React.FC<ProjectProps> = ({theme}) => {
     const recentProjects = [...projectData].slice(0, 3);
   
     // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
@@ -25,7 +29,13 @@ export default function Projects() {
         <>
           {recentProjects.map((project, index) => (
             <Link href={`/projects/${slugify(project.title)}`} key={index}>
-            <div key={index} className="border-2 border-custom-mint-green flex bg-white rounded-lg mx-2 lg:mx-5 my-8 hover:shadow-xl hover:shadow-lime-50">
+            <div key={index} className={`border-2 flex rounded-lg mx-2 lg:mx-5 my-8 
+               ${theme === 'dark' ? 
+               ' border-teal-500 text-teal-500 bg-gray-800  rounded-lg  hover:shadow-lg hover:shadow-cyan-300'
+               : 
+               'bg-white hover:shadow-xl hover:shadow-lime-50 border-custom-mint-green  '}
+              `}>
+              
               {/* Image */}
               <div className="relative w-1/2 border border-slate-300">
                 <Image
@@ -44,7 +54,7 @@ export default function Projects() {
                 </div>
     
                 {/* Description */}
-                <div className="font-light mt-2 text-gray-500 lg:text-lg">
+                <div className={`font-light mt-2  ${theme === 'dark' ? 'text-gray-200': 'text-gray-500'} lg:text-lg`}>
                   {project.description}
                 </div>
     
@@ -59,7 +69,12 @@ export default function Projects() {
             </Link>
           ))}
           <div className="flex justify-center">
-            <div className="flex w-72 justify-center items-center border-2 py-1 px-2 rounded-lg border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white hover:shadow-xl hover:shadow-lime-100">
+            <div className={`flex w-72 justify-center items-center border-2 py-1 px-2 rounded-lg
+                    ${theme === 'dark' ? 
+                    ' border-teal-500 text-teal-500 hover:bg-cyan-700 hover:text-white rounded-lg  hover:shadow-lg hover:shadow-cyan-300'
+                    : 
+                    ' border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg  hover:shadow-xl hover:shadow-lime-100'}
+                `}>
                 <Link href="/projects">
                     <div className="text-lg font-medium text flex items-center">
                         Check out more projects

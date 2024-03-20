@@ -1,14 +1,18 @@
 import Link from "next/link";
 import { timelineData } from "~/data/personal-info";
 
-export default function Timeline() {
+interface TimelineProps { 
+  theme: string;
+}
+
+export const Timeline: React.FC<TimelineProps> = ({theme}) => {
   return (
     <>
       <ol className="relative border-l mt-4 ml-2 lg:ml-10 mr-2 lg:mr-10 border-slate-500">
         {timelineData.map((item, index) => (
-          <li key={index} className="ml-4 relative">
+          <li key={index} className={`ml-4 relative ${theme === 'dark' ? 'text-gray-200' : 'text-black'}`}>
             {/* Dot */}
-            <div className={`absolute w-4 h-4 shadow-2xl bg-custom-mint-green rounded-full mt-2 -left-6`}></div>
+            <div className={`absolute w-4 h-4 shadow-2xl rounded-full mt-2 -left-6 ${theme === 'dark' ? 'bg-teal-500' : 'bg-custom-mint-green'}`}></div>
             
             {/* Year and Description */}
             <div className="flex flex-col ml-6 mt-3 mb-8">

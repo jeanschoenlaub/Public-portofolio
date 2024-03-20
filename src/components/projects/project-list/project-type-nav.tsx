@@ -5,11 +5,13 @@ interface ProjectTypeNavProps {
     selectedType: string;
     setSelectedType: (type: string) => void;
     options: string[];
+    theme: string;
   }
   
   const ProjectTypeNav: React.FC<ProjectTypeNavProps> = ({
     selectedType,
     setSelectedType,
+    theme,
     options = [] //Fallback to empty array if undefined
   }) => {
     const scrollContainer = useRef<HTMLDivElement>(null);
@@ -63,10 +65,10 @@ interface ProjectTypeNavProps {
         {scrollPosition > 0 && (
             <button
                 onClick={scrollLeft}
-                className={`${styles.buttonLeftOverlay} absolute left-0 z-20 p-2 bg-custom-beige`}
+                className={` absolute left-0 z-20 p-2 ${theme === 'dark' ?  'bg-gray-900' : 'bg-custom-beige'} ${theme === 'dark' ?  styles.buttonRightOverlayDark : styles.buttonRightOverlayLight}`}
             >
                 <svg className="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 1 1.3 6.326a.91.91 0 0 0 0 1.348L7 13"/>
+                    <path stroke={`${theme === 'dark' ?  '#e5e7eb' : '#020617'}`} strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 1 1.3 6.326a.91.91 0 0 0 0 1.348L7 13"/>
                 </svg>
             </button>
         )}
@@ -80,9 +82,19 @@ interface ProjectTypeNavProps {
             <button
                 key={index}
                 onClick={() => setSelectedType(option)} 
-                className={`whitespace-nowrap px-6 py-2 font-medium 
-                ${selectedType === option ? 'border-b-2 border-custom-mint-green font-semibold text-custom-mint-green' : 'border-b border-gray-300 text-gray-600 hover:text-gray-900'} 
-                focus:outline-none`}>
+                className={`whitespace-nowrap px-6 py-2 font-medium focus:outline-none 
+                ${selectedType === option ? 
+                    theme === 'dark' ? 
+                    'border-b-2 border-teal-500 font-semibold text-teal-500'
+                    : 
+                    'border-b-2 border-custom-mint-green font-semibold text-custom-mint-green'
+                :     
+                    theme === 'dark' ? 
+                    'hover:cursor-pointer border-b border-gray-600  text-gray-300 hover:text-gray-100' 
+                    : 
+                    'hover:cursor-pointer border-b border-gray-300 text-gray-600 hover:text-gray-900'
+                }
+                `}>
                 {option}
             </button>
             ))}
@@ -91,10 +103,10 @@ interface ProjectTypeNavProps {
         {scrollPosition < maxScrollPosition && (
             <button
             onClick={scrollRight}
-            className={`${styles.buttonRightOverlay} absolute right-0 z-20 p-2 bg-custom-beige`}
+            className={` absolute right-0 z-20 p-2  ${theme === 'dark' ?  'bg-gray-900' : 'bg-custom-beige'} ${theme === 'dark' ?  styles.buttonRightOverlayDark : styles.buttonRightOverlayLight} `}
             >
             <svg className="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"/>
+                <path stroke={`${theme === 'dark' ?  '#e5e7eb' : '#020617'}`} strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"/>
             </svg>
             </button>
         )}

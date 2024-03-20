@@ -19,10 +19,17 @@ interface ProjectProps {
 
 const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
   const router = useRouter();
+
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [theme, setTheme] = useState('light'); // Default theme or fetch from localStorage
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
+  };
+
+  // This function is passed to Navigation and updates the parent's state
+  const handleThemeChange = (newTheme: string) => {
+    setTheme(newTheme);
   };
 
   if (router.isFallback) {
@@ -40,19 +47,12 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
       ));
   };
 
-  const [theme, setTheme] = useState('light'); // Default theme or fetch from localStorage
-
-  // This function is passed to Navigation and updates the parent's state
-  const handleThemeChange = (newTheme: string) => {
-    setTheme(newTheme);
-  };
 
   return (
-    <main className="bg-custom-beige p-4">
+    <main className={`${theme === 'dark' ? ' bg-gray-900' : 'bg-custom-beige'} p-4`}>
     <div className="lg:container px-2 lg:px-8 w-full lg:w-3/5 mx-0 lg:mx-auto ">
     
-    <Navigation activeSection='home' onThemeChange={handleThemeChange} />
-
+    <Navigation activeSection='projects' onThemeChange={handleThemeChange} />
 
       <div className="w-1/4 hidden lg:flex justify-center align-center">
           <div className="fixed text-gray-800 top-1/4 left-8">
@@ -128,7 +128,7 @@ const ImageModal: React.FC<{
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center" onClick={onClickOutside}>
+    <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center" onClick={onClickOutside}>
       {/* Close Button */}
       <button
         onClick={onClickOutside}

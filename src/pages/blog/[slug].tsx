@@ -17,11 +17,13 @@ interface BlogPostProps {
 const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
   const router = useRouter();
 
+  const [theme, setTheme] = useState('light'); // Default theme or fetch from localStorage
+
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
 
-  const [theme, setTheme] = useState('light'); // Default theme or fetch from localStorage
+  
 
   // This function is passed to Navigation and updates the parent's state
   const handleThemeChange = (newTheme: string) => {
@@ -29,10 +31,10 @@ const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
   };
 
   return (
-    <main className="bg-custom-beige p-4">
+    <main className={`${theme === 'dark' ? ' bg-gray-900' : 'bg-custom-beige'} p-4`}>
         <div className="lg:container px-2 lg:px-8 w-full lg:w-3/5 mx-0 lg:mx-auto ">
           
-        <Navigation activeSection='home' onThemeChange={handleThemeChange} />
+        <Navigation activeSection='blog' onThemeChange={handleThemeChange} />
 
 
           <div  className={` p-2 mt-12 `}>

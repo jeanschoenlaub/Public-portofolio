@@ -11,7 +11,7 @@
     scroll-behavior: smooth;
 }
 
-.buttonLeftOverlay::after {
+.buttonLeftOverlayLight::after {
     content: '';
     position: absolute;
     top: 0;
@@ -22,13 +22,36 @@
     pointer-events: none;
 }
 
-.buttonRightOverlay::after {
+.buttonLeftOverlayDark::after {
     content: '';
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 100%; /* Start the gradient right before the button */
+    left: 100%; /* Start the gradient right after the button */
     width: 50px; /* Width of the transparent effect */
-    background: linear-gradient(to left, #FAF3E0, transparent);
+    background: linear-gradient(to left, transparent, #111827);
+    pointer-events: none;
+}
+
+/* Assuming this is in your styles.module.css */
+.buttonRightOverlayDark::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    width: 50px;
+    background: linear-gradient(to left, #111827, transparent); /* Dark theme gradient */
+    pointer-events: none;
+}
+
+.buttonRightOverlayLight::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    width: 50px;
+    background: linear-gradient(to left, #FAF3E0, transparent); /* Light theme gradient */
     pointer-events: none;
 }

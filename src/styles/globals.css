@@ -21,6 +21,13 @@ body {
     text-decoration-thickness: 3px; 
     text-underline-offset: 6px;
   }
+
+  .underline-teal-500:hover {
+    text-decoration: underline;
+    text-decoration-color: #38b2ac; 
+    text-decoration-thickness: 3px; 
+    text-underline-offset: 6px;
+  }
     
   .timeline-entry {
     position: relative;

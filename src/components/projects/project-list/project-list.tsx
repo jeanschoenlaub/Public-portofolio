@@ -9,7 +9,11 @@ const slugify = (title: string) => {
     return title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
 };
 
-export default function ProjectList() {
+interface ProjectListProps {
+    theme: string;
+}
+
+export const ProjectList: React.FC<ProjectListProps> = ({theme}) => {
     const [selectedType, setSelectedType] = useState('All');
     const [filteredProjects, setFilteredProjects] = useState(projectData);
     const options = ['All', 'Software', 'Solar', 'Data', 'Manufacturing', 'CAD', 'Travel'];
@@ -46,11 +50,18 @@ export default function ProjectList() {
             selectedType={selectedType}
             setSelectedType={handleTypeChange}
             options={options}
+            theme={theme}
         />
 
         {filteredProjects.map((project, index) => (
-            <div key={index} className="border-2 border-custom-mint-green flex bg-white rounded-lg my-8 shadow-lg">
-                {/* Image */}
+            <div key={index} className={`border-2 flex rounded-lg mx-2 lg:mx-5 my-8 
+            ${theme === 'dark' ? 
+            ' border-teal-500 text-teal-500 bg-gray-800 rounded-lg '
+            : 
+            'bg-white hover:shadow-xl hover:shadow-lime-50 border-custom-mint-green  '}
+           `}>
+             
+             {/* Image */}
                 <div className="relative w-1/2 border border-slate-300">
                     <Image
                         className="rounded-l-lg object-cover"
@@ -85,7 +96,13 @@ export default function ProjectList() {
 
                     {/* Read More */}
                     <div className="flex mt-4 justify-end">
-                        <div className="flex w-40 justify-center items-center border-2 py-1 px-2 rounded-lg border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white ">
+                        <div className={`flex w-40 justify-center items-center border-2 py-1 px-2 rounded-lg
+                            ${theme === 'dark' ? 
+                            ' border-teal-500 text-teal-500 hover:bg-cyan-700 hover:text-white rounded-lg  hover:shadow-lg hover:shadow-cyan-300'
+                            : 
+                            ' border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg  hover:shadow-xl hover:shadow-lime-100'}
+                        `}>
+                           
                             <Link href={`/projects/${slugify(project.title)}`}>
                                 <div className=" font-medium text flex items-center">
                                 Read More 

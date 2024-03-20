@@ -1,17 +1,22 @@
 import Link from "next/link";
 import { personalInfo } from "../../data/personal-info";
 
-export default function AboutMe() {
-  
+// Props type definition
+interface AboutMeProps {
+    theme: string;
+}
+    
+  // The Navigation component
+export const AboutMe: React.FC<AboutMeProps> = ({ theme }) => {
 
   return (
     <>
       <div className="flex flex-col"> 
             <div className="flex items-center">
                 <div className="lg:w-36 hidden lg:block ">
-                    <img src="/profile_image.jpeg" alt="Profile Image" className="rounded-full flex-grow items-center justify-center w-32 h-32 mr-12" />
+                    <img src="/profile_image.jpeg" alt="Profile Image" className="rounded-full flex-grow items-center justify-center w-32 h-32 mr-12 " />
                 </div>
-                <div className="flex ml-2 w-full lg:w-3/4 flex-col text-left">
+                <div className={`flex ml-2 w-full lg:w-3/4 flex-col text-left ${theme === 'dark' ? 'text-gray-200' : 'text-black'}`}>
                     
                     <h1 className="text-3xl tracking-tight font-semibold mb-4">Hey, I&apos;m {personalInfo.firstName}</h1>
                     <p className="mb-4"> {personalInfo.catchPhrase} </p>
@@ -19,7 +24,12 @@ export default function AboutMe() {
             </div>
             <div className="flex justify-between text-lg flex-wrap sm:flex-nowrap  mt-4 mb-4 "> 
 
-                <div className="flex font-medium items-center border-2 mt-2 py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg  hover:shadow-xl hover:shadow-lime-100">
+                <div className={`flex font-medium items-center border-2 mt-2 py-1 px-2 
+                        ${theme === 'dark' ? 
+                        ' border-teal-500 text-teal-500 hover:bg-cyan-700 hover:text-white rounded-lg  hover:shadow-lg hover:shadow-cyan-300'
+                        : 
+                        ' border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg  hover:shadow-xl hover:shadow-lime-100'}
+                    `}>
                     <Link href={personalInfo.githubLink} target="_blank" >
                         <div className="flex items-center">
                         <svg className="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -30,7 +40,12 @@ export default function AboutMe() {
                     </Link>
                 </div>
 
-                <div className="flex font-medium items-center border-2 ml-2 mt-2 py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg hover:shadow-xl hover:shadow-lime-100">
+                <div className={`flex font-medium items-center border-2 mt-2 py-1 px-2 
+                        ${theme === 'dark' ? 
+                        ' border-teal-500 text-teal-500 hover:bg-cyan-700 hover:text-white rounded-lg  hover:shadow-lg hover:shadow-cyan-300'
+                        : 
+                        ' border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg  hover:shadow-xl hover:shadow-lime-100'}
+                    `}>
                     <Link href={personalInfo.linkedInLink} target="_blank" >
                         <div className=" flex items-center">
                         <svg className="w-4 h-4 mb-1 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 15 15">
@@ -42,7 +57,12 @@ export default function AboutMe() {
                     </Link>
                 </div>
 
-                <div className="flex font-medium items-center ml-2 mt-2 border-2 py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg hover:shadow-xl hover:shadow-lime-100">
+                <div className={`flex font-medium items-center border-2 mt-2 py-1 px-2 
+                        ${theme === 'dark' ? 
+                        ' border-teal-500 text-teal-500 hover:bg-cyan-700 hover:text-white rounded-lg  hover:shadow-lg hover:shadow-cyan-300'
+                        : 
+                        ' border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg  hover:shadow-xl hover:shadow-lime-100'}
+                    `}>
                     <Link href="/CV-2024.pdf" download="resume.pdf">
                         <div className=" flex items-center">
                         <svg className="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 19">
@@ -53,8 +73,13 @@ export default function AboutMe() {
                     </Link>
                 </div>
 
-                <div className="flex font-medium items-center ml-2 mt-2 border-2 py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg hover:shadow-xl hover:shadow-lime-100">
-                    <Link href={`mailto:${personalInfo.emailAddress}`}>
+                <div className={`flex font-medium items-center border-2 mt-2 py-1 px-2 
+                        ${theme === 'dark' ? 
+                        ' border-teal-500 text-teal-500 hover:bg-cyan-700 hover:text-white rounded-lg  hover:shadow-lg hover:shadow-cyan-300'
+                        : 
+                        ' border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg  hover:shadow-xl hover:shadow-lime-100'}
+                    `}>
+                <Link href={`mailto:${personalInfo.emailAddress}`}>
                         <div className=" flex items-center">
                         <svg className="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 4a4 4 0 0 1 4 4v6M5 4a4 4 0 0 0-4 4v6h8M5 4h9M9 14h10V8a3.999 3.999 0 0 0-2.066-3.5M9 14v5m0-5h4v5m-9-8h2m8-4V1h2"/>
@@ -64,8 +89,13 @@ export default function AboutMe() {
                     </Link>
                 </div>
 
-                <div className="flex font-medium items-center ml-2 mt-2 border-2 py-1 px-2 border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg hover:shadow-xl hover:shadow-lime-100">
-                        <Link href={personalInfo.calendar} target="_blank">
+                <div className={`flex font-medium items-center border-2 mt-2 py-1 px-2 
+                        ${theme === 'dark' ? 
+                        ' border-teal-500 text-teal-500 hover:bg-cyan-700 hover:text-white rounded-lg  hover:shadow-lg hover:shadow-cyan-300'
+                        : 
+                        ' border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg  hover:shadow-xl hover:shadow-lime-100'}
+                    `}>
+                    <Link href={personalInfo.calendar} target="_blank">
                             <div className=" flex items-center">
                             <svg className="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14">
                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 1H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Zm7 11-6-2V4l6-2v10Z"/>
@@ -75,7 +105,7 @@ export default function AboutMe() {
                         </Link>
                     </div>
             </div>
-            <h1 className="flex font-base mt-2 text-lg italic justify-center mb-2"> {personalInfo.callToAction} </h1>
+            <h1 className={`flex font-base mt-2 items-center text-lg italic justify-center mb-2 ${theme === 'dark' ? 'text-gray-200' : 'text-black'}`}> {personalInfo.callToAction} </h1>
         </div>        
     </>
   );

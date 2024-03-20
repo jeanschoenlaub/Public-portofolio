@@ -1,5 +1,10 @@
 export const blogPostsData = [
     {
+        title: "Seagnal #2 - Solar modules cheaper than fences", 
+        link:"https://open.substack.com/pub/seagnal/p/seagnal-2-solar-modules-cheaper-than?r=2nofy3&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true",
+        date: "19/03/24",
+    }, 
+    {
         title: "Seagnal #1 - Powering AI with clean energy", 
         link:"https://open.substack.com/pub/seagnal/p/seagnal-1-powering-ai-with-clean?r=2nofy3&utm_campaign=post&utm_medium=web",
         date: "12/03/24",

@@ -4,16 +4,24 @@ import { DrawingsWindTurbines } from "../../components/drawings/wind-turbines";
 import { personalInfo } from "~/data/personal-info";
 import Navigation from "~/components/NavBar";
 import BlogPostsList from "~/components/blog/blog-posts-list";
+import { useState } from "react";
 
 
 export default function Home() {
+
+  const [theme, setTheme] = useState('light'); // Default theme or fetch from localStorage
+
+  // This function is passed to Navigation and updates the parent's state
+  const handleThemeChange = (newTheme: string) => {
+    setTheme(newTheme);
+  };
 
   return (
     <>
       <main className=" bg-custom-beige p-4">
         <div className="container px-2 lg:px-8 w-full lg:w-1/2 mx-0 lg:mx-auto">
         
-          <Navigation activeSection='blog'/>
+        <Navigation activeSection='home' onThemeChange={handleThemeChange} />
 
             <div id="about-blog" className={` p-2 mt-12 min-w-[600px]  `}>
                 Most recent writings:

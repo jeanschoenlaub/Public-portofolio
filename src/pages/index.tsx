@@ -7,7 +7,6 @@ import Timeline from "../components/home/timeline";
 import Projects from "../components/home/projects";
 import HomePageDrawings from "../components/drawings/home-drawings";
 
-import { personalInfo } from "~/data/personal-info";
 import Navigation from "~/components/NavBar";
 
 // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
@@ -62,6 +61,13 @@ export default function Home() {
     //console.log(isVisible); // Will log the current state of visibility
   }, [isElementVisible]);
 
+  const [theme, setTheme] = useState('light'); // Default theme or fetch from localStorage
+
+  // This function is passed to Navigation and updates the parent's state
+  const handleThemeChange = (newTheme: string) => {
+    setTheme(newTheme);
+  };
+
   return (
     <>
       <Head>
@@ -70,9 +76,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className=" bg-custom-beige p-4">
+      <main className={`bg-custom-beige ${theme === 'dark' ? 'dark:bg-black' : ''} p-4`}>
         <div className="container px-2 lg:px-8 w-full lg:w-1/2 mx-0 lg:mx-auto">
-          <Navigation activeSection='home'/>
+        
+          <Navigation activeSection='home' onThemeChange={handleThemeChange} />
 
           <div id="aboutme" className={`border-0 lg:border-l-4 min-w-[500px] relative z-50 p-2 mt-10 ${isElementVisible.aboutme ? ' border-yellow-400':'border-custom-beige'}`}>
                 <AboutMe></AboutMe>

@@ -19,7 +19,7 @@ export const projectData = [
        `,
       link: "https://www.riples.app/about",
       date: "2023",
-      tags: {1:"React",2:"Typescript",3:"Tailwind",4:"Next.js",5:"Vercel",6:"Prisma",7:"AWS",8:"OpenAI APIs"},
+      tags: {1:"React",2:"Typescript",3:"Tailwind",4:"Next.js",5:"Vercel",6:"Node.js",7:"AWS",8:"OpenAI APIs"},
       image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/Riples.png"
     },
     {

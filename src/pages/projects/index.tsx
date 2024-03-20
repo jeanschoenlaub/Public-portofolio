@@ -2,16 +2,24 @@ import Link from "next/link";
 import { DrawingsWindTurbines } from "../../components/drawings/wind-turbines";
 import ProjectList from "../../components/projects/project-list/project-list";
 import Navigation from "~/components/NavBar";
+import { useState } from "react";
 
 
 export default function Home() {
 
+  const [theme, setTheme] = useState('light'); // Default theme or fetch from localStorage
+
+  // This function is passed to Navigation and updates the parent's state
+  const handleThemeChange = (newTheme: string) => {
+    setTheme(newTheme);
+  };
+
   return (
     <>
-      <main className=" bg-custom-beige p-4">
+      <main className=" bg-custom-beige dark:bg-black p-4">
         <div className="container px-2 lg:px-8 w-full lg:w-1/2 mx-auto">
         
-        <Navigation activeSection='projects'/>
+        <Navigation activeSection='home' onThemeChange={handleThemeChange} />
 
             <div id="projects" className={` p-2 mt-12 min-w-[600px]  `}>
                 <ProjectList></ProjectList>

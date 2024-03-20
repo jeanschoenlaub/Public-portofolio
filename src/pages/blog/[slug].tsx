@@ -1,6 +1,6 @@
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Navigation from '~/components/NavBar';
 import { blogPostsData } from '~/data/blog-posts';
@@ -21,11 +21,19 @@ const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
     return <div>Loading...</div>;
   }
 
+  const [theme, setTheme] = useState('light'); // Default theme or fetch from localStorage
+
+  // This function is passed to Navigation and updates the parent's state
+  const handleThemeChange = (newTheme: string) => {
+    setTheme(newTheme);
+  };
+
   return (
     <main className="bg-custom-beige p-4">
         <div className="lg:container px-2 lg:px-8 w-full lg:w-3/5 mx-0 lg:mx-auto ">
           
-          <Navigation activeSection='blog'/>
+        <Navigation activeSection='home' onThemeChange={handleThemeChange} />
+
 
           <div  className={` p-2 mt-12 `}>
               {/* Go Back Button */}

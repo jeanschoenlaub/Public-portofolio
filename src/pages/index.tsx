@@ -110,7 +110,7 @@ export default function Home() {
 
             {/* Conditional rendering of LeftDrawings for medium devices and up */}
             <div className="hidden lg:block -z-50">
-              <HomePageDrawings isAnyElementVisible={isAnyElementVisible} onTopOffsetPowerChange={handleTopOffsetPowerChange} ></HomePageDrawings>
+              <HomePageDrawings isAnyElementVisible={isAnyElementVisible} onTopOffsetPowerChange={handleTopOffsetPowerChange} theme={theme} ></HomePageDrawings>
             </div>
         </div>
       </main>

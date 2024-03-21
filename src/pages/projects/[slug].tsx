@@ -17,6 +17,8 @@ interface ProjectProps {
   };
 }
 
+
+
 const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
   const router = useRouter();
 
@@ -56,20 +58,22 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
 
       <div className="w-1/4 hidden lg:flex justify-center align-center">
           <div className="fixed text-gray-800 top-1/4 left-8">
-            <TableOfContents htmlContent={project.full_text} />
+            <TableOfContents htmlContent={project.full_text} theme={theme}/>
           </div>
       </div>
 
-      <div  className={` p-2 mt-12 `}>
+      <div className={` p-2 mt-12 `}>
               {/* Go Back to Project List Button */}
               <Link href="/projects"> 
-                <div className="text-custom-mint-green text-lg hover:underline mb-4 inline-block">&larr; Go Back to Project List</div>
+                <div className={`${theme === 'dark' ? ' text-teal-500' : 'text-custom-mint-green'} text-lg hover:underline mb-4 inline-bloc `}>
+                  &larr; Go Back to Project List
+                </div>
               </Link>
 
               {/* Project Details */}
               <div>
                   <div className="flex justify-center items-end mb-6">
-                      <span className="text-4xl font-extrabold tracking-tight">
+                      <span className={`text-4xl font-extrabold tracking-tight ${theme === 'dark' ? ' text-gray-200' : 'text-'}  `}>
                           {project.title}
                       </span>
                   </div>
@@ -82,7 +86,7 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray-700 text-lg mb-4">{project.description}</p>
+                  <p className={`text-lg mb-4 ${theme === 'dark' ? ' text-gray-400' : 'text-gray-600'}`}>{project.description}</p>
                   
                   {/* Image */}
                   <div className="flex justify-center">
@@ -104,8 +108,8 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
                   />
 
                   {/* Full Text */}
-                  <div className="mt-4  text-gray-800">
-                    <div className='prose text-lg w-full' dangerouslySetInnerHTML={{ __html: project.full_text }}>
+                  <div className={`mt-4`}>
+                    <div className={`prose text-lg w-full ${theme === 'dark' ? ' text-gray-200' : 'text-gray-900'}`} dangerouslySetInnerHTML={{ __html: project.full_text }}>
                       {/* HTML content will be rendered here */}
                     </div>
                   </div>

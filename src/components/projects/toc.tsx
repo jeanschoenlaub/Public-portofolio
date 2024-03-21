@@ -2,15 +2,16 @@ import { useEffect, useState } from "react";
 
 interface TableOfContentsProps {
     htmlContent: string;
-  }
+    theme: string;
+}
   
-  interface TocItem {
+interface TocItem {
     id: string;
     text: string | null;
-  }
+}
   
   
- export const TableOfContents: React.FC<TableOfContentsProps> = ({ htmlContent }) => {
+export const TableOfContents: React.FC<TableOfContentsProps> = ({ htmlContent, theme }) => {
   
     const [tocItems, setTocItems] = useState<TocItem[]>([]);
   
@@ -30,8 +31,7 @@ interface TableOfContentsProps {
     return (
       <div className="">
         {tocItems.length > 0 && (
-          <div className="">
-            <div>
+          <div className={`${theme === 'dark' ? ' text-gray-200' : 'text-gray-900'}`}>
             <div className="text-xl font-semibold mb-4"> Table of Content </div>
             <ol>
               {tocItems.map((item, index) => (
@@ -47,7 +47,6 @@ interface TableOfContentsProps {
                 </li>
               ))}
             </ol>
-          </div>
           </div>
         )}
       </div>

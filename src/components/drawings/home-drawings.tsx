@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
-import { PanelSVG, PowerFullSVG, SunSVG } from "./panel-svg";
+import { PanelSVG, PowerFullSVG } from "./panel-svg";
 import { PowerSVG } from "./panel-svg";
+import { MoonSVG, SunSVG } from "./sun-moon";
+import theme from "tailwindcss/defaultTheme";
 
 interface HomePageDrawingsProps {
     isAnyElementVisible: boolean;
     onTopOffsetPowerChange: (value: number) => void;
+    theme: string;
 }
 
-export default function HomePageDrawings ( { isAnyElementVisible, onTopOffsetPowerChange }: HomePageDrawingsProps) {
+export default function HomePageDrawings ( { isAnyElementVisible, onTopOffsetPowerChange, theme }: HomePageDrawingsProps) {
     const numPanels = 3; // Number of PanelSVGs you want
     const spacing = 20; // Spacing in pixels between each PanelSVG
     const panelHeight= 121;
@@ -120,7 +123,7 @@ export default function HomePageDrawings ( { isAnyElementVisible, onTopOffsetPow
        <div className="w-1/4 flex justify-center align-center">
             <div className="fixed top-16 transform -translate-x-1/2" style={{ right: sunWidth+ rightOffsetSun -10 }}>
                 <div  style={{ position: 'absolute', width: '215px' }}> {/* width should match the SVG width */}
-                    <SunSVG height="230" width="215"/>
+                    {theme === "dark" ?  <MoonSVG height="180" width="200"/> :  <SunSVG height="230" width="215"/>}
                 </div>
             </div>
         </div>

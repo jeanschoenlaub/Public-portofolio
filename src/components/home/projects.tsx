@@ -31,7 +31,7 @@ export const Projects: React.FC<ProjectProps> = ({theme}) => {
             <Link href={`/projects/${slugify(project.title)}`} key={index}>
             <div key={index} className={`border-2 flex rounded-lg mx-2 lg:mx-5 my-8 
                ${theme === 'dark' ? 
-               ' border-teal-500 text-teal-500 bg-gray-800  rounded-lg  hover:shadow-lg hover:shadow-cyan-300'
+               ' border-teal-500 text-teal-500 bg-gray-800 rounded-lg  hover:shadow-lg hover:shadow-cyan-300'
                : 
                'bg-white hover:shadow-xl hover:shadow-lime-50 border-custom-mint-green  '}
               `}>

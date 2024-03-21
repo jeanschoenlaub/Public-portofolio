@@ -23,8 +23,6 @@ const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
     return <div>Loading...</div>;
   }
 
-  
-
   // This function is passed to Navigation and updates the parent's state
   const handleThemeChange = (newTheme: string) => {
     setTheme(newTheme);
@@ -40,20 +38,22 @@ const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
           <div  className={` p-2 mt-12 `}>
               {/* Go Back Button */}
               <Link href="/blog"> 
-                <div className="text-custom-mint-green text-lg hover:underline mb-4 inline-block">&larr; Go back to all blog posts</div>
+                <div className={`${theme === 'dark' ? ' text-teal-500' : 'text-custom-mint-green'} text-lg hover:underline mb-4 inline-bloc `}>
+                  &larr; Go back to all blog posts
+                </div>
               </Link>
 
               {/* Project Details */}
               <div>
                   <div className="flex justify-center items-end mb-6">
-                      <span className="text-2xl font-bold tracking-tight">
+                      <span className={`text-2xl font-bold tracking-tight ${theme === 'dark' ? ' text-gray-200' : 'text-gray-800'}`}>
                           {blog.title}
                       </span>
                   </div>
 
                   {/* Full Text */}
                   <div className="mt-4 text-gray-800">
-                      <div className='prose text-lg w-full' dangerouslySetInnerHTML={{ __html: blog.full_text }}>
+                      <div className={` prose text-lg w-full ${theme === 'dark' ? ' text-gray-200' : 'text-gray-800'}`} dangerouslySetInnerHTML={{ __html: blog.full_text }}>
                         {/* HTML content will be rendered here */}
                       </div>
                   </div>

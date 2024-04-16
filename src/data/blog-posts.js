@@ -1,5 +1,25 @@
 export const blogPostsData = [
     {
+        title: "Seagnal #6 - 💡 Energy Transition", 
+        link:"https://seagnal.substack.com/p/energy-transition",
+        date: "16/04/24",
+    }, 
+    {
+        title: "Seagnal #5 - 🌡️ Breaking temperature records", 
+        link:"https://seagnal.substack.com/p/breaking-temperature-records",
+        date: "09/04/24",
+    }, 
+    {
+        title: "Seagnal #4 - 📱 60% of the world now uses smartphones", 
+        link:"https://seagnal.substack.com/p/60-of-the-world-now-uses-smartphones",
+        date: "02/04/24",
+    }, 
+    {
+        title: "Seagnal #3 - AI Algorithms", 
+        link:"https://seagnal.substack.com/p/beyond-human-the-evolution-of-ai",
+        date: "26/03/24",
+    }, 
+    {
         title: "Seagnal #2 - Solar modules cheaper than fences", 
         link:"https://open.substack.com/pub/seagnal/p/seagnal-2-solar-modules-cheaper-than?r=2nofy3&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true",
         date: "19/03/24",

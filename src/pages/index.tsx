@@ -76,8 +76,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={`${theme === 'dark' ? ' bg-gray-900' : 'bg-custom-beige'} p-4`}>
-        <div className="container px-2 lg:px-8 w-full lg:w-1/2 mx-0 lg:mx-auto">
+      <main className={`${theme === 'dark' ? ' bg-gray-900' : 'bg-custom-beige'} py-4 w-full`}>
+        <div className="container px-4 sm:px-10 w-full lg:w-1/2 mx-auto">
         
           <Navigation activeSection='home' onThemeChange={handleThemeChange} />
 

@@ -52,9 +52,7 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
 
   return (
     <main className={`${theme === 'dark' ? ' bg-gray-900' : 'bg-custom-beige'} p-4`}>
-    <div className="lg:container px-2 lg:px-8 w-full lg:w-3/5 mx-0 lg:mx-auto ">
-    
-    <Navigation activeSection='projects' onThemeChange={handleThemeChange} />
+          <div className="container px-4 sm:px-8 w-full lg:w-1/2 mx-auto">  <Navigation activeSection='projects' onThemeChange={handleThemeChange} />
 
       <div className="w-1/4 hidden lg:flex justify-center align-center">
           <div className="fixed text-gray-800 top-1/4 left-8">

@@ -11,8 +11,7 @@ interface BlogPostsListProps {
 }
 
 export const BlogPostsList: React.FC<BlogPostsListProps> = ({theme}) => {
-    ;
-  
+    
     return (
     <>
         {blogPostsData.map((post, index) => (

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
 // All possible sections
-type Section = 'home' | 'projects' | 'blog';
+type Section = 'home' | 'projects' | 'blog' | 'links';
 
 // Props type definition
 interface NavigationProps {
@@ -48,7 +48,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, onThemeChange })
 
 
   return (
-    <nav className={`flex flex-no-shrink justify-end space-x-6 mb-4 mr-4 text-xl font-montserrat ${ !isDayTheme ? 'text-white' : 'text-black'}`}>
+    <nav className={`ml-4 flex flex-no-shrink justify-end space-x-2 sm:space-x-6 mb-4 sm:mr-4 min-w-[500px] text-xl font-montserrat ${ !isDayTheme ? 'text-white' : 'text-black'}`}>
       <Link href="/" className={linkClassName('home')}>
         Home
       </Link>
@@ -57,6 +57,9 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, onThemeChange })
       </Link>
       <Link href="/blog" className={linkClassName('blog')}>
         Writing
+      </Link>
+      <Link href="/links" className={linkClassName('links')}>
+        Links
       </Link>
       <label className="inline-flex items-center cursor-pointer">
         <input 

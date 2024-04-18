@@ -30,10 +30,9 @@ const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
 
   return (
     <main className={`${theme === 'dark' ? ' bg-gray-900' : 'bg-custom-beige'} p-4`}>
-        <div className="lg:container px-2 lg:px-8 w-full lg:w-3/5 mx-0 lg:mx-auto ">
-          
+        <div className="container px-4 sm:px-8 w-full lg:w-1/2 mx-auto">  
+        
         <Navigation activeSection='blog' onThemeChange={handleThemeChange} />
-
 
           <div  className={` p-2 mt-12 `}>
               {/* Go Back Button */}

@@ -18,7 +18,7 @@ export default function LinksPage () {
       <main className={`min-h-screen ${theme === 'dark' ? ' bg-gray-900' : 'bg-custom-beige'} p-4`}>
         <div className="container px-4 sm:px-8 w-full lg:w-1/2 mx-auto">
         
-        <Navigation activeSection='links' onThemeChange={handleThemeChange} />
+        {/* <Navigation activeSection='links' onThemeChange={handleThemeChange} /> */}
 
         <div className={`mt-8 mb-4 text-2xl font-semibold ${theme === 'dark' ? 'text-gray-200': 'text-gray-800'}`}>
            Links

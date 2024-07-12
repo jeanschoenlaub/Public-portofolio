@@ -50,7 +50,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, onThemeChange })
   return (
     <nav className={`ml-4 flex flex-no-shrink justify-end space-x-2 sm:space-x-6 mb-4 sm:mr-4 min-w-[500px] text-xl font-montserrat ${ !isDayTheme ? 'text-white' : 'text-black'}`}>
       <Link href="/" className={linkClassName('home')}>
-        Home
+        Being
       </Link>
       <Link href="/projects" className={linkClassName('projects')}>
         Doing

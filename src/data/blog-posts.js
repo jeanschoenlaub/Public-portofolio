@@ -1,31 +1,91 @@
 export const blogPostsData = [
     {
-        title: "Seagnal #6 - 💡 Energy Transition", 
+        title: "🧮 Energy transition or addition ?", 
+        link:"https://seagnal.substack.com/p/energy-transition-or-addition",
+        date: "03/07/24",
+    }, 
+    {
+        title: "♻️ Recycling solar panels", 
+        link:"https://seagnal.substack.com/p/recycling-solar-panels",
+        date: "03/07/24",
+    }, 
+    {
+        title: "🌪️ Natural Disasters and Climate", 
+        link:"https://seagnal.substack.com/p/disasters-and-climate",
+        date: "26/06/24",
+    }, 
+    {
+        title: "🚀 Hydrogen, fuel of the future ? Part 2", 
+        link:"https://seagnal.substack.com/p/hydrogen-fuel-of-the-future-part",
+        date: "18/06/24",
+    }, 
+    {
+        title: "🚀 Hydrogen, fuel of the future ? Part 1", 
+        link:"https://seagnal.substack.com/p/hydrogen-fuel-of-the-future",
+        date: "11/06/24",
+    }, 
+    {
+        title: "🐾 Biodiversity and Climate", 
+        link:"https://seagnal.substack.com/p/biodiversity-and-climate",
+        date: "04/06/24",
+    }, 
+    {
+        title: "🔌 Connecting grids across continents", 
+        link:"https://seagnal.substack.com/p/connecting-grids-across-continents",
+        date: "28/05/24",
+    }, 
+    {
+        title: "🕵️‍♀️ Energy Transition & Deglobalisation", 
+        link:"https://seagnal.substack.com/p/energy-transition-and-deglobalisation",
+        date: "21/05/24",
+    }, 
+    {
+        title: "💻 Sustainable digital technologies", 
+        link:"https://seagnal.substack.com/p/sustainable-digital-technologies",
+        date: "14/05/24",
+    }, 
+    {
+        title: "🔋 Batteries on sale", 
+        link: "https://seagnal.substack.com/p/batteries-on-sale",
+        date: "07/05/24",
+    }, 
+    {
+        title: " ⚡ Decentralized Energy Networks", 
+        link:"https://seagnal.substack.com/p/decentralization-of-energy-networks",
+        date: "30/04/24",
+    }, 
+    {
+        title: "🏭 Manufacturing Wars", 
+        link:"https://seagnal.substack.com/p/manufacturing-wars",
+        date: "23/04/24",
+    }, 
+    {
+        title: "💡 Energy Transition", 
         link:"https://seagnal.substack.com/p/energy-transition",
         date: "16/04/24",
     }, 
     {
-        title: "Seagnal #5 - 🌡️ Breaking temperature records", 
+        title: "🌡️ Breaking temperature records", 
         link:"https://seagnal.substack.com/p/breaking-temperature-records",
         date: "09/04/24",
     }, 
     {
-        title: "Seagnal #4 - 📱 60% of the world now uses smartphones", 
+        title: "60% of the world now uses smartphones", 
         link:"https://seagnal.substack.com/p/60-of-the-world-now-uses-smartphones",
         date: "02/04/24",
     }, 
     {
-        title: "Seagnal #3 - AI Algorithms", 
+        title: "AI Algorithms", 
         link:"https://seagnal.substack.com/p/beyond-human-the-evolution-of-ai",
         date: "26/03/24",
     }, 
     {
-        title: "Seagnal #2 - Solar modules cheaper than fences", 
+        title: "Solar modules cheaper than fences", 
         link:"https://open.substack.com/pub/seagnal/p/seagnal-2-solar-modules-cheaper-than?r=2nofy3&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true",
         date: "19/03/24",
     }, 
     {
-        title: "Seagnal #1 - Powering AI with clean energy", 
+        title: "Powering AI with clean energy", 
         link:"https://open.substack.com/pub/seagnal/p/seagnal-1-powering-ai-with-clean?r=2nofy3&utm_campaign=post&utm_medium=web",
         date: "12/03/24",
     }, 

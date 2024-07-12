@@ -3,7 +3,7 @@ export const personalInfo =
         firstName: "Jean",
         lastName: "Schoenlaub",
         catchPhrase: `
-        Swiss engineer committed to sustainability, specializing in data engineering and full-stack development. 
+        A swiss engineer committed to sustainability, specializing in <strong> data engineering and full-stack development </strong>. 
         Proven track record in digitization and automation within the energy and manufacturing industries to produce great products faster, cheaper, and at scale.`,
         githubLink: "https://github.com/jeanschoenlaub",
         linkedInLink: "https://www.linkedin.com/in/jean2020/",

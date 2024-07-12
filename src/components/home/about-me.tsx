@@ -19,7 +19,8 @@ export const AboutMe: React.FC<AboutMeProps> = ({ theme }) => {
                 <div className={`flex ml-2 w-full lg:w-3/4 flex-col text-left ${theme === 'dark' ? 'text-gray-200' : 'text-black'}`}>
                     
                     <h1 className="text-3xl tracking-tight font-semibold mb-4">Hey, I&apos;m {personalInfo.firstName}</h1>
-                    <p className="mb-4"> {personalInfo.catchPhrase} </p>
+                    <p className="mb-4" dangerouslySetInnerHTML={{ __html: personalInfo.catchPhrase }}></p>
+    
                 </div>
             </div>
             <div className="flex justify-between text-lg flex-wrap sm:flex-nowrap  mt-4 mb-4 "> 

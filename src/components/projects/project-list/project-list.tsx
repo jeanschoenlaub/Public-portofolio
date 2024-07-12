@@ -16,7 +16,7 @@ interface ProjectListProps {
 export const ProjectList: React.FC<ProjectListProps> = ({theme}) => {
     const [selectedType, setSelectedType] = useState('All');
     const [filteredProjects, setFilteredProjects] = useState(projectData);
-    const options = ['All', 'Software', 'Solar', 'Data', 'Manufacturing', 'CAD', 'Travel'];
+    const options = ['All', 'Software', 'Solar', 'Data', 'Manufacturing', 'CAD'];
   
     useEffect(() => {
       if (selectedType === 'All') {

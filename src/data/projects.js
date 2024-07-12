@@ -4,7 +4,11 @@ export const projectData = [
       type: {1:"Software"},
       description: "Developing games that educate on the energy transition and sustainability.",
       full_text: `
-      <p> Check out the demo/waitlist: <a href="https://cool-down-map.vercel.app/" style="color: blue; text-decoration: underline;">www.cooldown.io</a>. Thanks !</p><p id="context" style="font-size: 1.2em; font-weight: bold;">Context</p><p> Work in progress, but you can joing waitlist on link above if you want to receive updates"
+      <p> 3D table-top web game prototype with Three.js: <a href="https://cd-game.vercel.app/" style="color: blue; text-decoration: underline;"> Prototype Link</a> (Not in work anymore). Unity 2D tower defense pixel art game: <a href="https://www.cool-down.io/games" style="color: blue; text-decoration: underline;">cool-down.io/games</a></p>
+      <p id="context" style="font-size: 1.2em; font-weight: bold;">Context</p>
+      <p> While traveling the world on a gap year in 2023/24, I wanted to learn a new aspect of software development: games. Building on my web development skills, I started by creating a web browser tabletop game concept prototype using the JavaScript library three.js. The prototype turned out well, but I realized that without the tools offered by a game development environment, it would be a lot of work to turn the prototype into a full game and publish it.</p>
+      <p id="Progress" style="font-size: 1.2em; font-weight: bold;">Progress</p>
+      <p> So I started from scratch again, this time in Unity, with the idea to create a simple 2D tower defense game: WattWars. Think Plant vs Zombies but with energy towers. The game is stll in devellopment but a full 10/15 minutes demo will be available in September.</p>
       `,
       date: "2024",
       tags: {1:"React",2:"Three.js",3:"Unity"},
@@ -58,7 +62,7 @@ export const projectData = [
          <p>One technical challenge was understanding and querying the heavily customized Odoo ERP data was difficult, particularly linking components of a 4-level BoM to Purchase Orders and Transfer Orders for supplier traceability. </p> Another challenge was to handle various roles, including database architecture, data analysis, cloud setup, and data engineering, while managing and mentoring an intern. I was new to cloud engineering, an dI had to learn a lot of best practices on the fly. </p> <p> To address these challenges, I maintained clear communication with stakeholders, adhered to a bi-monthly release schedule, and sought advice from colleagues with similar experiences.</p>
          <p id="context" style="font-size: 1.2em; font-weight: bold;">Project Outcome</p>
          <p>In just 6 months of work (at 50% FTE), our small team provided the first source of truth for data at a company level. </p>
-         <p> We managed to reduce data entry and retrieval time (eg. for board meetings, product owners), by 50+ hrs/week; make project, supply chain, and engineering data very accessible via dashboards and reports. Ultimately, management decided to continue the project, and I assisted in hiring a successor to expand on this initial data infrastructure. </p>
+         <p> We managed to reduce data entry and retrieval time (eg. for board meetings, product owners), by 50+ hrs/week; make project, supply chain, and engineering data very accessible via dashboards and reports. Ultimately, management decided to continue the project , and I assisted in hiring a successor to expand on this initial data infrastructure. </p>
         `,
         date: "2023",
         tags: {1:"AWS",2:"SQL",3:"Python",4:"ETL",5:"Database Architecture",6:"DataLake"},

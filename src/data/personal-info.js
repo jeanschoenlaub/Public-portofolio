@@ -2,12 +2,14 @@ export const personalInfo =
     {
         firstName: "Jean",
         lastName: "Schoenlaub",
-        catchPhrase: "An engineer from Switzerland passionate about making the world a better place. I thrive on building innovative solutions to real problems, be it energy transition, sustainability or digital transformation.",
+        catchPhrase: `
+        Swiss engineer committed to sustainability, specializing in data engineering and full-stack development. 
+        Proven track record in digitization and automation within the energy and manufacturing industries to produce great products faster, cheaper, and at scale.`,
         githubLink: "https://github.com/jeanschoenlaub",
         linkedInLink: "https://www.linkedin.com/in/jean2020/",
         emailAddress: "jeanschoen@hotmail.com",
         calendar:"https://calendly.com/jean-schoenlaub/", // If you have a system in place to schedule vide call otherwise delete the component
-        callToAction: "Actively looking for roles in the Solar and Techology Industries!" // At the end of you about section
+        callToAction: "Actively looking for technical roles in the sustainability space!" // At the end of you about section
     }
 
 export const timelineData = [

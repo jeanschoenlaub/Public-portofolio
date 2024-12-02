@@ -106,7 +106,7 @@ export const AboutMe: React.FC<AboutMeProps> = ({ theme }) => {
                         </Link>
                     </div>
             </div>
-            <h1 className={`flex font-base mt-2 items-center text-lg italic justify-center mb-2 ${theme === 'dark' ? 'text-gray-200' : 'text-black'}`}> {personalInfo.callToAction} </h1>
+            {/* <h1 className={`flex font-base mt-2 items-center text-lg italic justify-center mb-2 ${theme === 'dark' ? 'text-gray-200' : 'text-black'}`}> {personalInfo.callToAction} </h1> */}
         </div>        
     </>
   );

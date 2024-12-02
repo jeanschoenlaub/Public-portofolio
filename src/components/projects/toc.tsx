@@ -9,6 +9,27 @@ interface TocItem {
     id: string;
     text: string | null;
 }
+
+const parseDescriptionWithLinks = (text: string) => {
+  const linkRegex = /(https?:\/\/[^\s]+)/g;
+  const parts = text.split(linkRegex);
+
+  return parts.map((part, index) =>
+    linkRegex.test(part) ? (
+      <a
+        key={index}
+        href={part}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline text-blue-500"
+      >
+        {part}
+      </a>
+    ) : (
+      <span key={index}>{part}</span>
+    )
+  );
+};
   
   
 export const TableOfContents: React.FC<TableOfContentsProps> = ({ htmlContent, theme }) => {
@@ -41,7 +62,7 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({ htmlContent, t
                     className="text-lg font-normal underline-custom-mint-green"
                     >
                     <span> 
-                        {index+1}. {item.text} 
+                        {index+1}. {parseDescriptionWithLinks(item.text!)} 
                     </span>
                   </a>
                 </li>

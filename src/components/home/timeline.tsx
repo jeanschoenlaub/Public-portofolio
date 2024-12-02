@@ -22,8 +22,8 @@ export const Timeline: React.FC<TimelineProps> = ({theme}) => {
               <p className="text-sm">{item.description}</p>
               {/* Conditional Link */}
               {item.link && (
-                <Link href={item.link} className="text-blue-500 hover:underline text-sm">
-                  Check it out here.
+                <Link href={item.link} target="_blank" className="text-blue-500 hover:underline text-sm">
+                  {item.linkDescription}
                 </Link>
               )}
             </div>

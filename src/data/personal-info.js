@@ -15,7 +15,7 @@ export const personalInfo =
 export const timelineData = [
     {
         year: "2025, Montpellier (FR)",
-        description: "Working as a Data Engineer for Morfo to enable large scale reforestation of native ecosystems with drones",
+        description: "Working as a Data Engineer for Morfo to enable large scale reforestation of native ecosystems with drones.",
         link: "https://www.morfo.rest/",
         linkDescription: "What's Morfo ?"
     },

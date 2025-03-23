@@ -1,5 +1,21 @@
 export const projectData = [
     {
+      title: "SLDiagrams (WIP): A figma like tool for Single Line Diagrams",
+      type: {1:"2025"},
+      description: "A CAD in the web to make electrical drawings of modular designs faster.",
+      full_text: `
+      <p> Check it out <a href="https://sl-draft-konva.vercel.app" style="color: blue; text-decoration: underline;"> here</a> (WIP), using key: "modularCAD" to sign in.
+      <p id="context" style="font-size: 1.2em; font-weight: bold;">Context</p>
+      <p> In a world where engineering is increasingly modular — from solar systems to configurable products like cars, ski goggles, and even buildings — the tools we rely on are often not designed with modularity in mind. </p>
+      <p> SLDiagrams is a concept for a modular, web-based Computer-Aided Design (CAD) application built to match the flexibility of modern engineering. Imagine a single CAD file that can be configued to produce an infinity of parametrised drawings, in the web and even via API ! </p> 
+      <p id="context" style="font-size: 1.2em; font-weight: bold;"> Progress </p>
+      <p> Currently focusing on the core features of a web based CAD, such as copy / paste / undo / redo .., working offline/online, etc. with simple shapes which is taking longer then expected ! </p> 
+      `,
+      date: "2025",
+      tags: {1:"React",2:"Typescript",3:"Tailwind",4:"Next.js",5:"AWS"},
+      image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/SLDiagrams.png"
+    },
+    {
       title: "CoolDown.io: Educational sustainability games",
       type: {1:"2024"},
       description: "Developing games that educate on the energy transition and sustainability.",
@@ -23,7 +39,7 @@ export const projectData = [
       `,
       link: "https://riples.vercel.app/about",
       date: "2023",
-      tags: {1:"React",2:"Typescript",3:"Tailwind",4:"Next.js",5:"Vercel",6:"Node.js",7:"AWS",8:"OpenAI APIs"},
+      tags: {1:"React",2:"Typescript",3:"Tailwind",4:"Next.js",5:"AWS",6:"OpenAI APIs"},
       image: "https://t3-portofolio.s3.us-east-2.amazonaws.com/thumbnails/Riples.png"
     },
    {

@@ -16,7 +16,7 @@ interface ProjectListProps {
 export const ProjectList: React.FC<ProjectListProps> = ({theme}) => {
     const [selectedType, setSelectedType] = useState('All');
     const [filteredProjects, setFilteredProjects] = useState(projectData);
-    const options = ['All', '2024', '2023', '2022', '2021'];
+    const options = ['All', '2025', '2024', '2023', '2022', '2021'];
   
     useEffect(() => {
       if (selectedType === 'All') {

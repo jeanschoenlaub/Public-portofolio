@@ -9,11 +9,11 @@ interface NavigationProps {
   activeSection: Section;
   onThemeChange: (theme: 'light' | 'dark') => void;
 }
-  
+
 // The Navigation component
 const Navigation: React.FC<NavigationProps> = ({ activeSection, onThemeChange }) => {
   // Helper function to determine the CSS classes based on activeSection
-  
+
   // Initialize state without assuming the theme (to prevent client server inconsistencies)
   const [isDayTheme, setIsDayTheme] = useState(true);
 
@@ -59,7 +59,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, onThemeChange })
         Writing
       </Link>
       <label className="inline-flex items-center cursor-pointer">
-        <input 
+        <input
           type="checkbox"
           checked={isDayTheme}
           onChange={handleChange}

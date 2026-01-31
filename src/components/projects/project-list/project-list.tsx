@@ -17,7 +17,7 @@ export const ProjectList: React.FC<ProjectListProps> = ({theme}) => {
     const [selectedType, setSelectedType] = useState('All');
     const [filteredProjects, setFilteredProjects] = useState(projectData);
     const options = ['All', '2025', '2024', '2023', '2022', '2021'];
-  
+
     useEffect(() => {
       if (selectedType === 'All') {
         setFilteredProjects(projectData);
@@ -28,7 +28,7 @@ export const ProjectList: React.FC<ProjectListProps> = ({theme}) => {
         setFilteredProjects(filtered);
       }
     }, [selectedType]);
-  
+
     const handleTypeChange = (type: string) => {
       setSelectedType(type);
     };
@@ -43,7 +43,7 @@ export const ProjectList: React.FC<ProjectListProps> = ({theme}) => {
            </span>
          ));
     };
-      
+
     return (
     <>
         <ProjectTypeNav
@@ -54,23 +54,23 @@ export const ProjectList: React.FC<ProjectListProps> = ({theme}) => {
         />
 
         {filteredProjects.map((project, index) => (
-            <div key={index} className={`border-2 flex rounded-lg mx-2 lg:mx-5 my-8 
-            ${theme === 'dark' ? 
+            <div key={index} className={`border-2 flex rounded-lg mx-2 lg:mx-5 my-8
+            ${theme === 'dark' ?
             ' border-teal-500 text-teal-500 bg-gray-800 rounded-lg '
-            : 
+            :
             'bg-white hover:shadow-xl hover:shadow-lime-50 border-custom-mint-green  '}
            `}>
-             
+
              {/* Image */}
                 <div className="relative w-1/2 border border-slate-300">
                     <Image
                         className="rounded-l-lg object-cover"
                         src={project.image || '/default-project-image.jpg'} // Fallback to default image
                         alt={`${project.title} image`}
-                        fill={true} 
+                        fill={true}
                     />
                 </div>
-        
+
                 {/* Card Content */}
                 <div className="p-4 w-1/2">
 
@@ -83,12 +83,12 @@ export const ProjectList: React.FC<ProjectListProps> = ({theme}) => {
                             {`(`+project.date+`)`}
                         </span>
                     </div>
-        
+
                     {/* Description */}
                     <div className="font-light mt-2 text-gray-500">
-                        {project.description}  
+                        {project.description}
                     </div>
-        
+
                     {/* Project Tags */}
                     <div className="text-sm mt-4 text-gray-800">
                         {renderTags(project.tags)}
@@ -97,15 +97,15 @@ export const ProjectList: React.FC<ProjectListProps> = ({theme}) => {
                     {/* Read More */}
                     <div className="flex mt-4 justify-end">
                         <div className={`flex w-40 justify-center items-center border-2 py-1 px-2 rounded-lg
-                            ${theme === 'dark' ? 
+                            ${theme === 'dark' ?
                             ' border-teal-500 text-teal-500 hover:bg-cyan-700 hover:text-white rounded-lg  hover:shadow-lg hover:shadow-cyan-300'
-                            : 
+                            :
                             ' border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg  hover:shadow-xl hover:shadow-lime-100'}
                         `}>
-                           
+
                             <Link href={`/projects/${slugify(project.title)}`}>
                                 <div className=" font-medium text flex items-center">
-                                Read More 
+                                Read More
                                 <svg className="w-4 h-4 ml-2 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                                     </svg>

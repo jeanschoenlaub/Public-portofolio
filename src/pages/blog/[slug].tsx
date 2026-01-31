@@ -30,13 +30,13 @@ const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
 
   return (
     <main className={`${theme === 'dark' ? ' bg-gray-900' : 'bg-custom-beige'} p-4`}>
-        <div className="container px-4 sm:px-8 w-full lg:w-1/2 mx-auto">  
-        
+        <div className="container px-4 sm:px-8 w-full lg:w-1/2 mx-auto">
+
         <Navigation activeSection='blog' onThemeChange={handleThemeChange} />
 
           <div  className={` p-2 mt-12 `}>
               {/* Go Back Button */}
-              <Link href="/blog"> 
+              <Link href="/blog">
                 <div className={`${theme === 'dark' ? ' text-teal-500' : 'text-custom-mint-green'} text-lg hover:underline mb-4 inline-bloc `}>
                   &larr; Go back to all blog posts
                 </div>
@@ -64,7 +64,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
           </div>
       </div>
   </main>
-    
+
   );
 };
 
@@ -86,7 +86,7 @@ if (!blog) {
 }
 
 return { props: { blog } };
-};  
+};
 
 export default BlogPost;
 

@@ -18,7 +18,7 @@ export default function PostList () {
     <>
       <main className={`${theme === 'dark' ? ' bg-gray-900' : 'bg-custom-beige'} p-4`}>
         <div className="container px-4 sm:px-8 w-full lg:w-1/2 mx-auto">
-        
+
         <Navigation activeSection='blog' onThemeChange={handleThemeChange} />
 
             <div id="about-blog" className={` p-2 mt-12 min-w-[600px] ${theme === 'dark' ? 'text-gray-200': 'text-black-200'} `}>

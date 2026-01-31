@@ -13,7 +13,7 @@ export const DrawingsWindTurbines = ({ animationDuration }: DrawingsWindTurbines
   // const totalHeight = numTurbines * turbineHeight + (numTurbines - 1) * spacing;
 
   const [rightOffsetWindTurbin, setRightOffsetWindTurbin] = useState(0); //The space between the edge of the panel SVG anf the first div
- 
+
   // Create an array for the turbines
   const turbinesArray = Array.from({ length: numTurbines });
 
@@ -21,7 +21,7 @@ export const DrawingsWindTurbines = ({ animationDuration }: DrawingsWindTurbines
     // Window-dependent code
     const vwUnitInPixels = window.innerWidth / 100;
     const twentyFiveVW = 25 * vwUnitInPixels;
-    const offsetPxWindTurbin = (twentyFiveVW - turbineWidth) / 2 + turbineWidth; 
+    const offsetPxWindTurbin = (twentyFiveVW - turbineWidth) / 2 + turbineWidth;
     setRightOffsetWindTurbin(offsetPxWindTurbin);
 
   };
@@ -59,7 +59,7 @@ export const DrawingsWindTurbines = ({ animationDuration }: DrawingsWindTurbines
             ))}
           </div>
         </div>
-    
+
     </>
   );
 }

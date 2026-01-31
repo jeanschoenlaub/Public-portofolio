@@ -11,12 +11,12 @@ interface BlogPostsListProps {
 }
 
 export const BlogPostsList: React.FC<BlogPostsListProps> = ({theme}) => {
-    
+
     return (
     <>
         {blogPostsData.map((post, index) => (
             <div key={index} className="mb-2 flex">
-                    <span className={`ml-2 font-medium lg:font-medium text-xs lg:text-base 
+                    <span className={`ml-2 font-medium lg:font-medium text-xs lg:text-base
                     ${theme === 'dark' ? 'text-gray-400': 'text-gray-500  '}`}>
                         {post.date+` - `}
                     </span>
@@ -25,7 +25,7 @@ export const BlogPostsList: React.FC<BlogPostsListProps> = ({theme}) => {
                         <Link href={post.link} target="_blank" className={` ml-1 flex font-semibold justify-center items-center
                             ${theme === 'dark' ? 'text-gray-200 underline-teal-500': 'text-gray-800 underline-custom-mint-green '}
                             `}>
-                            
+
                             {post.title}
                             <svg className={`w-4 h-4 ml-2  `} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 14v4.8a1.2 1.2 0 0 1-1.2 1.2H5.2A1.2 1.2 0 0 1 4 18.8V7.2A1.2 1.2 0 0 1 5.2 6h4.6m4.4-2H20v5.8m-7.9 2L20 4.2"/>

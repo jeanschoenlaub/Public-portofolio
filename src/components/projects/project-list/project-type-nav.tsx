@@ -7,7 +7,7 @@ interface ProjectTypeNavProps {
     options: string[];
     theme: string;
   }
-  
+
   const ProjectTypeNav: React.FC<ProjectTypeNavProps> = ({
     selectedType,
     setSelectedType,
@@ -24,13 +24,13 @@ interface ProjectTypeNavProps {
         setMaxScrollPosition(scrollContainer.current.scrollWidth - scrollContainer.current.clientWidth);
     }
     };
-    
+
     useEffect(() => {
         const handleScroll = () => {updateScrollPosition();};
-    
+
         // Update the max scroll position when the component mounts
         updateScrollPosition();
-    
+
         // Check if the currentContainer is not null before adding the event listener
         const currentContainer = scrollContainer.current;
         if (currentContainer) {
@@ -45,14 +45,14 @@ interface ProjectTypeNavProps {
             }
         };
     }, []);
-    
+
     const scrollLeft = () => {
         if (scrollContainer.current) {
             scrollContainer.current.scrollBy({ left: -100, behavior: 'smooth' });
             updateScrollPosition();
         }
     };
-    
+
     const scrollRight = () => {
         if (scrollContainer.current) {
             scrollContainer.current.scrollBy({ left: 100, behavior: 'smooth' });
@@ -73,25 +73,25 @@ interface ProjectTypeNavProps {
             </button>
         )}
 
-        <div 
-            ref={scrollContainer} 
+        <div
+            ref={scrollContainer}
             className={`${styles.hideScrollbar} ${styles.scrollContainer} \
             ml-2 flex overflow-x-auto z-10 py-2`}
         >
             {options.map((option, index) => (
             <button
                 key={index}
-                onClick={() => setSelectedType(option)} 
-                className={`whitespace-nowrap px-6 py-2 font-medium focus:outline-none 
-                ${selectedType === option ? 
-                    theme === 'dark' ? 
+                onClick={() => setSelectedType(option)}
+                className={`whitespace-nowrap px-6 py-2 font-medium focus:outline-none
+                ${selectedType === option ?
+                    theme === 'dark' ?
                     'border-b-2 border-teal-500 font-semibold text-teal-500'
-                    : 
+                    :
                     'border-b-2 border-custom-mint-green font-semibold text-custom-mint-green'
-                :     
-                    theme === 'dark' ? 
-                    'hover:cursor-pointer border-b border-gray-600  text-gray-300 hover:text-gray-100' 
-                    : 
+                :
+                    theme === 'dark' ?
+                    'hover:cursor-pointer border-b border-gray-600  text-gray-300 hover:text-gray-100'
+                    :
                     'hover:cursor-pointer border-b border-gray-300 text-gray-600 hover:text-gray-900'
                 }
                 `}>
@@ -115,4 +115,3 @@ interface ProjectTypeNavProps {
 };
 
 export default ProjectTypeNav;
-

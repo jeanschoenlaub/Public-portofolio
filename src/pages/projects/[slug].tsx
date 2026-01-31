@@ -18,7 +18,6 @@ interface ProjectProps {
 }
 
 
-
 const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
   const router = useRouter();
 
@@ -62,7 +61,7 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
 
       <div className={` p-2 mt-12 `}>
               {/* Go Back to Project List Button */}
-              <Link href="/projects"> 
+              <Link href="/projects">
                 <div className={`${theme === 'dark' ? ' text-teal-500' : 'text-custom-mint-green'} text-lg hover:underline mb-4 inline-bloc `}>
                   &larr; Go Back to Project List
                 </div>
@@ -85,7 +84,7 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
 
                   {/* Description */}
                   <p className={`text-lg mb-4 ${theme === 'dark' ? ' text-gray-400' : 'text-gray-600'}`}>{project.description}</p>
-                  
+
                   {/* Image */}
                   <div className="flex justify-center">
                     <img
@@ -116,7 +115,7 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
             </div>
         </div>
   </main>
-    
+
   );
 };
 
@@ -165,7 +164,7 @@ if (!project) {
 }
 
 return { props: { project } };
-};  
+};
 
 export default ProjectPage;
 

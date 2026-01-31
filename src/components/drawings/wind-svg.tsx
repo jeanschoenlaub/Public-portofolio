@@ -6,12 +6,12 @@ interface WindSVGProps {
     height: number;
     animationDuration:number;
   }
-  
+
 export const WindSVG = ({ width, height, animationDuration }: WindSVGProps) => {
 
     const [rotation, setRotation] = useState(0);
 
-    // We use 
+    // We use
     useEffect(() => {
 
         if (typeof window === 'undefined') {
@@ -19,16 +19,16 @@ export const WindSVG = ({ width, height, animationDuration }: WindSVGProps) => {
           }
 
         let lastScrollY = window.scrollY;
-        
+
         const handleScroll = () => {
-            // Then we wan't to accumulate rotation if the user keeps scrolling within animation duration 
+            // Then we wan't to accumulate rotation if the user keeps scrolling within animation duration
             // so wind turbine can go really fast
             const scrollDiff = window.scrollY - lastScrollY;
             lastScrollY = window.scrollY;
             // And we use absolute values so no matter scroll direction turbine only spins one way
             setRotation(prevRotation =>  prevRotation + Math.abs(scrollDiff * 0.3));
         };
-    
+
         window.addEventListener('scroll', handleScroll);
 
         // Clean up function
@@ -111,12 +111,11 @@ export const WindSVG = ({ width, height, animationDuration }: WindSVGProps) => {
      <path id="Rectangle 12_3" d="M199.658 183.497L256.432 204.888C255.401 196.115 256.629 192.06 262.796 186.729L206.022 165.337L199.658 183.497Z" fill="#FAF3E0"/>
      <path id="Rectangle 13_3" d="M68.6115 136.202L198.297 190.58L206.531 165.529L74.6212 120.794L68.6115 136.202Z" fill="#FAF3E0"/>
      <path id="Polygon 2_3" d="M198.298 190.58C204.855 188.426 209.159 188.59 217.492 190.335L200.502 183.762L198.298 190.58Z" fill="#FAF3E0"/>
-     
+
      </g>
      </motion.g>
-     
+
      </g>
      </svg>
-     
-)}
 
+)}

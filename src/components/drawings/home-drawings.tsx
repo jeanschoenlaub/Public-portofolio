@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { PanelSVG, PowerFullSVG } from "./panel-svg";
 import { PowerSVG } from "./panel-svg";
 import { MoonSVG, SunSVG } from "./sun-moon";
-import theme from "tailwindcss/defaultTheme";
+
 
 interface HomePageDrawingsProps {
     isAnyElementVisible: boolean;
@@ -28,7 +28,7 @@ export default function HomePageDrawings ( { isAnyElementVisible, onTopOffsetPow
     const [bottomOffsetPower, setBottomOffsetPower] = useState(0); // The space between bottom of screen and the power converter
     const [rightOffsetSun, setRightOffsetSun] = useState(0); // The space between rigth of screen and the start of the sun based on 1/4 screen width minus sun width
 
-    const updateTopOffset = (newTopOffsetPower:number) => { //pass back the poer svg loc for dinamic border rendering on touvhin power svg 
+    const updateTopOffset = (newTopOffsetPower:number) => { //pass back the poer svg loc for dinamic border rendering on touvhin power svg
         onTopOffsetPowerChange(newTopOffsetPower);
         console.log(newTopOffsetPower)
     };
@@ -36,7 +36,7 @@ export default function HomePageDrawings ( { isAnyElementVisible, onTopOffsetPow
 
     useEffect(() => {
         const calculateValues = () => {
-            
+
             const vwUnitInPixels = window.innerWidth / 100;
             const twentyFiveVW = 25 * vwUnitInPixels;
             const offsetPx = twentyFiveVW - panelWidth;
@@ -53,7 +53,7 @@ export default function HomePageDrawings ( { isAnyElementVisible, onTopOffsetPow
 
             updateTopOffset(100 * vhUnitInPixels - calcBottomOffsetPower)
         };
-        
+
 
        // Initial calculation
        calculateValues();
@@ -75,13 +75,13 @@ export default function HomePageDrawings ( { isAnyElementVisible, onTopOffsetPow
     <>
        {/* Render multiple PanelSVGs at a certain vertical spacing, centered horizontally */}
        <div className="fixed top-0 left-2  transform -translate-x-1/2" style={{ top: topOffsetPanels }}>
-            {panelsArray.map((_, index) => (    
+            {panelsArray.map((_, index) => (
                 <div key={index} style={{ position: 'absolute', top: `${index * (panelHeight + spacing)}px`, width: '200px' }}> {/* width should match the SVG width */}
                     <PanelSVG />
                 </div>
                 ))}
         </div>
-        
+
 
         <svg
             className="fixed bottom-0 left-2"
@@ -91,9 +91,9 @@ export default function HomePageDrawings ( { isAnyElementVisible, onTopOffsetPow
             viewBox={`0 0 ${totalWidth} ${innerHeight}`}
             xmlns="http://www.w3.org/2000/svg"
             >
-            <path 
+            <path
                 d={`
-                M 1,${innerHeight-20} 
+                M 1,${innerHeight-20}
                 V ${innerHeight - (totalHeight + spacing) - 20}
                 a 20,20 0 0 1 20,-20
                 H ${panelWidth +rightOffsetPanelDivs - FullPowerWidth +  30}
@@ -103,7 +103,7 @@ export default function HomePageDrawings ( { isAnyElementVisible, onTopOffsetPow
                 fill="none"
             />
         </svg>
-                
+
 
         <div>
             {isAnyElementVisible ? (
@@ -127,7 +127,7 @@ export default function HomePageDrawings ( { isAnyElementVisible, onTopOffsetPow
                 </div>
             </div>
         </div>
-    
+
     </>
   );
 }

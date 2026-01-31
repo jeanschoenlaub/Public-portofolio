@@ -9,10 +9,9 @@ export const PanelSVG = () => {
             <path d="M37 71L204 23" stroke="#A9A3A3" strokeWidth="0.5"/>
             <path d="M33 61L27 100.5" stroke="#A9A3A3" strokeWidth="2"/>
             <path d="M30.5 52L25 89C21.3681 99.9583 15.1846 101.43 1 100.5" stroke="#B87333" strokeWidth="3"/>
-        </svg> 
+        </svg>
     );
 };
-
 
 export const PowerSVG = () => {
     return (
@@ -73,5 +72,3 @@ export const PowerFullSVG = () => {
         <path d="M59 20L52 23" stroke="#B87333"/>
         </svg>
 )}
-
-

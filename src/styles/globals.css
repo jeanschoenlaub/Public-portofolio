@@ -17,24 +17,24 @@ body {
 /* styles/global.css */
 .underline-custom-mint-green:hover {
     text-decoration: underline;
-    text-decoration-color: #8BC34A; 
-    text-decoration-thickness: 3px; 
+    text-decoration-color: #8BC34A;
+    text-decoration-thickness: 3px;
     text-underline-offset: 6px;
   }
 
   .underline-teal-500:hover {
     text-decoration: underline;
-    text-decoration-color: #38b2ac; 
-    text-decoration-thickness: 3px; 
+    text-decoration-color: #38b2ac;
+    text-decoration-thickness: 3px;
     text-underline-offset: 6px;
   }
-    
+
   .timeline-entry {
     position: relative;
     margin-left: 20px;
     margin-bottom: 20px;
   }
-  
+
   .timeline-entry:before {
     content: '';
     position: absolute;
@@ -44,7 +44,7 @@ body {
     height: 2px;
     background-color: black;
   }
-  
+
   .black-line {
     position: absolute;
     bottom: 100%; /* Adjust this value to connect to the bottom of the green box */

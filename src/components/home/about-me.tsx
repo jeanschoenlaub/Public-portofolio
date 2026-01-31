@@ -5,30 +5,30 @@ import { personalInfo } from "../../data/personal-info";
 interface AboutMeProps {
     theme: string;
 }
-    
+
   // The Navigation component
 export const AboutMe: React.FC<AboutMeProps> = ({ theme }) => {
 
   return (
     <>
-      <div className="flex flex-col"> 
+      <div className="flex flex-col">
             <div className="flex items-center">
                 <div className="lg:w-36 hidden lg:block ">
                     <img src="/profile_image.jpeg" alt="Profile Image" className="rounded-full flex-grow items-center justify-center w-32 h-32 mr-12 " />
                 </div>
                 <div className={`flex ml-2 w-full lg:w-3/4 flex-col text-left ${theme === 'dark' ? 'text-gray-200' : 'text-black'}`}>
-                    
+
                     <h1 className="text-3xl tracking-tight font-semibold mb-4">Hey, I&apos;m {personalInfo.firstName}</h1>
                     <p className="mb-4" dangerouslySetInnerHTML={{ __html: personalInfo.catchPhrase }}></p>
-    
+
                 </div>
             </div>
-            <div className="flex justify-between text-lg flex-wrap sm:flex-nowrap  mt-4 mb-4 "> 
+            <div className="flex justify-between text-lg flex-wrap sm:flex-nowrap  mt-4 mb-4 ">
 
-                <div className={`flex font-medium items-center border-2 mt-2 py-1 px-2 
-                        ${theme === 'dark' ? 
+                <div className={`flex font-medium items-center border-2 mt-2 py-1 px-2
+                        ${theme === 'dark' ?
                         ' border-teal-500 text-teal-500 hover:bg-cyan-700 hover:text-white rounded-lg  hover:shadow-lg hover:shadow-cyan-300'
-                        : 
+                        :
                         ' border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg  hover:shadow-xl hover:shadow-lime-100'}
                     `}>
                     <Link href={personalInfo.githubLink} target="_blank" >
@@ -41,10 +41,10 @@ export const AboutMe: React.FC<AboutMeProps> = ({ theme }) => {
                     </Link>
                 </div>
 
-                <div className={`flex font-medium items-center border-2 mt-2 py-1 px-2 
-                        ${theme === 'dark' ? 
+                <div className={`flex font-medium items-center border-2 mt-2 py-1 px-2
+                        ${theme === 'dark' ?
                         ' border-teal-500 text-teal-500 hover:bg-cyan-700 hover:text-white rounded-lg  hover:shadow-lg hover:shadow-cyan-300'
-                        : 
+                        :
                         ' border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg  hover:shadow-xl hover:shadow-lime-100'}
                     `}>
                     <Link href={personalInfo.linkedInLink} target="_blank" >
@@ -58,14 +58,14 @@ export const AboutMe: React.FC<AboutMeProps> = ({ theme }) => {
                     </Link>
                 </div>
 
-                <div className={`flex font-medium items-center border-2 mt-2 py-1 px-2 
-                        ${theme === 'dark' ? 
+                <div className={`flex font-medium items-center border-2 mt-2 py-1 px-2
+                        ${theme === 'dark' ?
                         ' border-teal-500 text-teal-500 hover:bg-cyan-700 hover:text-white rounded-lg  hover:shadow-lg hover:shadow-cyan-300'
-                        : 
+                        :
                         ' border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg  hover:shadow-xl hover:shadow-lime-100'}
                     `}>
-                    <Link href="/CV-2025.pdf" download="resume.pdf">
-                        <div className=" flex items-center">
+                    <Link href="/CV.pdf" download="resume.pdf">
+                        <div className="flex items-center">
                         <svg className="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 19">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 15h.01M4 12H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-3M9.5 1v10.93m4-3.93-4 4-4-4"/>
                         </svg>
@@ -74,10 +74,10 @@ export const AboutMe: React.FC<AboutMeProps> = ({ theme }) => {
                     </Link>
                 </div>
 
-                <div className={`flex font-medium items-center border-2 mt-2 py-1 px-2 
-                        ${theme === 'dark' ? 
+                <div className={`flex font-medium items-center border-2 mt-2 py-1 px-2
+                        ${theme === 'dark' ?
                         ' border-teal-500 text-teal-500 hover:bg-cyan-700 hover:text-white rounded-lg  hover:shadow-lg hover:shadow-cyan-300'
-                        : 
+                        :
                         ' border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg  hover:shadow-xl hover:shadow-lime-100'}
                     `}>
                 <Link href={`mailto:${personalInfo.emailAddress}`}>
@@ -90,10 +90,10 @@ export const AboutMe: React.FC<AboutMeProps> = ({ theme }) => {
                     </Link>
                 </div>
 
-                <div className={`flex font-medium items-center border-2 mt-2 py-1 px-2 
-                        ${theme === 'dark' ? 
+                <div className={`flex font-medium items-center border-2 mt-2 py-1 px-2
+                        ${theme === 'dark' ?
                         ' border-teal-500 text-teal-500 hover:bg-cyan-700 hover:text-white rounded-lg  hover:shadow-lg hover:shadow-cyan-300'
-                        : 
+                        :
                         ' border-custom-mint-green text-custom-mint-green hover:bg-custom-mint-green hover:text-white rounded-lg  hover:shadow-xl hover:shadow-lime-100'}
                     `}>
                     <Link href={personalInfo.calendar} target="_blank">
@@ -107,7 +107,7 @@ export const AboutMe: React.FC<AboutMeProps> = ({ theme }) => {
                     </div>
             </div>
             {/* <h1 className={`flex font-base mt-2 items-center text-lg italic justify-center mb-2 ${theme === 'dark' ? 'text-gray-200' : 'text-black'}`}> {personalInfo.callToAction} </h1> */}
-        </div>        
+        </div>
     </>
   );
 }

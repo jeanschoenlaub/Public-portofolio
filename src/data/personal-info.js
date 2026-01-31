@@ -1,9 +1,9 @@
-export const personalInfo = 
+export const personalInfo =
     {
         firstName: "Jean",
         lastName: "Schoenlaub",
         catchPhrase: `
-        A swiss engineer committed to sustainability, specializing in <strong> data engineering and full-stack development </strong>. 
+        A swiss engineer committed to sustainability, specializing in <strong> data engineering and full-stack development </strong>.
         Proven track record in digitization and automation within the energy, manufacturing and reforestation industries.`,
         githubLink: "https://github.com/jeanschoenlaub",
         linkedInLink: "https://www.linkedin.com/in/jean2020/",
@@ -14,8 +14,14 @@ export const personalInfo =
 
 export const timelineData = [
     {
+        year: "2025-now, Brussels (BE)",
+        description: "Software Engineer at Odoo, helping build the world's most affordable and comprehensive ERP.",
+        link: "https://www.morfo.rest/",
+        linkDescription: "Odoo"
+    },
+    {
         year: "2025, Montpellier (FR)",
-        description: "Working as a Data Engineer for Morfo to enable large scale reforestation of native ecosystems with drones.",
+        description: "Data Engineer for Morfo to enable large scale reforestation of native ecosystems with drones.",
         link: "https://www.morfo.rest/",
         linkDescription: "What's Morfo ?"
     },
@@ -28,7 +34,7 @@ export const timelineData = [
     {
         year: "2021-2023, Sydney (AU)",
         description: "Working as a Business Analyst and then Data Engineer at a promising solar manufacturing scale-up, 5B.",
-        link: "https://www.5b.com.au", 
+        link: "https://www.5b.com.au",
         linkDescription: "What's 5B ?"
     },
     {

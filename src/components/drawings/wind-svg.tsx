@@ -5,9 +5,10 @@ interface WindSVGProps {
     width: number;
     height: number;
     animationDuration:number;
+    backgroundColor?: string;
   }
 
-export const WindSVG = ({ width, height, animationDuration }: WindSVGProps) => {
+export const WindSVG = ({ width, height, animationDuration, backgroundColor = 'var(--color-bg-light)' }: WindSVGProps) => {
 
     const [rotation, setRotation] = useState(0);
 
@@ -56,7 +57,7 @@ export const WindSVG = ({ width, height, animationDuration }: WindSVGProps) => {
      <path id="Vector 199" d="M264 439C283.916 447.53 295.085 446.452 315 439" stroke="#BCB5B5" strokeWidth="5"/>
      <path id="Vector 200" d="M262 510C283.868 519.952 296.132 518.694 318 510" stroke="#BCB5B5" strokeWidth="5"/>
      <path id="Vector 201" d="M258 582C282.602 593.373 296.399 591.936 321 582" stroke="#BCB5B5" strokeWidth="5"/>
-     <circle id="Ellipse 5" cx="289" cy="206" r="30.5" fill="#FAF3E0" stroke="#BCB5B5" strokeWidth="3"/>
+     <circle id="Ellipse 5" cx="289" cy="206" r="30.5" fill={backgroundColor} stroke="#BCB5B5" strokeWidth="3"/>
      <path id="Vector 202" d="M278.5 194C278.5 194 284.5 185 295.5 188.5C306.5 192 308 204.5 308 204.5" stroke="#BCB5B5" strokeWidth="3"/>
      </g>
      <motion.g animate={bladeAnimation} style={{originX: 0.552, originY: 0.397}}>
@@ -73,9 +74,9 @@ export const WindSVG = ({ width, height, animationDuration }: WindSVGProps) => {
      <path id="Vector 189" d="M323.405 289.156L347.354 476.528" stroke="#BCB5B5" strokeWidth="3"/>
      </g>
      </g>
-     <path id="Rectangle 12" d="M315.684 293.863L305.823 234C298.741 239.28 294.615 240.244 286.915 237.569L296.776 297.432L315.684 293.863Z" fill="#FAF3E0"/>
-     <path id="Rectangle 13" d="M340.25 431L322.499 291.5L296.688 296.896L323.901 433.5L340.25 431Z" fill="#FAF3E0"/>
-     <path id="Polygon 2" d="M322.499 291.5C317.355 286.898 315.345 283.089 312.69 275L315.492 293L322.499 291.5Z" fill="#FAF3E0"/>
+     <path id="Rectangle 12" d="M315.684 293.863L305.823 234C298.741 239.28 294.615 240.244 286.915 237.569L296.776 297.432L315.684 293.863Z" fill={backgroundColor}/>
+     <path id="Rectangle 13" d="M340.25 431L322.499 291.5L296.688 296.896L323.901 433.5L340.25 431Z" fill={backgroundColor}/>
+     <path id="Polygon 2" d="M322.499 291.5C317.355 286.898 315.345 283.089 312.69 275L315.492 293L322.499 291.5Z" fill={backgroundColor}/>
      </g>
      <g id="Blade2">
      <g id="Group 14_2">
@@ -90,9 +91,9 @@ export const WindSVG = ({ width, height, animationDuration }: WindSVGProps) => {
      <path id="Vector 189_2" d="M344.115 135.694L494.41 21.2668" stroke="#BCB5B5" strokeWidth="3"/>
      </g>
      </g>
-     <path id="Rectangle 12_2" d="M352.052 140.026L305.14 178.498C313.253 181.991 316.151 185.082 317.684 193.088L364.597 154.616L352.052 140.026Z" fill="#FAF3E0"/>
-     <path id="Rectangle 13_2" d="M458.533 50.1832L346.598 135.306L364.176 154.962L468.873 63.0922L458.533 50.1832Z" fill="#FAF3E0"/>
-     <path id="Polygon 2_2" d="M346.598 135.306C345.184 142.062 342.891 145.707 337.213 152.051L351.4 140.624L346.598 135.306Z" fill="#FAF3E0"/>
+     <path id="Rectangle 12_2" d="M352.052 140.026L305.14 178.498C313.253 181.991 316.151 185.082 317.684 193.088L364.597 154.616L352.052 140.026Z" fill={backgroundColor}/>
+     <path id="Rectangle 13_2" d="M458.533 50.1832L346.598 135.306L364.176 154.962L468.873 63.0922L458.533 50.1832Z" fill={backgroundColor}/>
+     <path id="Polygon 2_2" d="M346.598 135.306C345.184 142.062 342.891 145.707 337.213 152.051L351.4 140.624L346.598 135.306Z" fill={backgroundColor}/>
      </g>
      <g id="Blade3">
      <g id="Group 14_3">
@@ -107,9 +108,9 @@ export const WindSVG = ({ width, height, animationDuration }: WindSVGProps) => {
      <path id="Vector 189_3" d="M199.875 192.536L25.631 119.591" stroke="#BCB5B5" strokeWidth="3"/>
      </g>
      </g>
-     <path id="Rectangle 12_3" d="M199.658 183.497L256.432 204.888C255.401 196.115 256.629 192.06 262.796 186.729L206.022 165.337L199.658 183.497Z" fill="#FAF3E0"/>
-     <path id="Rectangle 13_3" d="M68.6115 136.202L198.297 190.58L206.531 165.529L74.6212 120.794L68.6115 136.202Z" fill="#FAF3E0"/>
-     <path id="Polygon 2_3" d="M198.298 190.58C204.855 188.426 209.159 188.59 217.492 190.335L200.502 183.762L198.298 190.58Z" fill="#FAF3E0"/>
+     <path id="Rectangle 12_3" d="M199.658 183.497L256.432 204.888C255.401 196.115 256.629 192.06 262.796 186.729L206.022 165.337L199.658 183.497Z" fill={backgroundColor}/>
+     <path id="Rectangle 13_3" d="M68.6115 136.202L198.297 190.58L206.531 165.529L74.6212 120.794L68.6115 136.202Z" fill={backgroundColor}/>
+     <path id="Polygon 2_3" d="M198.298 190.58C204.855 188.426 209.159 188.59 217.492 190.335L200.502 183.762L198.298 190.58Z" fill={backgroundColor}/>
 
      </g>
      </motion.g>

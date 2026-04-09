@@ -33,7 +33,7 @@ export default function Home() {
 
 
             <div className="hidden lg:block">
-                <DrawingsWindTurbines animationDuration={5}></DrawingsWindTurbines>
+                <DrawingsWindTurbines animationDuration={5} backgroundColor={theme === 'dark' ? 'var(--color-bg-dark)' : 'var(--color-bg-light)'}></DrawingsWindTurbines>
             </div>
         </div>
       </main>

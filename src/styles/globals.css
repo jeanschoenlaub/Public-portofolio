@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --color-bg-light: #FAF3E0;
+    --color-bg-dark: #111827;
+}
+
 body {
     @apply bg-custom-beige;
 }

@@ -58,7 +58,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
                   </div>
 
                   <div className="hidden lg:block">
-                    <DrawingsWindTurbines animationDuration={0.5}></DrawingsWindTurbines>
+                    <DrawingsWindTurbines animationDuration={0.5} backgroundColor={theme === 'dark' ? 'var(--color-bg-dark)' : 'var(--color-bg-light)'}></DrawingsWindTurbines>
                 </div>
               </div>
           </div>

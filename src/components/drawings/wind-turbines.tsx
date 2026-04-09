@@ -3,9 +3,10 @@ import { WindSVG } from "~/components/drawings/wind-svg";
 
 interface DrawingsWindTurbines {
   animationDuration:number;
+  backgroundColor?: string;
 }
 
-export const DrawingsWindTurbines = ({ animationDuration }: DrawingsWindTurbines) => {
+export const DrawingsWindTurbines = ({ animationDuration, backgroundColor }: DrawingsWindTurbines) => {
   const [numTurbines, setNumTurbines] = useState(2); // Initial number of turbines
   const spacing = 30; // Spacing in pixels between each turbine
   const turbineHeight = 300; // Height of each turbine
@@ -54,7 +55,7 @@ export const DrawingsWindTurbines = ({ animationDuration }: DrawingsWindTurbines
           <div className="fixed top-0 right-0 transform -translate-x-1/2" style={{ right:rightOffsetWindTurbin}}>
             {turbinesArray.map((_, index) => (
               <div key={index} style={{ position: 'fixed', top: `${index * (turbineHeight + spacing)}px`, width: `${turbineWidth}px`, height: `${turbineHeight}px` }}>
-                <WindSVG width={turbineWidth} height={turbineHeight} animationDuration={animationDuration} />
+                <WindSVG width={turbineWidth} height={turbineHeight} animationDuration={animationDuration} backgroundColor={backgroundColor} />
               </div>
             ))}
           </div>

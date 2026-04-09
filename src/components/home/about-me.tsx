@@ -14,6 +14,7 @@ export const AboutMe: React.FC<AboutMeProps> = ({ theme }) => {
       <div className="flex flex-col">
             <div className="flex items-center">
                 <div className="lg:w-36 hidden lg:block ">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src="/profile_image.jpeg" alt="Profile Image" className="rounded-full flex-grow items-center justify-center w-32 h-32 mr-12 " />
                 </div>
                 <div className={`flex ml-2 w-full lg:w-3/4 flex-col text-left ${theme === 'dark' ? 'text-gray-200' : 'text-black'}`}>

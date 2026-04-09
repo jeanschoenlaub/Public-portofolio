@@ -28,7 +28,7 @@ export default function HomePageDrawings ( { isAnyElementVisible, onTopOffsetPow
     const [bottomOffsetPower, setBottomOffsetPower] = useState(0); // The space between bottom of screen and the power converter
     const [rightOffsetSun, setRightOffsetSun] = useState(0); // The space between rigth of screen and the start of the sun based on 1/4 screen width minus sun width
 
-    const updateTopOffset = (newTopOffsetPower:number) => { //pass back the poer svg loc for dinamic border rendering on touvhin power svg
+    const updateTopOffset = (newTopOffsetPower:number) => { //pass back the power svg loc for dinamic border rendering on touvhin power svg
         onTopOffsetPowerChange(newTopOffsetPower);
         console.log(newTopOffsetPower)
     };
@@ -54,22 +54,13 @@ export default function HomePageDrawings ( { isAnyElementVisible, onTopOffsetPow
             updateTopOffset(100 * vhUnitInPixels - calcBottomOffsetPower)
         };
 
-
-       // Initial calculation
        calculateValues();
-
-       // Set up the resize event listener
        window.addEventListener('resize', calculateValues);
-
-       // Clean up
        return () => {
            window.removeEventListener('resize', calculateValues);
        };
-   }, []);
-   // Use Array constructor with a specific type (e.g., undefined since you're just using the index in the map)
+   });
     const panelsArray = new Array<undefined>(numPanels).fill(undefined);
-
-
 
   return (
     <>

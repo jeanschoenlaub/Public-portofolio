@@ -10,63 +10,51 @@ import { AboutMe } from "~/components/home/about-me";
 import { Timeline } from "~/components/home/timeline";
 import { Projects } from "~/components/home/projects";
 
-// eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
-interface VisibilityState {
-  // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
-  [key: string]: boolean;
-}
+type VisibilityState = Record<string, boolean>;
 
 
 export default function Home() {
 
-  const [isElementVisible, setIsElementVisible] = useState<VisibilityState>({ timeline: false, aboutme: false });
-  const [isAnyElementVisible, setIsAnyElementVisible]= useState(false)
+  const [isElementVisible, setIsElementVisible] = useState<VisibilityState>({});
   const [topOffsetPower, setTopOffsetPower] = useState(0);
+
+  const isAnyElementVisible = Object.values(isElementVisible).some(Boolean);
 
   const handleTopOffsetPowerChange = (value:number) => {
       setTopOffsetPower(value);
   };
 
   useEffect(() => {
-    // Scroll event handler
     const handleScroll = () => {
       const newVisibility: VisibilityState = {};
+      const tresholdPixel = topOffsetPower - 20; // 20 px is where the drawing is
 
-      // List of element selectors to check
       const elementsToCheck = ['timeline', 'aboutme','projects','hobbies', 'blog'];
-
       elementsToCheck.forEach(id => {
         const element = document.getElementById(id);
         if (element) {
-          const rect = element.getBoundingClientRect();
-          newVisibility[id] = rect.top < topOffsetPower-20 && ( rect.bottom > (topOffsetPower-20));
+          const elBounds = element.getBoundingClientRect();
+          const intersectsPowerLine = elBounds.top < tresholdPixel &&  elBounds.bottom > tresholdPixel;
+          newVisibility[id] = intersectsPowerLine
         }
       });
-      //show the solar panel connecting to the sections
+
       setIsElementVisible(newVisibility);
     };
 
     window.addEventListener('scroll', handleScroll);
-    // Initial check in case elements are already in the desired position
-    handleScroll();
-    // Remove event listener on cleanup
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [topOffsetPower]); //If window resized (wathced in children it resets here )
+  }, [topOffsetPower]);
 
 
-  useEffect(() => {
-    // Update isAnyElementVisible based on the latest isElementVisible
-    const isVisible = Object.values(isElementVisible).some(isVisible => isVisible);
-    setIsAnyElementVisible(isVisible);
+  const [theme, setTheme] = useState('light');
 
-    //console.log(isVisible); // Will log the current state of visibility
-  }, [isElementVisible]);
-
-  const [theme, setTheme] = useState('light'); // Default theme or fetch from localStorage
-  // This function is passed to Navigation and updates the parent's state
   const handleThemeChange = (newTheme: string) => {
     setTheme(newTheme);
   };
+
+  const powerOnBorder = theme === 'dark' ? 'border-purple-800' : 'border-yellow-400'
+  const powerOffBorder = theme === 'dark' ? 'border-gray-900' : 'border-custom-beige'
 
   return (
     <>
@@ -82,22 +70,18 @@ export default function Home() {
           <Navigation activeSection='home' onThemeChange={handleThemeChange} />
 
           <div id="aboutme" className={`border-0 lg:border-l-4 min-w-[500px] relative z-50 p-2 mt-10
-              ${isElementVisible.aboutme ?
-               (theme === 'dark' ? 'border-purple-800' : 'border-yellow-400'):
-               (theme === 'dark' ? 'border-gray-900' : 'border-custom-beige')}`}>
+              ${isElementVisible.aboutme ? powerOnBorder: powerOffBorder}`}>
                 <AboutMe theme={theme}></AboutMe>
             </div>
 
-            <div id="projects" className={`p-2 border-0 min-w-[600px] relative z-50 lg:border-l-4 mt-10 ${isElementVisible.projects ?
-               (theme === 'dark' ? 'border-purple-800' : 'border-yellow-400'):
-               (theme === 'dark' ? 'border-gray-900' : 'border-custom-beige')}`}>
+            <div id="projects" className={`p-2 border-0 min-w-[600px] relative z-50 lg:border-l-4 mt-10
+                ${isElementVisible.projects ? powerOnBorder: powerOffBorder}`}>
                 <h2 className={`text-3xl tracking-tight font-medium mt-2 ${theme === 'dark' ? 'text-gray-200' : 'text-black'}`}> What I&apos;ve been up to </h2>
                 <Projects theme = {theme}></Projects>
             </div>
 
-            <div id="timeline" className={` p-2 border-0 min-w-[500px] lg:border-l-4 mt-10 ${isElementVisible.timeline ?
-               (theme === 'dark' ? 'border-purple-800' : 'border-yellow-400'):
-               (theme === 'dark' ? 'border-gray-900' : 'border-custom-beige')}`}>
+            <div id="timeline" className={` p-2 border-0 min-w-[500px] lg:border-l-4 mt-10
+               ${isElementVisible.timeline ? powerOnBorder: powerOffBorder}`}>
                 <h2 className={`text-3xl tracking-tight font-medium mt-2 mb-8 ${theme === 'dark' ? 'text-gray-200' : 'text-black'}`}> It&apos;s about the journey </h2>
                 <Timeline theme={theme}></Timeline>
             </div>

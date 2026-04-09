@@ -11,7 +11,6 @@ export const WindSVG = ({ width, height, animationDuration }: WindSVGProps) => {
 
     const [rotation, setRotation] = useState(0);
 
-    // We use
     useEffect(() => {
 
         if (typeof window === 'undefined') {

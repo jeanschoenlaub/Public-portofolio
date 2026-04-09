@@ -87,6 +87,7 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
 
                   {/* Image */}
                   <div className="flex justify-center">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={project.image}
                       alt={project.title}
@@ -142,6 +143,7 @@ const ImageModal: React.FC<{
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={src} alt={alt} className="max-w-full max-h-full" />
     </div>
   );

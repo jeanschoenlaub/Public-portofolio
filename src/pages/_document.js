@@ -12,8 +12,7 @@ class MyDocument extends Document {
         <body className="bg-custom-beige">
         <script dangerouslySetInnerHTML={{
             __html: `
-              (function() {ddd
-                // Assuming 'theme' is stored in localStorage and can be 'dark' or 'light'
+              (function() {
                 var theme = localStorage.getItem('theme');
                 if (theme === 'dark') {
                   document.body.className = 'bg-gray-900';

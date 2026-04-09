@@ -2,7 +2,7 @@ interface SunSVGProps {
     width: string;
     height: string;
 }
-  
+
 export const SunSVG = ({ width, height }: SunSVGProps) => {
     return (
         <svg width={width} height={height} viewBox="0 0 329 350" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,7 +24,7 @@ export const SunSVG = ({ width, height }: SunSVGProps) => {
         <rect width="11.0843" height="92.053" rx="5" transform="matrix(-0.511235 -0.859441 0.872369 -0.488849 6.10321 267)" fill="#EAB308"/>
         <rect width="11.2509" height="70.5363" rx="5" transform="matrix(-0.872369 -0.488849 0.511235 -0.859441 87.9439 313.442)" fill="#EAB308"/>
         <rect y="180" width="11" height="72.1212" rx="5" transform="rotate(-90 0 180)" fill="#EAB308"/>
-        </svg>         
+        </svg>
     );
 };
 
@@ -32,20 +32,20 @@ interface MoonSVGProps {
     width: string;
     height: string;
 }
-  
+
 export const MoonSVG = ({ width, height }: MoonSVGProps) => {
     return (
     <svg width={width} height={height} viewBox="0 0 470 620" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect x="20" y="10" width="447" height="600" fill="#111827"/>
     <g filter="url(#filter0_d_20_30)">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M20.0001 544.545C33.5747 546.769 47.5045 547.925 61.7018 547.925C204.304 547.925 319.905 431.311 319.905 287.46C319.905 164.866 235.945 62.0545 122.866 34.3458C138.794 31.4901 155.191 30 171.935 30C325.506 30 450 155.36 450 310C450 464.64 325.506 590 171.935 590C115.866 590 63.6733 573.29 20.0001 544.545Z" fill="#E5E7EB"/>
+    <path fillRule="evenodd" clipRule="evenodd" d="M20.0001 544.545C33.5747 546.769 47.5045 547.925 61.7018 547.925C204.304 547.925 319.905 431.311 319.905 287.46C319.905 164.866 235.945 62.0545 122.866 34.3458C138.794 31.4901 155.191 30 171.935 30C325.506 30 450 155.36 450 310C450 464.64 325.506 590 171.935 590C115.866 590 63.6733 573.29 20.0001 544.545Z" fill="#E5E7EB"/>
     </g>
     <g filter="url(#filter1_d_20_30)">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M20.0001 544.545C33.5747 546.769 47.5045 547.925 61.7018 547.925C204.304 547.925 319.905 431.311 319.905 287.46C319.905 164.866 235.945 62.0545 122.866 34.3458C138.794 31.4901 155.191 30 171.935 30C325.506 30 450 155.36 450 310C450 464.64 325.506 590 171.935 590C115.866 590 63.6733 573.29 20.0001 544.545Z" fill="#E5E7EB"/>
+    <path fillRule="evenodd" clipRule="evenodd" d="M20.0001 544.545C33.5747 546.769 47.5045 547.925 61.7018 547.925C204.304 547.925 319.905 431.311 319.905 287.46C319.905 164.866 235.945 62.0545 122.866 34.3458C138.794 31.4901 155.191 30 171.935 30C325.506 30 450 155.36 450 310C450 464.64 325.506 590 171.935 590C115.866 590 63.6733 573.29 20.0001 544.545Z" fill="#E5E7EB"/>
     </g>
     <defs>
-    <filter id="filter0_d_20_30" x="0" y="0" width="470" height="600" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <filter id="filter0_d_20_30" x="0" y="0" width="470" height="600" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
     <feOffset dy="-10"/>
     <feGaussianBlur stdDeviation="10"/>
@@ -54,8 +54,8 @@ export const MoonSVG = ({ width, height }: MoonSVGProps) => {
     <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_20_30"/>
     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_20_30" result="shape"/>
     </filter>
-    <filter id="filter1_d_20_30" x="0" y="20" width="470" height="600" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <filter id="filter1_d_20_30" x="0" y="20" width="470" height="600" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
     <feOffset dy="10"/>
     <feGaussianBlur stdDeviation="10"/>
@@ -65,6 +65,6 @@ export const MoonSVG = ({ width, height }: MoonSVGProps) => {
     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_20_30" result="shape"/>
     </filter>
     </defs>
-    </svg>    
+    </svg>
     )
 }

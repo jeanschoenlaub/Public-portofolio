@@ -62,12 +62,12 @@ export const ProjectList: React.FC<ProjectListProps> = ({theme}) => {
            `}>
 
              {/* Image */}
-                <div className="w-1/2 border border-slate-300">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                        className="rounded-l-lg object-cover w-full h-full"
-                        src={project.image || '/default-project-image.jpg'} // Fallback to default image
+                <div className="relative w-1/2 border border-slate-300 rounded-l-lg overflow-hidden min-h-[120px]">
+                    <Image
+                        className="object-cover"
+                        src={project.image || '/default-project-image.jpg'}
                         alt={`${project.title} image`}
+                        fill
                     />
                 </div>
 

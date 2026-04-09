@@ -16,7 +16,7 @@ export default function Home() {
 
         <Navigation activeSection='projects' />
 
-            <div id="projects" className={` p-2 mt-12 min-w-[600px]  `}>
+            <div id="projects" className={` p-2 mt-12`}>
                 <ProjectList theme={theme}></ProjectList>
             </div>
 

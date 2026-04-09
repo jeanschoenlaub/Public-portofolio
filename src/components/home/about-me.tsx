@@ -24,7 +24,7 @@ export const AboutMe: React.FC<AboutMeProps> = ({ theme }) => {
 
                 </div>
             </div>
-            <div className="flex justify-between text-lg flex-wrap sm:flex-nowrap  mt-4 mb-4 ">
+            <div className="flex text-lg flex-wrap gap-2 mt-4 mb-4 justify-around">
 
                 <div className={`flex font-medium items-center border-2 mt-2 py-1 px-2
                         ${theme === 'dark' ?

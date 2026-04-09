@@ -2,6 +2,7 @@ import type { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { projectData } from "../../data/projects";
 import React, { useState } from 'react';
+import { useTheme } from '~/context/ThemeContext';
 import Link from 'next/link';
 import { TableOfContents } from '../../components/projects/toc';
 import Navigation from '~/components/NavBar';
@@ -22,15 +23,10 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
   const router = useRouter();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [theme, setTheme] = useState('light'); // Default theme or fetch from localStorage
+  const { theme } = useTheme();
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
-  };
-
-  // This function is passed to Navigation and updates the parent's state
-  const handleThemeChange = (newTheme: string) => {
-    setTheme(newTheme);
   };
 
   if (router.isFallback) {
@@ -51,7 +47,7 @@ const ProjectPage: React.FC<ProjectProps> = ({ project }) => {
 
   return (
     <main className={`${theme === 'dark' ? ' bg-gray-900' : 'bg-custom-beige'} p-4`}>
-          <div className="container px-4 sm:px-8 w-full lg:w-1/2 mx-auto">  <Navigation activeSection='projects' onThemeChange={handleThemeChange} />
+          <div className="container px-4 sm:px-8 w-full lg:w-1/2 mx-auto">  <Navigation activeSection='projects' />
 
       <div className="w-1/4 hidden lg:flex justify-center align-center">
           <div className="fixed text-gray-800 top-1/4 left-8">

@@ -1,25 +1,20 @@
 import Link from "next/link";
 import { DrawingsWindTurbines } from "../../components/drawings/wind-turbines";
 import Navigation from "~/components/NavBar";
-import { useState } from "react";
+import { useTheme } from "~/context/ThemeContext";
 import { BlogPostsList } from "~/components/blog/blog-posts-list";
 
 
 export default function PostList () {
 
-  const [theme, setTheme] = useState('light'); // Default theme or fetch from localStorage
-
-  // This function is passed to Navigation and updates the parent's state
-  const handleThemeChange = (newTheme: string) => {
-    setTheme(newTheme);
-  };
+  const { theme } = useTheme();
 
   return (
     <>
       <main className={`${theme === 'dark' ? ' bg-gray-900' : 'bg-custom-beige'} p-4`}>
         <div className="container px-4 sm:px-8 w-full lg:w-1/2 mx-auto">
 
-        <Navigation activeSection='blog' onThemeChange={handleThemeChange} />
+        <Navigation activeSection='blog' />
 
             <div id="about-blog" className={` p-2 mt-12 min-w-[600px] ${theme === 'dark' ? 'text-gray-200': 'text-black-200'} `}>
                 Most recent writings:

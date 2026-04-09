@@ -9,7 +9,7 @@ class MyDocument extends Document {
           {/* ... other meta tags ... */}
           <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
         </Head>
-        <body className="bg-custom-beige">
+        <body>
         <script dangerouslySetInnerHTML={{
             __html: `
               (function() {
@@ -21,6 +21,11 @@ class MyDocument extends Document {
                 }
               })();
             `}}></script>
+        <style dangerouslySetInnerHTML={{
+            __html: `
+              body:not(.theme-ready) main { opacity: 0; }
+              body.theme-ready main { opacity: 1; }
+            `}}></style>
           <Main />
           <NextScript />
         </body>

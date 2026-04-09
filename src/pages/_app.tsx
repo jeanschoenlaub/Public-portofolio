@@ -1,12 +1,13 @@
 import { type AppType } from "next/app";
 import { Analytics } from "@vercel/analytics/react"
 import Head from "next/head";
+import { ThemeProvider } from "~/context/ThemeContext";
 
 import "../styles/globals.css";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <>
+    <ThemeProvider>
       <Head>
         <title>Jean Schoenlaub </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,7 +23,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       </Head>
       <Component {...pageProps}/>
       <Analytics />
-    </>
+    </ThemeProvider>
   );
 };
 

@@ -1,16 +1,11 @@
 import Link from "next/link";
 import { linksData,lastlinksDataUpdateString } from "../../data/links";
-import { useState } from "react";
 import { DrawingsWindTurbines } from "~/components/drawings/wind-turbines";
+import { useTheme } from "~/context/ThemeContext";
 
 export default function LinksPage () {
 
-  const [theme, setTheme] = useState('light'); // Default theme or fetch from localStorage
-
-  // This function is passed to Navigation and updates the parent's state
-  const handleThemeChange = (newTheme: string) => {
-    setTheme(newTheme);
-  };
+  const { theme } = useTheme();
 
   return (
     <>

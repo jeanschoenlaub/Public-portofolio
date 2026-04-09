@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
+import { useTheme } from "~/context/ThemeContext";
 
 import HomePageDrawings from "../components/drawings/home-drawings";
 
@@ -47,11 +47,7 @@ export default function Home() {
   }, [topOffsetPower]);
 
 
-  const [theme, setTheme] = useState('light');
-
-  const handleThemeChange = (newTheme: string) => {
-    setTheme(newTheme);
-  };
+  const { theme } = useTheme();
 
   const powerOnBorder = theme === 'dark' ? 'border-purple-800' : 'border-yellow-400'
   const powerOffBorder = theme === 'dark' ? 'border-gray-900' : 'border-custom-beige'
@@ -67,7 +63,7 @@ export default function Home() {
       <main className={`${theme === 'dark' ? ' bg-gray-900' : 'bg-custom-beige'} py-4 w-full`}>
         <div className="container px-4 sm:px-10 w-full lg:w-1/2 mx-auto">
 
-          <Navigation activeSection='home' onThemeChange={handleThemeChange} />
+          <Navigation activeSection='home' />
 
           <div id="aboutme" className={`border-0 lg:border-l-4 min-w-[500px] relative z-50 p-2 mt-10
               ${isElementVisible.aboutme ? powerOnBorder: powerOffBorder}`}>

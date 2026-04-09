@@ -30,7 +30,6 @@ export default function HomePageDrawings ( { isAnyElementVisible, onTopOffsetPow
 
     const updateTopOffset = (newTopOffsetPower:number) => { //pass back the power svg loc for dinamic border rendering on touvhin power svg
         onTopOffsetPowerChange(newTopOffsetPower);
-        console.log(newTopOffsetPower)
     };
 
 

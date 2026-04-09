@@ -11,6 +11,8 @@
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.7.0",
     "@vercel/analytics": "^1.5.0",
+    "baseline-browser-mapping": "^2.10.16",
+    "caniuse-lite": "^1.0.30001787",
     "framer-motion": "^10.16.5",
     "next": "^14.0.0",
     "react": "18.2.0",

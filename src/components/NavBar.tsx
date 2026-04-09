@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTheme } from '~/context/ThemeContext';
 
 type Section = 'home' | 'projects' | 'blog';
@@ -11,6 +11,14 @@ interface NavigationProps {
 const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
   const { theme, mounted, handleThemeChange } = useTheme();
   const isDayTheme = theme === 'light';
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 640);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
 
   const handleChange = () => {
     handleThemeChange(isDayTheme ? 'dark' : 'light');
@@ -19,8 +27,10 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
   const linkClassName = (section: Section) =>
     `${!isDayTheme ? 'underline-teal-500' : 'underline-custom-mint-green'} ${activeSection === section ? 'font-semibold' : ''}`;
 
+  const navClassName = `ml-4 flex flex-no-shrink ${isMobile ? 'justify-start' : 'justify-end'} space-x-2 sm:space-x-6 mb-4 sm:mr-4 text-xl font-montserrat ${!isDayTheme ? 'text-white' : 'text-black'}`;
+
   return (
-    <nav className={`ml-4 flex flex-no-shrink justify-end space-x-2 sm:space-x-6 mb-4 sm:mr-4 min-w-[500px] text-xl font-montserrat ${!isDayTheme ? 'text-white' : 'text-black'}`}>
+    <nav className={navClassName}>
       <Link href="/" className={linkClassName('home')}>
         Being
       </Link>

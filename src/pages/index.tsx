@@ -65,18 +65,18 @@ export default function Home() {
 
           <Navigation activeSection='home' />
 
-          <div id="aboutme" className={`border-0 lg:border-l-4 min-w-[500px] relative z-50 p-2 mt-10
+          <div id="aboutme" className={`border-0 lg:border-l-4 relative z-50 p-2 mt-10
               ${isElementVisible.aboutme ? powerOnBorder: powerOffBorder}`}>
                 <AboutMe theme={theme}></AboutMe>
             </div>
 
-            <div id="projects" className={`p-2 border-0 min-w-[600px] relative z-50 lg:border-l-4 mt-10
+            <div id="projects" className={`p-2 border-0 relative z-50 lg:border-l-4 mt-10
                 ${isElementVisible.projects ? powerOnBorder: powerOffBorder}`}>
                 <h2 className={`text-3xl tracking-tight font-medium mt-2 ${theme === 'dark' ? 'text-gray-200' : 'text-black'}`}> What I&apos;ve been up to </h2>
                 <Projects theme = {theme}></Projects>
             </div>
 
-            <div id="timeline" className={` p-2 border-0 min-w-[500px] lg:border-l-4 mt-10
+            <div id="timeline" className={` p-2 border-0 lg:border-l-4 mt-10
                ${isElementVisible.timeline ? powerOnBorder: powerOffBorder}`}>
                 <h2 className={`text-3xl tracking-tight font-medium mt-2 mb-8 ${theme === 'dark' ? 'text-gray-200' : 'text-black'}`}> It&apos;s about the journey </h2>
                 <Timeline theme={theme}></Timeline>
